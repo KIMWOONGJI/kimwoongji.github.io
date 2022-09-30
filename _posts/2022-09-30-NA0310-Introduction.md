@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "1. Introduction"
-categories: coding
+categories: Nonlinear acoustics
 tags: [Nonlinear acoustics]
 toc: true
 ---
