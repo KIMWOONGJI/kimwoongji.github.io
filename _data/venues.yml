@@ -1,3 +1,19 @@
+"J. Acoust. Soc. Am.":
+  url: https://pubs.aip.org/asa/jasa
+  color: "#ffcc00"
+
+"Appl. Acoust.":
+  url: https://www.journals.elsevier.com/applied-acoustics
+  color: "#0073e6"
+
+"Small":
+  url: https://onlinelibrary.wiley.com/journal/16136829
+  color: "#ff6600"
+
+"Adv. Mater.":
+  url: https://onlinelibrary.wiley.com/journal/15214095
+  color: "#ff6600"
+
 "AJP":
   url: https://aapt.scitation.org/journal/ajp
   color: "#00369f"
