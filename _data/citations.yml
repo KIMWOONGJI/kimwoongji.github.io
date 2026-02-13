@@ -1,6 +1,10 @@
 metadata:
-  last_updated: '2026-02-02'
+  last_updated: '2026-02-13'
 papers:
+  ZHKTxKIAAAAJ:0EnyYjriUFMC:
+    citations: 0
+    title: "Miniature Nanomesh Mechano\u2010Acoustic Sensor with Wide Linear Dynamic Range, Broad Bandwidth, and Flat Frequency Response"
+    year: '2026'
   ZHKTxKIAAAAJ:2osOgNQ5qMEC:
     citations: 1
     title: "\uC870\uC120\uC18C\uC758 \uB300\uD615\uBE14\uB85D \uC6A9\uC811\uC744 \uC704\uD55C \uC778\uB825 \uC6B4\uBC18\uD615 \uC6A9\uC811\uB85C\uBD07 \uAC1C\uBC1C"
@@ -18,7 +22,7 @@ papers:
     title: An accurate measurement of parametric array using a spurious sound filter topologically equivalent to a half-wavelength resonator
     year: '2025'
   ZHKTxKIAAAAJ:Tyk-4Ss8FVUC:
-    citations: 84
+    citations: 85
     title: "A high\u2010fidelity skin\u2010attachable acoustic sensor for realizing auditory electronic skin"
     year: '2022'
   ZHKTxKIAAAAJ:UeHWp8X0CEIC:
@@ -34,7 +38,7 @@ papers:
     title: Design, analysis, and experimental validation of a stepped plate parametric array loudspeaker
     year: '2025'
   ZHKTxKIAAAAJ:Y0pCki6q_DkC:
-    citations: 10
+    citations: 11
     title: Interactive Deformable Colored Sound Display Achieved with Electrostrictive Fluoropolymer and Halide Perovskite
     year: '2024'
   ZHKTxKIAAAAJ:_FxGoFyzp5QC:
