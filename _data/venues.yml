@@ -1,25 +1,23 @@
+"Adv. Funct. Mater.":
+  url: https://advanced.onlinelibrary.wiley.com/journal/16163028
+  color: "#115c36"
+
+"Nat. Sens.":
+  url: https://www.nature.com/natsensors/
+  color: "#ffd83f"
+
 "J. Acoust. Soc. Am.":
   url: https://pubs.aip.org/asa/jasa
-  color: "#ffcc00"
+  color: "#007fff"
 
 "Appl. Acoust.":
   url: https://www.journals.elsevier.com/applied-acoustics
-  color: "#0073e6"
+  color: "#7753a2"
 
 "Small":
   url: https://onlinelibrary.wiley.com/journal/16136829
-  color: "#ff6600"
+  color: "#003a7d"
 
 "Adv. Mater.":
   url: https://onlinelibrary.wiley.com/journal/15214095
-  color: "#ff6600"
-
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+  color: "#115c36"
