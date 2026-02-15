@@ -47,9 +47,9 @@ ninja.data = [{
           description: "a project that redirects to another website",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project.html";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+            },},{id: "projects-acoustical-field-characterization",
+          title: 'acoustical field characterization',
+          description: "fully automated acoustical field characterization system",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project.html";
             },},{
