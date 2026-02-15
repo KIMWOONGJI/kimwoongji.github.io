@@ -51,17 +51,17 @@ ninja.data = [{
           title: 'acoustical field characterization',
           description: "fully automated acoustical field characterization system",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/aco-field-characterization.html";
+              window.location.href = "/projects/aco_field_characterization.html";
             },},{id: "projects-component-development",
           title: 'component development',
           description: "hand-on experience on development of customized experiment setups",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/component-development.html";
+              window.location.href = "/projects/component_development.html";
             },},{id: "projects-mechanical-vibration-characterization",
           title: 'mechanical vibration characterization',
           description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/mech-vibraction-characterization.html";
+              window.location.href = "/projects/mech_vibraction_characterization.html";
             },},{
         id: 'social-email',
         title: 'email',
