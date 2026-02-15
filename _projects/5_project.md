@@ -23,16 +23,16 @@ A MATLAB-based automated measurement program was developed, which profiled and a
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/propagation-curve-1@3x.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/propagation-curve-1@3x.png" title="simulated propagation curve" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/propagation-curve-2@3x.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/propagation-curve-2@3x.png" title="measured propagation curve" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/beam-pattern-1@3x.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/beam-pattern-1@3x.png" title="simulated beam pattern" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/beam-pattern-2@3x.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/beam-pattern-2@3x.png" title="measured beam pattern" %}
     </div>
 </div>
 <div class="caption">
