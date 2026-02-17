@@ -52,11 +52,11 @@ ninja.data = [{
           description: "fully automated acoustical field characterization system",
           section: "Projects",handler: () => {
               window.location.href = "/projects/aco_field_characterization.html";
-            },},{id: "projects-component-development",
-          title: 'component development',
+            },},{id: "projects-hardware-design-assembly-and-instrumentation",
+          title: 'Hardware design, assembly, and instrumentation',
           description: "hand-on experience on development of customized experiment setups",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/component_development.html";
+              window.location.href = "/projects/hardware.html";
             },},{id: "projects-material-property-evaluation",
           title: 'material property evaluation',
           description: "",
