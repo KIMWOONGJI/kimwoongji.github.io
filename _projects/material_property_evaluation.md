@@ -3,7 +3,7 @@ layout: page
 title: material property evaluation
 description: 
 img: assets/img/project/dynamic-material-property-evaluation/dynamic-material-property-evaluation-1.png
-importance: 4
+importance: 3
 category: experiment
 related_publications: true
 ---
