@@ -57,6 +57,11 @@ ninja.data = [{
           description: "hand-on experience on development of customized experiment setups",
           section: "Projects",handler: () => {
               window.location.href = "/projects/component_development.html";
+            },},{id: "projects-material-property-evaluation",
+          title: 'material property evaluation',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/material_property_evaluation.html";
             },},{id: "projects-mechanical-vibration-characterization",
           title: 'mechanical vibration characterization',
           description: "",
