@@ -3,7 +3,7 @@ layout: page
 title: acoustical field characterization
 description: fully automated acoustical field characterization system
 img: assets/img/project/aco-field-characterization/main.png
-importance: 3
+importance: 1
 category: experiment
 related_publications: true
 ---

@@ -3,7 +3,7 @@ layout: page
 title: mechanical vibration characterization
 description: 
 img: assets/img/project/mech-vibration-characterization/mech-vibration-characterization-2.png
-importance: 3
+importance: 2
 category: experiment
 related_publications: true
 ---
