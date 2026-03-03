@@ -67,6 +67,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/mech_vibraction_characterization.html";
+            },},{id: "projects-parametric-array-loudspeakers",
+          title: 'parametric array loudspeakers',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/parametric_array_loudspeakers.html";
             },},{
         id: 'social-email',
         title: 'email',
