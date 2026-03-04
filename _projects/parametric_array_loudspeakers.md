@@ -175,9 +175,6 @@ Westervelt's parametric array loudspeaker (PAL) concept, which generates a highl
             mipal-aco-meta.
         </div>
     </div>
-</div>
-
-<div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/mipal-ela-meta.svg" title="phased array" %}
         <div class="caption">
@@ -185,6 +182,7 @@ Westervelt's parametric array loudspeaker (PAL) concept, which generates a highl
         </div>
     </div>
 </div>
+
 
 
 
