@@ -18,7 +18,7 @@ Unlike conventional loudspeakers that broadcast sound uniformly in all direction
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/rigid-piston-direct-radiation.svg" title="example image" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/rigid-piston-direct-radiation.svg" title="Rigid piston direct radiation" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
@@ -29,7 +29,7 @@ To generate a highly directional audio beam with a 4.5-degree half-power beam wi
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/loudspeaker-direct-radiation.svg" title="example image" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/loudspeaker-direct-radiation.svg" title="Conventional loudspeaker direct radiation" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
@@ -40,7 +40,7 @@ In reality, the diaphragms of conventional loudspeakers are not perfectly rigid 
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/parametric-acoustic-array-westervelt.png" title="example image" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/parametric-acoustic-array-westervelt.png" title="Parametric acoustic array concept" class="img-fluid" %}
     </div>
 </div>
 
@@ -48,7 +48,7 @@ The concept of the parametric acoustic array was originally proposed in the semi
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/rigid-piston-pal-ultra.svg" title="example image" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/rigid-piston-pal-ultra.svg" title="Rigid piston ultrasound beam" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
@@ -57,7 +57,7 @@ The concept of the parametric acoustic array was originally proposed in the semi
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/rigid-piston-pal-audio.svg" title="example image" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/rigid-piston-pal-audio.svg" title="Directional audio beam via parametric array" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
@@ -68,7 +68,7 @@ This remarkable effect occurs because the intense ultrasound waves alter the loc
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/parametric-array.svg" title="example image" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/parametric-array.svg" title="Virtual end-fire line source" class="img-fluid" %}
         <div class="caption">
             Parametric array principle forming a virtual end-fire line source.
         </div>
@@ -104,7 +104,7 @@ While utilizing an ideal rigid piston would be pristine, it is physically unfeas
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/flexural-plate-radiation.svg" title="example image" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/flexural-plate-radiation.svg" title="Flexural plate radiation pattern" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
@@ -121,7 +121,7 @@ To resolve this scattering issue, the SPPAL was developed to transform the scatt
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/sppal-concept.svg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/sppal-concept.svg" title="SPPAL concept" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -130,7 +130,7 @@ To resolve this scattering issue, the SPPAL was developed to transform the scatt
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/sppal-ultra.svg" title="example image" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/sppal-ultra.svg" title="SPPAL ultrasonic wavefront" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
@@ -139,14 +139,23 @@ To resolve this scattering issue, the SPPAL was developed to transform the scatt
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/sppal-audio.svg" title="example image" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/sppal-audio.svg" title="SPPAL directional audio beam" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
     Directional audio beam generated by the SPPAL.
 </div>
 
-While the SPPAL successfully shapes the audio beam, experimental testing revealed an inherent challenge called combination resonance (CR). Due to structural nonlinear coupling with the low-order vibration modes of the flexural plate, the intense driving forces excite the plate's own structural resonances at audible frequencies. This undesirable structural vibration produces parasitic, omnidirectional noise, severely undermining the highly directional audio beam that the SPPAL was designed to achieve.
+While the SPPAL successfully shapes the audio beam, experimental testing revealed an inherent challenge called combination resonance (CR). Due to structural nonlinear coupling with the low-order vibration modes of the flexural plate, the even tiny driving forces excite the plate's own structural resonances at audible frequencies. This undesirable structural vibration produces parasitic, omnidirectional noise, severely undermining the highly directional audio beam that the SPPAL was designed to achieve.
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-9 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/sppal-combination-resonance.svg" title="SPPAL combination resonance" class="img-fluid" %}
+    </div>
+</div>
+<div class="caption">
+    Vibration modes of the stepped plate. (top) The intended high-order flexural mode at ultrasonic frequencies. (middle) The unintended low-order combination resonance modes at audible frequencies excited by amplitude modulation operation. (bottom) The resulting vibration behavior of the plate under amplitude modulation, showing the coexistence of the intended ultrasonic mode and the parasitic combination resonance modes.
+</div>
 
 <hr>
 
@@ -156,7 +165,7 @@ To comprehensively overcome the limitations of the SPPAL---namely, its relativel
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/mipal-concept.svg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/mipal-concept.svg" title="MiPAL concept" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -165,7 +174,7 @@ To comprehensively overcome the limitations of the SPPAL---namely, its relativel
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/mipal-ultra.svg" title="example image" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/mipal-ultra.svg" title="MiPAL ultrasound wavefront" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
@@ -174,26 +183,26 @@ To comprehensively overcome the limitations of the SPPAL---namely, its relativel
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/mipal-audio.svg" title="example image" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/mipal-audio.svg" title="MiPAL directional audible sound" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
     Highly directional audible sound produced over a broad frequency range with parasitic combination resonance (CR) leakage effectively suppressed.
 </div>
 
-This architecture employs an acoustic metasurface to shape the scattered ultrasonic emissions into a pristine, collimated beam. Concurrently, locally resonant elastic meta-units are integrated into the plate to act as mechanical band-gap filters. These units expertly suppress the specific low-frequency structural vibrations responsible for CR. The result is a highly compact loudspeaker capable of producing intensely focused audio beams across a broad frequency range, completely free from unwanted side-lobe leakage.
+This architecture employs an **acoustic metasurface** to shape the scattered ultrasonic emissions into a pristine, collimated beam. Concurrently, locally resonant **elastic meta-units** are integrated into the plate to act as mechanical band-gap filters. These units expertly suppress the specific low-frequency structural vibrations responsible for CR. The result is a highly compact loudspeaker capable of producing intensely focused audio beams across a broad frequency range, completely free from unwanted side-lobe leakage.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/mipal-aco-meta.svg" title="rigid piston" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/mipal-aco-meta.svg" title="Acoustic metasurface unit-cells" %}
         <div class="caption">
-            Acoustic metasurface comprising unit-cells composed of Helmholtz resonators and space-coiling channels tailored for precise phase modulation.
+            <strong>Acoustic metasurface</strong> comprising unit-cells composed of Helmholtz resonators and space-coiling channels tailored for precise phase modulation.
         </div>
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/mipal-ela-meta.svg" title="phased array" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/mipal-ela-meta.svg" title="Locally resonant elastic meta-units" %}
         <div class="caption">
-            Locally resonant elastic meta-units embedded on the radiating plate to introduce mode-selective loss against unwanted structure-borne sound from CR.
+            Locally resonant <strong>elastic meta-units</strong> embedded on the radiating plate to introduce mode-selective loss against unwanted structure-borne sound from CR.
         </div>
     </div>
 </div>
