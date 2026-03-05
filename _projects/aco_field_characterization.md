@@ -6,6 +6,8 @@ img: assets/img/project/aco-field-characterization/main.png
 importance: 1
 category: experiment
 related_publications: true
+scholar:
+  style: apa
 ---
 
 The goal of this project was to characterize the acoustic field of a developed sound source, validate theoretical models by direct comparison with experimental measurements, and ensure stable and reproducible data acquisition through automated control.

@@ -6,6 +6,8 @@ img: assets/img/project/impedance-tube/impedance-tube-1.png
 importance: 4
 category: experiment
 related_publications: true
+scholar:
+  style: apa
 ---
 
 <hr>

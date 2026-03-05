@@ -6,6 +6,8 @@ img: assets/img/project/dynamic-material-property-evaluation/dynamic-material-pr
 importance: 3
 category: experiment
 related_publications: true
+scholar:
+  style: apa
 ---
 
 <hr>

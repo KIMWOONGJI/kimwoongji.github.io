@@ -6,6 +6,8 @@ img: assets/img/project/mech-vibration-characterization/mech-vibration-character
 importance: 2
 category: experiment
 related_publications: true
+scholar:
+  style: apa
 ---
 
 <hr>
