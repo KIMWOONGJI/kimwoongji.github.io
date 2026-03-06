@@ -72,6 +72,11 @@ ninja.data = [{
           description: "research and development of transducers",
           section: "Projects",handler: () => {
               window.location.href = "/projects/parametric_array_loudspeakers.html";
+            },},{id: "projects-spurious-sound-filter",
+          title: 'spurious sound filter',
+          description: "acoustically analogous structure to a half-wavelength resonator",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/spurious_sound_filter.html";
             },},{
         id: 'social-email',
         title: 'email',
