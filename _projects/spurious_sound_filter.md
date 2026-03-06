@@ -18,8 +18,8 @@ scholar:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante ultricies finibus. Nullam nec metus vel ante ultricies finibus. Nullam nec metus vel ante ultricies finibus. Nullam nec metus vel ante ultricies finibus. Nullam nec metus vel ante ultricies finibus.
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/parametric-array-loudspeaker/rigid-piston-direct-radiation.svg" title="Rigid piston direct radiation" class="img-fluid" %}
+    <div class="col-sm-3 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/project/spurious-sound-filter/spurious-sound-filter-concept.gif" title="Rigid piston direct radiation" class="img-fluid rounded" %}
     </div>
 </div>
 <div class="caption">
