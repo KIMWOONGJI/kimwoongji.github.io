@@ -69,7 +69,7 @@ ninja.data = [{
               window.location.href = "/projects/mech_vibraction_characterization.html";
             },},{id: "projects-parametric-array-loudspeakers",
           title: 'parametric array loudspeakers',
-          description: "",
+          description: "research and development of transducers",
           section: "Projects",handler: () => {
               window.location.href = "/projects/parametric_array_loudspeakers.html";
             },},{
