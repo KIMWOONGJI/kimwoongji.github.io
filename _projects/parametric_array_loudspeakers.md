@@ -100,7 +100,7 @@ This remarkable effect occurs because the intense ultrasound waves alter the loc
     </div>
 </div>
 
-While utilizing an ideal rigid piston would be pristine, it is physically unfeasible to maintain uniform vibration across a large surface at ultrasonic frequencies. Consequently, traditional PALs are typically constructed using phased arrays comprising numerous small, synchronized transducers. While effective, these phased arrays require complex and expensive driving electronics. This high cost and complexity pose significant barriers to the widespread commercialization of PAL technology. Alternatively, <strong>a single flexural vibrating plate offers a highly compact and cost-effective architecture.</strong>
+While utilizing an ideal rigid piston would be pristine, it is physically unfeasible to maintain uniform vibration across a large surface at ultrasonic frequencies. Consequently, traditional PALs are typically constructed using phased arrays comprising numerous small, synchronized transducers[^7]. While effective, these phased arrays require complex and expensive driving electronics. This high cost and complexity pose significant barriers to the widespread commercialization of PAL technology. Alternatively, <strong>a single flexural vibrating plate offers a highly compact and cost-effective architecture.</strong>
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-9 mt-3 mt-md-0">
@@ -117,7 +117,7 @@ However, a standard flexural plate inevitably exhibits high-order vibration mode
 
 <h4><strong>Stepped-plate parametric array loudspeaker (SPPAL)</strong> <span style="font-size: 0.8rem;">{% cite kimDesignAnalysisExperimental2025b %}</span></h4>
 
-To resolve this scattering issue, the SPPAL was developed to transform the scattered radiation of a flexural plate into a collimated beam. By strategically attaching annular step rings onto the vibrating plate, the SPPAL applies precise phase delays to the radiated sound waves. This simple yet effective modification aligns the phases of the emitted waves, allowing the single flexural plate to mimic the highly directional radiation of an ideal rigid piston.
+To resolve this scattering issue, the SPPAL was developed to transform the scattered radiation of a flexural plate into a collimated beam. By strategically attaching annular step rings onto the vibrating plate, the SPPAL applies precise phase delays to the radiated sound waves[^3]. This simple yet effective modification aligns the phases of the emitted waves, allowing the single flexural plate to mimic the highly directional radiation of an ideal rigid piston.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
@@ -156,6 +156,16 @@ While the SPPAL successfully shapes the audio beam, experimental testing reveale
 <div class="caption">
     Vibration modes of the stepped plate. (top) The intended high-order flexural mode at ultrasonic frequencies. (middle) The unintended low-order combination resonance modes at audible frequencies excited by amplitude modulation operation. (bottom) The resulting vibration behavior of the plate under amplitude modulation, showing the coexistence of the intended ultrasonic mode and the parasitic combination resonance modes.
 </div>
+
+To understand the physical mechanism behind this limitation, consider the vibrational dynamics illustrated in the figure above. Under ideal, unmodulated ultrasonic excitation, the stepped plate vibrates purely in its intended high-order flexural mode (top), producing the spatially coherent wavefront required for a parametric array. However, a PAL is generally driven by an amplitude-modulated (AM) signal to generate audio. Due to the structural nonlinearity of the flexural plate, the low-frequency signal inadvertently excites the plate's inherent low-order natural frequencies (middle). This phenomenon is known as combination resonance[^6]. Consequently, during actual operation, the plate exhibits a superposition of the desired mode and the unwanted combination mode (bottom). This undesirable structural vibration produces parasitic, omnidirectional noise, severely undermining the highly directional audio beam that the SPPAL was designed to achieve.
+
+<h6><strong>Research Contributions & Limitations</strong></h6>
+
+- Establishing an **integrated modeling framework** successfully bridged structural dynamics with nonlinear acoustic propagation. Combining an approximate analytical 3D model[^4] with the spherical wave expansion (SWE) method[^5] enabled the accurate prediction of nonlinear acoustic fields without prohibitive computational costs.
+
+- Through multi-objective optimization, a **dual-resonance (DR) transducer architecture** was engineered to amplify both the primary carrier and sideband frequencies. This capability effectively compensates for the low-frequency roll-off inherent to parametric arrays, significantly enhancing the generated audio output.
+
+- Extensive [vibration]({% link _projects/aco_field_characterization.md %}) and [acoustic measurements]({% link _projects/aco_field_characterization.md %}) **formally identified CR for the first time** as an intrinsic structural limitation of single-body flexural transducers.
 
 <hr>
 
@@ -207,7 +217,22 @@ This architecture employs an **acoustic metasurface** to shape the scattered ult
     </div>
 </div>
 
+<h6><strong>Research Contributions</strong></h6>
+
+- The development of the MiPAL serves as a pioneering **application of dual-domain metamaterials**, marking a fundamental paradigm shift in directional audio design. By entirely decoupling structural vibration from acoustic phase compensation—replacing the heavy, damping polymer steps of the SPPAL with an independent acoustic metasurface.
+
+- Complementing this acoustic control, integrated **elastic meta-units** act in the structural domain to introduce precise, mode-selective loss. This dual-domain synergy successfully suppresses parasitic CR modes and eliminates omnidirectional sound leakage, enabling the projection of an ultrabroadband, highly collimated audio beam spanning over four octaves (500 Hz to 10 kHz).
+
+- *The comprehensive findings are currently under peer review for publication.*
+
+<hr>
+
 <h4><strong>References</strong></h4>
 
-[^1]: P. J. Westervelt, "Parametric Acoustic Array," *J. Acoust. Soc. Am.*, vol. 35, no. 4, pp. 535--537, 1963. DOI: [10.1121/1.1918525](https://doi.org/10.1121/1.1918525).
-[^2]: M. F. Hamilton and D. T. Blackstock (Eds.), *Nonlinear Acoustics*. Springer Cham, 2024. DOI: [10.1007/978-3-031-58963-8](https://doi.org/10.1007/978-3-031-58963-8).
+[^1]: <small>P. J. Westervelt, "Parametric Acoustic Array," *J. Acoust. Soc. Am.*, vol. 35, no. 4, pp. 535--537, 1963. DOI: [10.1121/1.1918525](https://doi.org/10.1121/1.1918525).</small>
+[^2]: <small>M. F. Hamilton and D. T. Blackstock (Eds.), *Nonlinear Acoustics*. Springer Cham, 2024. DOI: [10.1007/978-3-031-58963-8](https://doi.org/10.1007/978-3-031-58963-8).</small>
+[^3]: <small>A. Barone and J. A. Gallego Juarez, "Flexural Vibrating Free-Edge Plates with Stepped Thicknesses for Generating High Directional Ultrasonic Radiation," *J. Acoust. Soc. Am.*, vol. 51, no. 3B, pp. 953--959, 1972. DOI: [10.1121/1.1912944](https://doi.org/10.1121/1.1912944).</small>
+[^4]: <small>A. Iula, N. Lamberti, and M. Pappalardo, "An Approximated 3-D Model of Cylinder-Shaped Piezoceramic Elements for Transducer Design," *IEEE Trans. Ultrason. Ferroelectr. Freq. Control*, vol. 45, no. 4, pp. 1056--1064, 1998. DOI: [10.1109/58.710588](https://doi.org/10.1109/58.710588).</small>
+[^5]: <small>J. Zhong, R. Kirby, and X. Qiu, "A Spherical Expansion for Audio Sounds Generated by a Circular Parametric Array Loudspeaker," *J. Acoust. Soc. Am.*, vol. 147, no. 5, pp. 3502--3510, 2020. DOI: [10.1121/10.0001261](https://doi.org/10.1121/10.0001261).</small>
+[^6]: <small>T. Yamamoto and S. Hayashi, "Combination Tones of Differential Type in Nonlinear Vibratory Systems," *Bull. JSME*, vol. 7, no. 28, pp. 690--698, 1964. DOI: [10.1299/jsme1958.7.690](https://doi.org/10.1299/jsme1958.7.690).</small>
+[^7]: <small>J. Zhong and X. Qiu, *Acoustic Waves Generated by Parametric Array Loudspeakers*, 1st ed. Boca Raton, FL: CRC Press, 2024, pp. 295--299, 305--314. DOI: [10.1201/9781003354994](https://doi.org/10.1201/9781003354994).</small>
