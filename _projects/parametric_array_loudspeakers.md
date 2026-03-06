@@ -1,8 +1,9 @@
 ---
 layout: page
 title: parametric array loudspeakers
-description: 
-img: assets/img/12.jpg
+description: research and development of transducers
+tags: [parametric array loudspeaker, pal, acoustics, nonlinear acoustics, meta-materials, transducers]
+img: assets/img/project/parametric-array-loudspeaker/meta-materials-integrated/mipal-experiment-close-1.svg
 importance: 1
 category: research
 related_publications: true
