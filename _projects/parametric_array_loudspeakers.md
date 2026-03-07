@@ -170,7 +170,7 @@ To understand the physical mechanism behind this limitation, consider the vibrat
 
 <hr>
 
-<h4><strong>Metamaterials-integrated parametric array loudspeaker (MiPAL)</strong></h4>
+<h4><strong>Metamaterials-integrated parametric array loudspeaker (MiPAL)</strong> <span style="font-size: 0.8rem;">{% cite kim2026Dualmetamaterials %}</span></h4>
 
 To comprehensively overcome the limitations of the SPPAL---namely, its relatively low sound pressure and the parasitic noise caused by CR---the MiPAL was invented. The MiPAL is a revolutionary single-body ultrasonic transducer interwoven with dual-domain metamaterials, addressing acoustics in the air and elastic vibrations in the structure simultaneously.
 

@@ -21,7 +21,7 @@ scholar:
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
         <h4><strong>Mechanical vibration characterization</strong></h4>
-        <p>Using MATLAB-based automated control, single-point LDV measurements were performed to obtain not only the frequency response of the radiating plate but also its experimental modal analysis (EMA). The experimental results were compared with FEM simulations, and the underlying mechanism of the previously unreported combination resonance in stepped plate parametric array loudspeakers was firstly identified{% cite kimDesignAnalysisExperimental2025b %}.</p>
+        <p>Using MATLAB-based automated control, single-point LDV measurements were performed to obtain not only the frequency response of the radiating plate but also its experimental modal analysis (EMA). The experimental results were compared with FEM simulations, and the underlying mechanism of the previously unreported combination resonance in stepped plate parametric array loudspeakers was firstly identified {% cite kimDesignAnalysisExperimental2025b %}.</p>
         <h5>Experimental Setup</h5>
         <ul>
             <li>MATLAB-based automated measurement program</li>
