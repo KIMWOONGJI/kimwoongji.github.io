@@ -58,7 +58,7 @@ We effectively utilized this filter to evaluate the parametric array loudspeaker
 
 - Proposed an **acoustically equivalent half-wavelength resonator** serving as a novel acoustic filter, effectively isolating the microphone from targeted high-frequency ultrasound.
 - Achieved **robust suppression of spurious sounds** across all incidence angles, ensuring highly reliable acoustic measurements unaffected by wave directionality, which significantly enhanced the **complex near-field measurement** of parametric arrays when combined with the grazing incidence method.
-- Established a **simple, reproducible ultrasonic filter** by utilizing SLA 3D printing technology, greatly facilitating widespread practical application in acoustic laboratories. We provide the STL file link as: <https://zenodo.org/records/15055891>
+- Established a **simple, reproducible ultrasonic filter** by utilizing SLA 3D printing technology, greatly facilitating widespread practical application in acoustic laboratories. We provide the STL file link as: <https://zenodo.org/records/15055891>.
 
 <hr>
 
