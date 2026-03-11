@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-04'
+  last_updated: '2026-03-11'
 papers:
   ZHKTxKIAAAAJ:0EnyYjriUFMC:
     citations: 0
@@ -9,10 +9,6 @@ papers:
     citations: 0
     title: "\uC870\uC120\uC18C\uC758 \uB300\uD615\uBE14\uB85D \uC6A9\uC811\uC744 \uC704\uD55C \uC778\uB825 \uC6B4\uBC18\uD615 \uC6A9\uC811\uB85C\uBD07 \uAC1C\uBC1C"
     year: '2014'
-  ZHKTxKIAAAAJ:5nxA0vEk-isC:
-    citations: 0
-    title: Design, analysis, and experimental validation of a stepped plate parametric array loudspeaker
-    year: '2025'
   ZHKTxKIAAAAJ:9yKSN-GCB0IC:
     citations: 1
     title: "\uC870\uC120\uC678\uC5C5 \uD658\uACBD\uC5D0 \uC801\uC6A9\uAC00\uB2A5\uD55C \uC774\uB3D9\uD615 \uC6A9\uC811\uB85C\uBD07 \uC2DC\uC2A4\uD15C \uAC1C\uBC1C"
@@ -26,7 +22,7 @@ papers:
     title: An accurate measurement of parametric array using a spurious sound filter topologically equivalent to a half-wavelength resonator
     year: '2025'
   ZHKTxKIAAAAJ:Tyk-4Ss8FVUC:
-    citations: 87
+    citations: 90
     title: "A high\u2010fidelity skin\u2010attachable acoustic sensor for realizing auditory electronic skin"
     year: '2022'
   ZHKTxKIAAAAJ:UeHWp8X0CEIC:
@@ -69,7 +65,3 @@ papers:
     citations: 5
     title: Development of a Portable Welding Robot for Welding Jobs in Ship Blocks
     year: '2014'
-  ZHKTxKIAAAAJ:ufrVoPGSRksC:
-    citations: 2
-    title: "A High\u2010Fidelity Skin\u2010Attachable Acoustic Sensor for Realizing Auditory Electronic Skin (Adv. Mater. 21/2022)"
-    year: '2022'
