@@ -1,6 +1,6 @@
 ---
 layout: page
-title: research workflow and technology stack
+title: my research workflow and technology stack
 description: A systematic methodology integrating multiphysics simulation, component-based modeling, and scalable data infrastructure
 tags: [research workflow, technology stack]
 img: 

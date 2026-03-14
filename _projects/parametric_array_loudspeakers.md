@@ -168,6 +168,14 @@ To understand the physical mechanism behind this limitation, consider the vibrat
 
 - Extensive [vibration]({% link _projects/aco_field_characterization.md %}) and [acoustic measurements]({% link _projects/aco_field_characterization.md %}) **formally identified CR for the first time** as an intrinsic structural limitation of single-body flexural transducers.
 
+<!-- XYZ bullets -->
+
+<!-- Accelerated design space exploration to extract critical design parameters for multiphysics transducer systems, as measured by a reduction in simulation time from up to 2 hours to approximately 20 seconds per case while maintaining high predictive accuracy, by establishing an integrated analytical modeling framework.
+
+Enabled the reliable manufacturing of complex acoustic devices from theoretical models, as measured by the successful fabrication of prototypes that achieved targeted acoustic performance without structural failure during assembly, by developing a comprehensive Design for Manufacturing (DFM) framework using structural optimization algorithms.
+
+Discovered a previously unknown physical limitation that disrupts targeted directional audio in compact speaker systems, as measured by the precise experimental detection of unintended structural vibrations, by engineering a fully automated and synchronized hardware testing setup. -->
+
 <hr>
 
 <h4><strong>Metamaterials-integrated parametric array loudspeaker (MiPAL)</strong> <span style="font-size: 0.8rem;">{% cite kim2026Dualmetamaterials %}</span></h4>
@@ -220,11 +228,25 @@ This architecture employs an **acoustic metasurface** to shape the scattered ult
 
 <h6><strong>Research Contributions</strong></h6>
 
-- The development of the MiPAL serves as a pioneering **application of dual-domain metamaterials**, marking a fundamental paradigm shift in directional audio design. By entirely decoupling structural vibration from acoustic phase compensation—replacing the heavy, damping polymer steps of the SPPAL with an independent acoustic metasurface.
+<!-- - The development of the MiPAL serves as a pioneering **application of dual-domain metamaterials**, marking a fundamental paradigm shift in directional audio design. By entirely decoupling structural vibration from acoustic phase compensation—replacing the heavy, damping polymer steps of the SPPAL with an independent acoustic metasurface. -->
 
-- Complementing this acoustic control, integrated **elastic meta-units** act in the structural domain to introduce precise, mode-selective loss. This dual-domain synergy successfully suppresses parasitic CR modes and eliminates omnidirectional sound leakage, enabling the projection of an ultrabroadband, highly collimated audio beam spanning over four octaves (500 Hz to 10 kHz).
+<!-- - Complementing this acoustic control, integrated **elastic meta-units** act in the structural domain to introduce precise, mode-selective loss. This dual-domain synergy successfully suppresses parasitic CR modes and eliminates omnidirectional sound leakage, enabling the projection of an ultrabroadband, highly collimated audio beam spanning over four octaves (500 Hz to 10 kHz). -->
+
+- Developing a novel architecture that represents the **application of dual-domain metamaterials** marks a fundamental paradigm shift in compact directional audio design.
+
+- Engineering an **acoustic metasurface** successfully overcame the severe material damping and low efficiency limitations of previous models. By replacing the heavy polymer steps of the SPPAL, this tailored layer redirects scattered ultrasonic emissions into a highly collimated sound beam.
+
+- Integrating locally resonant **elastic meta-units** directly onto the radiating plate introduces precise, mode-selective mechanical loss. This structural modification suppresses parasitic combination resonance modes, completely eliminating omnidirectional noise leakage and securing an ultrabroadband audio beam spanning over four octaves (500 Hz to 10 kHz).
 
 - *The comprehensive findings are currently under peer review for publication.*
+
+<!-- XYZ format
+
+Pioneered an application of metamaterials, as measured by the unprecedented simultaneous control over both structure-borne elastic waves and airborne acoustics, by successfully integrating dual-domain metamaterials into a single-body transducer.
+
+Overcame critical acoustic efficiency drops and severe material damping limitations of previous models, as measured by a 12.3 dB enhancement in ultrasonic output and the creation of a highly collimated sound beam, by engineering an acoustic metasurface to replace heavy polymer components.
+
+Eliminated parasitic vibration modes that previously disrupted highly directional audio, as measured by the complete suppression of omnidirectional sound leakage and the projection of an ultrabroadband audio beam spanning over four octaves (500 Hz to 10 kHz), by designing and embedding locally resonant elastic meta-units. -->
 
 <hr>
 
