@@ -72,8 +72,8 @@ ninja.data = [{
           description: "research and development of transducers",
           section: "Projects",handler: () => {
               window.location.href = "/projects/parametric_array_loudspeakers.html";
-            },},{id: "projects-research-workflow-and-technology-stack",
-          title: 'research workflow and technology stack',
+            },},{id: "projects-my-research-workflow-and-technology-stack",
+          title: 'my research workflow and technology stack',
           description: "A systematic methodology integrating multiphysics simulation, component-based modeling, and scalable data infrastructure",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research_workflow_and_technology_stack.html";
