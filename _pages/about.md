@@ -14,11 +14,21 @@ social: true # includes social icons at the bottom of the page
 
 ---
 
-I hold a **Ph.D. in Mechanical Engineering** from [Pohang University of Science and Technology (POSTECH)](https://postech.ac.kr/eng), where I graduated in February 2026. My research expertise lies in **Electro-Mechano-Acoustic Transducers**, **Linear/Nonlinear Acoustics**, and **Modeling and Simulation, Design, and Experimental Validation**. I specialize in bridging the gap between theoretical models and practical applications, utilizing a workflow that integrates analytical modeling, finite element Analysis, and rigorous experimental validation.
+<br>
 
-My doctoral dissertation, "<ins>Stepped Plate and Metasurface-Integrated Parametric Array Loudspeakers: Design, Analysis, and Experimental Validation</ins>," focused on developing cost-effective, high-directivity sound sources by engineering wavefronts using sub-wavelength structures and suppressing nonlinear structural resonances through the integration of acoustic and elastic metamaterials.
+I hold a **Ph.D. in Mechanical Engineering** from [Pohang University of Science and Technology (POSTECH)](https://postech.ac.kr/eng), where I graduated in February 2026. 
 
-Prior to my doctoral studies, I earned my M.Sc. in Mechanical Engineering from POSTECH and my B.Sc. from Kyung Hee University. I also possess valuable industry experience, having worked as an engineer at Hanwha Ocean.
+<br>
+
+My research expertise lies in **Electro-Mechano-Acoustic Transducers**, **Linear/Nonlinear Acoustics**, and **Modeling and Simulation, Design, and Experimental Validation**. 
+
+<br>
+
+I specialize in bridging the gap between theoretical models and practical applications, utilizing a workflow that integrates analytical modeling, finite element analysis, and rigorous experimental validation.
+
+<!-- My doctoral dissertation, "<ins>Stepped Plate and Metasurface-Integrated Parametric Array Loudspeakers: Design, Analysis, and Experimental Validation</ins>," focused on developing cost-effective, high-directivity sound sources by engineering wavefronts using sub-wavelength structures and suppressing nonlinear structural resonances through the integration of acoustic and elastic metamaterials. -->
+
+<!-- Prior to my doctoral studies, I earned my M.Sc. in Mechanical Engineering from POSTECH and my B.Sc. from Kyung Hee University. I also possess valuable industry experience, having worked as a research engineer at Hanwha Ocean. -->
 
 <!-- **Contact:** [wj.kim@postech.ac.kr](mailto:wj.kim@postech.ac.kr) -->
 

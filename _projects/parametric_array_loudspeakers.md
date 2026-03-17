@@ -240,9 +240,9 @@ This architecture employs an **acoustic metasurface** to shape the scattered ult
 
 - *The comprehensive findings are currently under peer review for publication.*
 
-<!-- XYZ format
+<!-- XYZ bullets -->
 
-Pioneered an application of metamaterials, as measured by the unprecedented simultaneous control over both structure-borne elastic waves and airborne acoustics, by successfully integrating dual-domain metamaterials into a single-body transducer.
+<!-- Pioneered an application of metamaterials, as measured by the unprecedented simultaneous control over both structure-borne elastic waves and airborne acoustics, by successfully integrating dual-domain metamaterials into a single-body transducer.
 
 Overcame critical acoustic efficiency drops and severe material damping limitations of previous models, as measured by a 12.3 dB enhancement in ultrasonic output and the creation of a highly collimated sound beam, by engineering an acoustic metasurface to replace heavy polymer components.
 

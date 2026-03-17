@@ -64,10 +64,10 @@
       "endDate": "2026-02-13",
       "score": "",
       "courses": [
-        // "Advisor: Prof. Wonkyu Moon / Prof. Junsuk Rho",
-        "Advisor: Prof. Wonkyu Moon",
-        // "Lab: Vibration and Acoustic Transducers Laboratory / Nanoscale Photonics & Integrated Manufacturing Laboratory",
-        "Lab: Vibration and Acoustic Transducers Laboratory",
+        "Advisor: Prof. Wonkyu Moon / Prof. Junsuk Rho",
+        // "Advisor: Prof. Wonkyu Moon",
+        "Lab: Vibration and Acoustic Transducers Laboratory / Nanoscale Photonics & Integrated Manufacturing Laboratory",
+        // "Lab: Vibration and Acoustic Transducers Laboratory",
         "Dissertation: Stepped Plate and Metasurface-Integrated Parametric Array Loudspeakers: Design, Analysis, and Experimental Validation"
       ]
     },
