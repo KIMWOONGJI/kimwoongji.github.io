@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-projects",
           title: "projects",
-          description: "",
+          description: "Research projects by Woongji Kim covering parametric array loudspeakers, acoustic transducers, acoustic metamaterials, field characterization, and experimental instrumentation.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -25,14 +25,14 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "repositories",
-          description: "",
+          description: "Open-source repositories and GitHub contributions by Woongji Kim.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "",
+          description: "Curriculum vitae of Woongji Kim — Ph.D. in Mechanical Engineering from POSTECH, specializing in acoustics, vibration, and transducer engineering.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -49,37 +49,37 @@ ninja.data = [{
               window.location.href = "/projects/3_project.html";
             },},{id: "projects-acoustical-field-characterization",
           title: 'acoustical field characterization',
-          description: "fully automated acoustical field characterization system",
+          description: "Fully automated acoustical field characterization system for measuring directivity and sound pressure levels in a semi-anechoic chamber.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/aco_field_characterization.html";
             },},{id: "projects-hardware-design-assembly-and-instrumentation",
           title: 'Hardware design, assembly, and instrumentation',
-          description: "hand-on experience on development of customized experiment setups",
+          description: "Custom hardware design, assembly, and instrumentation for acoustic experiments, including impedance tube construction and measurement setups.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/hardware.html";
             },},{id: "projects-material-property-evaluation",
           title: 'material property evaluation',
-          description: "",
+          description: "Dynamic material property evaluation of piezoelectric materials using impulse excitation technique complying with ASTM E1876 standards.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/material_property_evaluation.html";
             },},{id: "projects-mechanical-vibration-characterization",
           title: 'mechanical vibration characterization',
-          description: "",
+          description: "Mechanical vibration characterization of radiating plates using laser Doppler vibrometry (LDV) for transducer validation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/mech_vibraction_characterization.html";
             },},{id: "projects-parametric-array-loudspeakers",
           title: 'parametric array loudspeakers',
-          description: "research and development of transducers",
+          description: "Research on parametric array loudspeaker transducers — highly directional sound sources utilizing nonlinear acoustics, stepped plates, and acoustic metamaterials.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/parametric_array_loudspeakers.html";
             },},{id: "projects-my-research-workflow-and-technology-stack",
           title: 'my research workflow and technology stack',
-          description: "A systematic methodology integrating multiphysics simulation, component-based modeling, and scalable data infrastructure",
+          description: "Systematic research methodology integrating COMSOL multiphysics simulation, MATLAB-based modeling, and scalable data infrastructure for acoustic transducer development.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research_workflow_and_technology_stack.html";
             },},{id: "projects-spurious-sound-filter",
           title: 'spurious sound filter',
-          description: "acoustically analogous structure to a half-wavelength resonator",
+          description: "Design of a spurious sound filter using a half-wavelength resonator analogy for accurate parametric array loudspeaker measurements.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/spurious_sound_filter.html";
             },},{
@@ -102,6 +102,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/kimwoongji", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0002-9614-6762", "_blank");
         },
       },{
         id: 'social-researchgate',
