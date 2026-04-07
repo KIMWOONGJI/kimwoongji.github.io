@@ -14,7 +14,7 @@ scholar:
 
 <div class="row">
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/mech-vibration-characterization/mech-vibration-characterization-1.png" title="LDV measurement setup" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/mech-vibration-characterization/mech-vibration-characterization-1.png" title="LDV measurement setup" alt="Single-point laser Doppler vibrometer measurement setup for radiating plate vibration characterization" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Single-point LDV measurement setup for mechanical vibration characterization of the radiating plate.
         </div>
@@ -32,16 +32,16 @@ scholar:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-3 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/mech-vibration-characterization/mech-vibration-characterization-3.png" title="EMA amplitude - FEM" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/mech-vibration-characterization/mech-vibration-characterization-3.png" title="EMA amplitude - FEM" alt="FEM-predicted experimental modal analysis amplitude at 8th eigenmode" %}
     </div>
     <div class="col-sm-3 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/mech-vibration-characterization/mech-vibration-characterization-4.png" title="EMA amplitude - experiment" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/mech-vibration-characterization/mech-vibration-characterization-4.png" title="EMA amplitude - experiment" alt="Experimentally measured modal analysis amplitude at 8th eigenmode" %}
     </div>
     <div class="col-sm-3 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/mech-vibration-characterization/mech-vibration-characterization-5.png" title="EMA phase - FEM" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/mech-vibration-characterization/mech-vibration-characterization-5.png" title="EMA phase - FEM" alt="FEM-predicted modal analysis phase at 8th eigenmode" %}
     </div>
     <div class="col-sm-3 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/mech-vibration-characterization/mech-vibration-characterization-6.png" title="EMA phase - experiment" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/mech-vibration-characterization/mech-vibration-characterization-6.png" title="EMA phase - experiment" alt="Experimentally measured modal analysis phase at 8th eigenmode" %}
     </div>
 </div>
 <div class="caption">
@@ -54,13 +54,13 @@ The EMA of the radiating plate around the 8th eigenmode frequency showed close a
 
 <div class="row">
     <div class="col-sm-3 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/lrm-characterization/lrm-characterization-1.png" title="Experimental velocity frequency response" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/lrm-characterization/lrm-characterization-1.png" title="Experimental velocity frequency response" alt="Velocity frequency response measurement setup of locally resonant metamaterial unit" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Velocity frequency response measurement setup of the locally resonant metamaterial unit.
         </div>
     </div>
     <div class="col-sm-4 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/lrm-characterization/lrm-characterization-2.png" title="FEM velocity frequency response" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/lrm-characterization/lrm-characterization-2.png" title="FEM velocity frequency response" alt="FEM and experimental velocity frequency response comparison for locally resonant metamaterial" %}
         <div class="caption">
             The bold solid lines represent FEM predictions, while the translucent solid lines correspond to the experimental measurements.
         </div>
@@ -79,13 +79,13 @@ The EMA of the radiating plate around the 8th eigenmode frequency showed close a
 
 <div class="row">
     <div class="col-sm-3 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/plate-impedance/plate-impedance-1.png" title="Experimental plate impedance response" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/plate-impedance/plate-impedance-1.png" title="Experimental plate impedance response" alt="Plate impedance measurement setup for radiating plate with and without locally resonant metamaterial" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Plate impedance measurement setup for vibration-based characterization of the radiating plate with/without the locally resonant metamaterial.
         </div>
     </div>
     <div class="col-sm-4 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/plate-impedance/plate-impedance-2.png" title="FEM plate impedance response" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/plate-impedance/plate-impedance-2.png" title="FEM plate impedance response" alt="Impedance response of radiating plate without and with locally resonant metamaterial" %}
         <div class="caption">
             Impedance response of the radiating plate: without (gray) and with (blue) the locally resonant metamaterial.
         </div>
@@ -104,7 +104,7 @@ The EMA of the radiating plate around the 8th eigenmode frequency showed close a
 
 <div class="row">
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/miniature-diaphragm-characterization/miniature-diaphragm-characterization-1.png" title="Diaphragm compliance measurement setup" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/miniature-diaphragm-characterization/miniature-diaphragm-characterization-1.png" title="Diaphragm compliance measurement setup" alt="Miniature polymer diaphragm compliance measurement setup using passive excitation" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Diaphragm compliance measurement setup.
         </div>
@@ -117,7 +117,7 @@ The EMA of the radiating plate around the 8th eigenmode frequency showed close a
             <li>LabVIEW-based automated measurement program</li>
             <li>Note that constructing a pressure chamber for controlled passive excitation would further improve measurement reliability and remains as future work.</li>
         </ul>
-        {% include figure.liquid loading="eager" path="assets/img/project/miniature-diaphragm-characterization/miniature-diaphragm-characterization-2.png" title="EMA amplitude - FEM" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/miniature-diaphragm-characterization/miniature-diaphragm-characterization-2.png" title="Diaphragm compliance results" alt="Polymer square diaphragm under test and compliance measurement results" %}
         <div class="caption">
              Polymer square diaphragm as the device under test (left), and compliance measurement result (right).
         </div>

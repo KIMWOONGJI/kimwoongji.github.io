@@ -14,7 +14,7 @@ scholar:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/dynamic-material-property-evaluation/dynamic-material-property-evaluation-1.png" title="ASTM E1876 experimental setup" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/dynamic-material-property-evaluation/dynamic-material-property-evaluation-1.png" title="ASTM E1876 experimental setup" alt="Experimental setup for dynamic material property evaluation complying with ASTM E1876" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Experimental setup for dynamic material property evaluation complying with <em>ASTM E1876-22</em>.
         </div>
@@ -34,7 +34,7 @@ scholar:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-5 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/dynamic-material-property-evaluation/dynamic-material-property-evaluation-2.png" title="ASTM E1876 results" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/dynamic-material-property-evaluation/dynamic-material-property-evaluation-2.png" title="ASTM E1876 results" alt="Dynamic material property measurement results showing Young's modulus and shear modulus" %}
     </div>
     <div class="col-sm-5 mt-3 mt-md-0">
         <style>
@@ -104,7 +104,7 @@ scholar:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/piezo-impedance/piezo-impedance-1.png" title="piezoelectric impedance analysis setup" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/piezo-impedance/piezo-impedance-1.png" title="piezoelectric impedance analysis setup" alt="Experimental setup for piezoelectric ceramic ring impedance analysis" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Experimental setup for piezoelectric material property characterization using impedance analysis.
         </div>
@@ -123,10 +123,10 @@ scholar:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/piezo-impedance/piezo-impedance-2.png" title="impedance result 1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/piezo-impedance/piezo-impedance-2.png" title="impedance result 1" alt="Piezoelectric impedance measurement showing agreement between experiment and FEM" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/piezo-impedance/piezo-impedance-3.png" title="impedance result 2" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/piezo-impedance/piezo-impedance-3.png" title="impedance result 2" alt="Piezoelectric impedance measurement showing discrepancy indicating unreliable supplier data" %}
     </div>
 </div>
 <div class="caption">
@@ -137,7 +137,7 @@ scholar:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/pe-se-curve/pe-se-curve-1.png" title="PE/SE curve experimental setup" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/pe-se-curve/pe-se-curve-1.png" title="PE/SE curve experimental setup" alt="Experimental setup for PE/SE curve measurement using laser Doppler vibrometer and Sawyer-Tower circuit" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Experimental setup for PE/SE curve measurement of piezoelectric/electrostrictive materials using a laser Doppler vibrometer and Sawyer-Tower circuit.
         </div>
@@ -157,13 +157,13 @@ scholar:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-3 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/pe-se-curve/pese_custom_jig.png" title="custom fixture" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/pe-se-curve/pese_custom_jig.png" title="custom fixture" alt="Custom fixture with pogo pins for piezoelectric polymer film measurement" %}
     </div>
     <div class="col-sm-3 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/pe-se-curve/pe-se-curve-2.png" title="PE SE curves" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/pe-se-curve/pe-se-curve-2.png" title="PE SE curves" alt="Polarization-electric field and strain-electric field hysteresis curves of piezoelectric polymer" %}
     </div>
     <div class="col-sm-3 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/pe-se-curve/pe-se-curve-3.png" title="effective piezoelectric constant" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/pe-se-curve/pe-se-curve-3.png" title="effective piezoelectric constant" alt="Extracted effective piezoelectric constant e31f under applied electric field bias" %}
     </div>
 </div>
 <div class="caption">

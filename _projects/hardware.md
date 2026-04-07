@@ -14,7 +14,7 @@ scholar:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/impedance-tube/impedance-tube-1.png" title="custom-designed impedance tube" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/impedance-tube/impedance-tube-1.png" title="custom-designed impedance tube" alt="Custom-designed impedance tube for acoustic input impedance measurement of an automotive horn" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Custom-designed impedance tube and experimental configuration for acoustic input impedance measurement of an automotive horn.
         </div>
@@ -35,13 +35,13 @@ scholar:
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/impedance-tube/impedance-tube-2.png" title="impedance measurement result 1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/impedance-tube/impedance-tube-2.png" title="impedance measurement result 1" alt="Impedance tube experimental setup photograph" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/impedance-tube/impedance-tube-3.png" title="impedance measurement result 2" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/impedance-tube/impedance-tube-3.png" title="impedance measurement result 2" alt="Impedance tube components before assembly" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/impedance-tube/impedance-tube-4.png" title="FEM comparison" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/impedance-tube/impedance-tube-4.png" title="FEM comparison" alt="Acoustic input impedance measurement results compared with FEM predictions" %}
     </div>
 </div>
 <div class="caption">
@@ -54,7 +54,7 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/mic-holder/mic-holder.png" title="custom microphone holder" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/mic-holder/mic-holder.png" title="custom microphone holder" alt="Custom microphone holder fabricated via MJF 3D printing for sequential measurement" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Custom microphone holder fabricated via MJF 3D printing for sequential measurement with different microphone types.
         </div>
@@ -95,31 +95,31 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-2 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/1.JPEG" title="Transducer head part with alignment jig" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/1.JPEG" title="Transducer head part with alignment jig" alt="SPPAL transducer head part positioned in 3D-printed alignment jig" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             1 - Transducer head part with alignment jig
         </div>
     </div>
     <div class="col-sm-2 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/2.JPEG" title="The first piezostack and electrode aligned by jig" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/2.JPEG" title="The first piezostack and electrode aligned by jig" alt="First piezoelectric stack and electrode aligned by assembly jig" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             2 - The first piezostack and electrode aligned by jig
         </div>
     </div>
     <div class="col-sm-2 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/3.JPEG" title="Adding transducer middle part" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/3.JPEG" title="Adding transducer middle part" alt="Adding transducer middle part during SPPAL assembly" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             3 - Adding transducer middle part
         </div>
     </div>
     <div class="col-sm-2 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/4.JPEG" title="The second piezostack and electrode aligned by jig" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/4.JPEG" title="The second piezostack and electrode aligned by jig" alt="Second piezoelectric stack and electrode aligned by assembly jig" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             4 - The second piezostack and electrode aligned by jig
         </div>
     </div>
     <div class="col-sm-2 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/5.JPEG" title="Adding transducer tail part" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/5.JPEG" title="Adding transducer tail part" alt="Adding transducer tail part to complete SPPAL stack" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             5 - Adding transducer tail part
         </div>
@@ -127,31 +127,31 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
 </div>
 <div class="row justify-content-sm-center">
     <div class="col-sm-2 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/10.JPEG" title="Custom-designed wrench flat clamping jig" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/10.JPEG" title="Custom-designed wrench flat clamping jig" alt="Custom-designed wrench flat clamping jig for controlled preload application" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             6- Custom-designed wrench flat clamping jig
         </div>
     </div>
     <div class="col-sm-2 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/6.JPEG" title="Tightening with wrench flat clamping jig and torque wrench" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/6.JPEG" title="Tightening with wrench flat clamping jig and torque wrench" alt="Transducer affixed with wrench flat clamping jig and mechanical vise" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             7 - Affix transducer with wrench flat clamping jig and mechanical vise
         </div>
     </div>
     <div class="col-sm-2 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/7.JPEG" title="Tightening with wrench flat clamping jig and torque wrench" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/7.JPEG" title="Tightening with wrench flat clamping jig and torque wrench" alt="Tightening transducer assembly with torque wrench for controlled preload" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             8 - Tightening with wrench flat clamping jig and torque wrench
         </div>
     </div>
     <div class="col-sm-2 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/8.JPEG" title="Final assembly" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/8.JPEG" title="Final assembly" alt="Fully assembled SPPAL ultrasonic transducer" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             9 - Final assembly
         </div>
     </div>
     <div class="col-sm-2 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/9.JPEG" title="Wiring" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/9.JPEG" title="Wiring" alt="Wiring of the assembled SPPAL transducer" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             10 - Wiring
         </div>
@@ -162,37 +162,37 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-2 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-1.png" title="impedance measurement result 1" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-1.png" title="MiPAL Langevin assembly" alt="MiPAL Langevin-type transducer assembly using machine vise, custom clamping jig, and aligner" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             1 - Assembly of the Langevin-type configuration using a machine vise, custom clamping jig, and aligner.
         </div>
     </div>
     <div class="col-sm-2 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-2.png" title="impedance measurement result 2" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-2.png" title="MiPAL bolt preloading" alt="Preloading stud bolt and nut with torque wrench during MiPAL assembly" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             2 - Preloading of the stud bolt and nut using a torque wrench.
         </div>
     </div>
     <div class="col-sm-2 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-3.png" title="FEM comparison" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-3.png" title="MiPAL Langevin on fixture" alt="Langevin-type configuration mounted on transducer fixture with O-ring" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             3 - Photograph of the Langevin-type configuration mounted on the transducer fixture with an O-ring.
         </div>
     </div>
     <div class="col-sm-2 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-4.png" title="FEM comparison" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-4.png" title="MiPAL horn coupling" alt="Coupling conical horn to Langevin transducer with controlled preload via torque wrench" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             4 - Coupling of the conical horn to the Langevin transducer, with controlled preload applied using a torque wrench.
         </div>
     </div>
     <div class="col-sm-2 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-5.png" title="FEM comparison" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-5.png" title="MiPAL assembled Langevin with horn" alt="Assembled Langevin transducer with conical horn" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             5 - Assembled Langevin transducer with the conical horn.
         </div>
     </div>
     <div class="col-sm-2 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-6.png" title="FEM comparison" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/mipal/mipal-transducer-assembly-6.png" title="MiPAL fully assembled" alt="Fully assembled MiPAL transducer architecture" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             6 - Fully assembled transducer architecture.
         </div>
@@ -203,7 +203,7 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/acel-demo/acel_demo_1_overall.png" title="ACEL demonstration setup" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/acel-demo/acel_demo_1_overall.png" title="ACEL demonstration setup" alt="ACEL demonstration setup with driving circuit for sound and light emission" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             ACEL demonstration setup
         </div>
@@ -220,13 +220,13 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-5 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/acel-demo/acel_demo_1_circuit.png" title="Circuit diagram" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/acel-demo/acel_demo_1_circuit.png" title="Circuit diagram" alt="Three cascaded circuit boards inside housing for ACEL demonstration" %}
         <div class="caption">
             3 Cascaded circuit boards inside its housing.
         </div>
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/acel-demo/acel_demo_1_circuit_1.png" title="Circuit diagram" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/acel-demo/acel_demo_1_circuit_1.png" title="Circuit 3D view" alt="3D view of demonstration circuit PCB layout" %}
         <div class="caption">
             3 dimensional view of demonstration circuit.
         </div>
@@ -237,7 +237,7 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/mems-mic-circuit-interface/mems-mic-circuit-interface-1.png" title="custom-designed impedance tube" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/mems-mic-circuit-interface/mems-mic-circuit-interface-1.png" title="MEMS microphone analog interface" alt="Custom-designed MEMS microphone analog interface PCB for die characterization" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Custom-designed impedance tube and experimental configuration for acoustic input impedance measurement of an automotive horn.
         </div>
@@ -257,25 +257,25 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-3 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/mems-mic-circuit-interface/mic-calibration-low.png" title="impedance measurement result 1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/mems-mic-circuit-interface/mic-calibration-low.png" title="Low-frequency microphone calibration" alt="Microphone calibrator setup for low-frequency range calibration" %}
         <div class="caption" style="font-size: 0.6rem;">
             Microphone calibrator for low-frequency range.
         </div>
     </div>
     <div class="col-sm-3 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/mems-mic-circuit-interface/mic-calibration-high.png" title="impedance measurement result 2" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/mems-mic-circuit-interface/mic-calibration-high.png" title="High-frequency microphone calibration" alt="Microphone calibration in semi-anechoic chamber for high-frequency range" %}
         <div class="caption" style="font-size: 0.6rem;">
             Microphone calibration in semi-anechoic chamber for high-frequency range.
         </div>
     </div>
     <div class="col-sm-3 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/mems-mic-circuit-interface/mems-mic-circuit-interface-2.png" title="impedance measurement result 1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/mems-mic-circuit-interface/mems-mic-circuit-interface-2.png" title="MEMS microphone sensitivity" alt="Measured frequency response in sensitivity of MEMS microphone with analog interface" %}
         <div class="caption" style="font-size: 0.6rem;">
             Measured frequency response in sensitivity of the MEMS microphone with analog interface circuitry.
         </div>
     </div>
     <div class="col-sm-3 mt-0 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/mems-mic-circuit-interface/mems-mic-circuit-interface-3.png" title="impedance measurement result 2" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/mems-mic-circuit-interface/mems-mic-circuit-interface-3.png" title="MEMS microphone power spectral density" alt="Measured power spectral density of MEMS microphone with analog interface circuitry" %}
         <div class="caption" style="font-size: 0.6rem;">
             Measured power spectral density of the MEMS microphone with analog interface circuitry.
         </div>

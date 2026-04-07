@@ -14,7 +14,7 @@ The goal of this project was to characterize the acoustic field of a developed s
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/main@2x.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/main@2x.png" title="Acoustical field characterization setup" alt="Experimental setup in semi-anechoic chamber with measurement microphone, linear and rotational stages, and spectrum analyzer" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -25,16 +25,16 @@ A MATLAB-based automated measurement program was developed, which profiled and a
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/propagation-curve-1@3x.png" title="simulated propagation curve" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/propagation-curve-1@3x.png" title="simulated propagation curve" alt="Simulated sound pressure propagation curve of the developed sound source" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/propagation-curve-2@3x.png" title="measured propagation curve" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/propagation-curve-2@3x.png" title="measured propagation curve" alt="Experimentally measured sound pressure propagation curve" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/beam-pattern-1@3x.png" title="simulated beam pattern" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/beam-pattern-1@3x.png" title="simulated beam pattern" alt="Simulated acoustic beam pattern showing directivity" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/beam-pattern-2@3x.png" title="measured beam pattern" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/aco-field-characterization/beam-pattern-2@3x.png" title="measured beam pattern" alt="Experimentally measured acoustic beam pattern" %}
     </div>
 </div>
 <div class="caption">
