@@ -1,7 +1,7 @@
 ---
 layout: page
 title: my research workflow and technology stack
-description: A systematic methodology integrating multiphysics simulation, component-based modeling, and scalable data infrastructure
+description: Systematic research methodology integrating COMSOL multiphysics simulation, MATLAB-based modeling, and scalable data infrastructure for acoustic transducer development.
 tags: [research workflow, technology stack]
 img: 
 importance: 1

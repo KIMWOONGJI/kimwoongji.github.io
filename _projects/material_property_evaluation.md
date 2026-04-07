@@ -1,7 +1,7 @@
 ---
 layout: page
 title: material property evaluation
-description: 
+description: Dynamic material property evaluation of piezoelectric materials using impulse excitation technique complying with ASTM E1876 standards.
 img: assets/img/project/dynamic-material-property-evaluation/dynamic-material-property-evaluation-1.png
 importance: 3
 category: experiment

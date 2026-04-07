@@ -1,7 +1,7 @@
 ---
 layout: page
 title: parametric array loudspeakers
-description: research and development of transducers
+description: Research on parametric array loudspeaker transducers — highly directional sound sources utilizing nonlinear acoustics, stepped plates, and acoustic metamaterials.
 tags: [parametric array loudspeaker, pal, acoustics, nonlinear acoustics, meta-materials, transducers]
 img: assets/img/project/parametric-array-loudspeaker/meta-materials-integrated/mipal-experiment-close-1.svg
 importance: 1

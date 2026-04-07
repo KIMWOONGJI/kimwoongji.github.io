@@ -1,7 +1,7 @@
 ---
 layout: page
 title: acoustical field characterization
-description: fully automated acoustical field characterization system
+description: Fully automated acoustical field characterization system for measuring directivity and sound pressure levels in a semi-anechoic chamber.
 img: assets/img/project/aco-field-characterization/main.png
 importance: 1
 category: experiment

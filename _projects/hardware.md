@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hardware design, assembly, and instrumentation
-description: hand-on experience on development of customized experiment setups
+description: Custom hardware design, assembly, and instrumentation for acoustic experiments, including impedance tube construction and measurement setups.
 img: assets/img/project/impedance-tube/impedance-tube-1.png
 importance: 4
 category: experiment

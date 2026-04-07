@@ -1,7 +1,7 @@
 ---
 layout: page
 title: spurious sound filter
-description: acoustically analogous structure to a half-wavelength resonator
+description: Design of a spurious sound filter using a half-wavelength resonator analogy for accurate parametric array loudspeaker measurements.
 tags: [acoustic filter, acoustics, nonlinear acoustics]
 img: assets/img/project/spurious-sound-filter/spurious-sound-filter.jpeg
 importance: 1

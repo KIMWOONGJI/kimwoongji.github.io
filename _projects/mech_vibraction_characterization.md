@@ -1,7 +1,7 @@
 ---
 layout: page
 title: mechanical vibration characterization
-description: 
+description: Mechanical vibration characterization of radiating plates using laser Doppler vibrometry (LDV) for transducer validation.
 img: assets/img/project/mech-vibration-characterization/mech-vibration-characterization-2.png
 importance: 2
 category: experiment

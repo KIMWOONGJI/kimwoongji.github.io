@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: 
+description: Open-source repositories and GitHub contributions by Woongji Kim.
 nav: true
 nav_order: 4
 ---
