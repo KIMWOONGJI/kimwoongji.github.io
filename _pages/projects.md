@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: 
+description: Research projects by Woongji Kim covering parametric array loudspeakers, acoustic transducers, acoustic metamaterials, field characterization, and experimental instrumentation.
 nav: true
 nav_order: 2
 display_categories: [skills, research, experiment]

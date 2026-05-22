@@ -1,7 +1,7 @@
 ---
 layout: page
 title: my research workflow and technology stack
-description: A systematic methodology integrating multiphysics simulation, component-based modeling, and scalable data infrastructure
+description: Systematic research methodology integrating COMSOL multiphysics simulation, MATLAB-based modeling, and scalable data infrastructure for acoustic transducer development.
 tags: [research workflow, technology stack]
 img: 
 importance: 1
@@ -10,7 +10,7 @@ category: skills
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/research-workflow-and-technology-stack/research-schematic-diagram.svg" title="Research workflow and technology stack" class="img-fluid" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/research-workflow-and-technology-stack/research-schematic-diagram.svg" title="Research workflow and technology stack" alt="Infographic of integrated research workflow bridging COMSOL simulation, MATLAB modeling, and data infrastructure" class="img-fluid" %}
     </div>
 </div>
 <div class="caption">
