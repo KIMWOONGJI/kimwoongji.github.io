@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-15'
+  last_updated: '2026-07-31'
 papers:
   ZHKTxKIAAAAJ:0EnyYjriUFMC:
     citations: 0
@@ -26,11 +26,11 @@ papers:
     title: A study on the design of a trumpet horn for automobiles based on acoustic reactance at the horn throat
     year: '2024'
   ZHKTxKIAAAAJ:Se3iqnhoufwC:
-    citations: 4
+    citations: 5
     title: An accurate measurement of parametric array using a spurious sound filter topologically equivalent to a half-wavelength resonator
     year: '2025'
   ZHKTxKIAAAAJ:Tyk-4Ss8FVUC:
-    citations: 100
+    citations: 101
     title: "A high\u2010fidelity skin\u2010attachable acoustic sensor for realizing auditory electronic skin"
     year: '2022'
   ZHKTxKIAAAAJ:UeHWp8X0CEIC:
@@ -38,11 +38,11 @@ papers:
     title: Wireline tensioner layout structure and offshore structure having same layout structure
     year: '2016'
   ZHKTxKIAAAAJ:UebtZRa9Y70C:
-    citations: 5
+    citations: 6
     title: Hyperpacked piezoelectric-powered capacitive sensor array for high-fidelity vibration detection
     year: '2026'
   ZHKTxKIAAAAJ:WF5omc3nYNoC:
-    citations: 1
+    citations: 2
     title: Design, analysis, and experimental validation of a stepped plate parametric array loudspeaker
     year: '2025'
   ZHKTxKIAAAAJ:Y0pCki6q_DkC:
