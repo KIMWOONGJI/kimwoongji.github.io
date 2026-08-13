@@ -45,14 +45,14 @@ Note `.prettierignore` excludes `_data/citations.yml`, `_scripts/*`, and vendore
 When making content changes, these are the files that matter. Everything else is upstream theme code
 and should generally be left alone:
 
-| Path | Purpose |
-| --- | --- |
-| `_bibliography/papers.bib` | All publications (see below) |
-| `_projects/*.md` | Project pages |
-| `_pages/*.md` | about / cv / publications / projects / repositories |
-| `assets/json/resume.json` | CV content (JSON Resume format) |
-| `_data/*.yml` | `socials`, `venues`, `coauthors`, `repositories` |
-| `_config.yml` | Site-wide settings |
+| Path                       | Purpose                                             |
+| -------------------------- | --------------------------------------------------- |
+| `_bibliography/papers.bib` | All publications (see below)                        |
+| `_projects/*.md`           | Project pages                                       |
+| `_pages/*.md`              | about / cv / publications / projects / repositories |
+| `assets/json/resume.json`  | CV content (JSON Resume format)                     |
+| `_data/*.yml`              | `socials`, `venues`, `coauthors`, `repositories`    |
+| `_config.yml`              | Site-wide settings                                  |
 
 Collections defined in `_config.yml`: `books`, `news`, `projects`.
 
@@ -73,7 +73,7 @@ This is the most interconnected part of the site — a change to a `.bib` entry 
 3. **Citation counts** come from `_data/citations.yml`, looked up in `bib.liquid:324-334`. That file
    is **generated — never hand-edit it.** See below.
 4. **Site-specific author conventions** (documented in the legend at `_pages/publications.md`):
-   markers are written *inline in the author field*, e.g. `author = {Kim†, Woongji and Rho*, Junsuk}`
+   markers are written _inline in the author field_, e.g. `author = {Kim†, Woongji and Rho*, Junsuk}`
    — `†` for equal contribution, `*` for corresponding author. A `preview` image signals first
    authorship. Preserve these markers when editing entries.
 
@@ -88,7 +88,9 @@ same idiom as `abbr` → `_data/venues.yml`: the bib entry carries only what is 
 - **`_data/press.yml`** — outlet registry: display name, `lang` (grouping), optional `logo` path,
   `symbol` and `invert_dark` flags. Also defines the language groups and their display order.
   `symbol: true` means the logo is a symbol mark rather than a wordmark, so the outlet name is
-  rendered beside it; a wordmark logo stands alone.
+  rendered beside it; a wordmark logo stands alone. **House style is symbol marks throughout** —
+  take the outlet's apple-touch-icon or favicon (largest frame), not its wordmark, and set
+  `symbol: true`. Skip the logo entirely below ~32px rather than upscaling a tiny favicon.
 - **`_bibliography/papers.bib`** — a `press` field per entry, formatted `<slug>|<article url>` with
   entries separated by `;`.
 - **`_layouts/bib.liquid`** renders it; `_sass/_base.scss` (`.press`) styles it; `press` is in

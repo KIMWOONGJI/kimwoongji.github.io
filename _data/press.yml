@@ -60,36 +60,68 @@ outlets:
     # logo: assets/img/press/sciencedaily.svg
 
   # --- Korean ----------------------------------------------------------------
+  yna:
+    name: 연합뉴스
+    lang: ko
+    logo: assets/img/press/yna.png
+    symbol: true
+
+  donga:
+    name: 동아일보
+    lang: ko
+    logo: assets/img/press/donga.png
+    symbol: true
+
   khan:
     name: 경향신문
     lang: ko
     logo: assets/img/press/khan.png
-    symbol: true # app icon; Kyunghyang does not publish a wordmark asset
+    symbol: true
 
   newsis:
     name: 뉴시스
     lang: ko
     logo: assets/img/press/newsis.png
-    invert_dark: true
+    symbol: true
 
   tbc:
     name: TBC
     lang: ko
     logo: assets/img/press/tbc.png
+    symbol: true
+
+  unn:
+    name: 한국대학신문
+    lang: ko
+    # Only a 16px favicon is published — too small to render cleanly, so the
+    # name stands alone until a usable mark turns up.
+
+  kpinews:
+    name: KPI뉴스
+    lang: ko
+    logo: assets/img/press/kpinews.png
+    symbol: true
+
+  hidomin:
+    name: 경북도민일보
+    lang: ko
+    logo: assets/img/press/hidomin.png
+    symbol: true
+
+  kbmaeil:
+    name: 경북매일
+    lang: ko
+    logo: assets/img/press/kbmaeil.png
+    symbol: true
 
   kbsm:
     name: 경북신문
     lang: ko
     logo: assets/img/press/kbsm.png
-    invert_dark: true
+    symbol: true
 
   dkilbo:
     name: 대경일보
     lang: ko
     logo: assets/img/press/dkilbo.png
-    invert_dark: true
-
-  yonhap:
-    name: 연합뉴스
-    lang: ko
-    # logo: assets/img/press/yonhap.svg
+    symbol: true
