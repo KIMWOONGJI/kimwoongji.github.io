@@ -48,6 +48,8 @@ groups:
   - code: video
     label: Video
     embed: true
+  - code: radio
+    label: Radio
 
 outlets:
   # --- English ---------------------------------------------------------------
@@ -177,3 +179,12 @@ outlets:
   phmbc_yt:
     name: Pohang MBC
     group: video
+
+  # --- Radio (live appearances) ----------------------------------------------
+  # Its own group rather than sitting among the Korean articles: this is the
+  # author on air, not a report about the work, and it aired live with no
+  # archive or rebroadcast — so the link goes to the programme, not a recording.
+  kbs1radio:
+    name: KBS 1Radio
+    group: radio
+    domain: program.kbs.co.kr
