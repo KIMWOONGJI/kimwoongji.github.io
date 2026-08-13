@@ -80,17 +80,23 @@ This is the most interconnected part of the site — a change to a `.bib` entry 
 `_projects/*.md` front matter uses `related_publications: true` to pull matching entries from the
 bibliography, plus `importance` (sort order) and `category` (grouping on `_pages/projects.md`).
 
-### Press coverage ("Featured in") — local addition, not upstream al-folio
+### Media coverage — local addition, not upstream al-folio
 
-Media coverage renders as a logo row below the badges. It is split across two files, following the
-same idiom as `abbr` → `_data/venues.yml`: the bib entry carries only what is paper-specific.
+Renders as a "Media coverage" block below the badges: a label, then one row per group. Split across
+two files, following the same idiom as `abbr` → `_data/venues.yml`: the bib entry carries only what
+is paper-specific.
 
-- **`_data/press.yml`** — outlet registry: display name, `lang` (grouping), optional `logo` path,
-  `symbol` and `invert_dark` flags. Also defines the language groups and their display order.
-  `symbol: true` means the logo is a symbol mark rather than a wordmark, so the outlet name is
-  rendered beside it; a wordmark logo stands alone. **House style is symbol marks throughout** —
-  take the outlet's apple-touch-icon or favicon (largest frame), not its wordmark, and set
-  `symbol: true`. Skip the logo entirely below ~32px rather than upscaling a tiny favicon.
+- **`_data/press.yml`** — outlet registry: display name, `group`, optional `logo` path, `symbol` and
+  `invert_dark` flags. Also defines the groups and their display order (`English`, `Korean`,
+  `Video` — the last for broadcast segments hosted on YouTube). Outlet names are written in English
+  or romanized, matching the co-author's list at https://beomseokohme.github.io/publications/.
+  **House style is symbol marks, never wordmarks** — a wordmark logo would stand alone, but every
+  outlet here sets `symbol: true` so the name renders beside the mark and the row stays aligned.
+  The cleanest uniform source is `https://www.google.com/s2/favicons?domain=<host>&sz=128`, which
+  normalizes and crops for you; **download and self-host it** rather than hotlinking, so visitors
+  are not exposed to Google. It falls back to the site's native favicon when smaller than requested,
+  so check the size — below ~32px, or when the mark washes out on either theme, omit `logo:` and let
+  the name stand alone.
 - **`_bibliography/papers.bib`** — a `press` field per entry, formatted `<slug>|<article url>` with
   entries separated by `;`.
 - **`_layouts/bib.liquid`** renders it; `_sass/_base.scss` (`.press`) styles it; `press` is in

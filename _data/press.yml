@@ -1,24 +1,25 @@
-# Media outlet registry for the "Featured in" row on the publications page.
+# Outlet registry for the "Media coverage" row on the publications page.
 #
 # This file holds everything that is the same for every article from an outlet
-# (display name, logo, language). Anything paper-specific — i.e. the article URL
-# — goes in _bibliography/papers.bib. Same split as _data/venues.yml, where the
+# (display name, logo, group). Anything paper-specific — i.e. the article URL —
+# goes in _bibliography/papers.bib. Same split as _data/venues.yml, where the
 # bib entry carries `abbr` and this folder carries the colour and link.
 #
 # ---------------------------------------------------------------------------
-# HOW TO ADD PRESS COVERAGE TO A PAPER
+# HOW TO ADD COVERAGE TO A PAPER
 # ---------------------------------------------------------------------------
 # 1. Make sure the outlet has an entry under `outlets:` below. Add it if not.
 #
-# 2. Drop its logo in assets/img/press/ and point `logo:` at it.
-#    Prefer SVG; PNG is fine. Aim for a transparent background and trim the
-#    whitespace — the row renders them at a fixed height (see _sass/_base.scss).
-#    No logo yet? Just omit `logo:` and the outlet name renders as text.
+# 2. Drop its logo in assets/img/press/ and point `logo:` at it. House style is
+#    symbol marks, not wordmarks: take the outlet's apple-touch-icon or the
+#    largest frame of its favicon, cap it at 64px tall, and set `symbol: true`
+#    so the name renders beside it. Below ~32px, or when the mark is too faint
+#    to read on both themes, leave `logo:` out — the name then stands alone.
 #
 # 3. In _bibliography/papers.bib, add a `press` field to the entry:
 #
-#      press = {physorg|https://phys.org/news/2026-05-example.html;
-#               yonhap|https://www.yna.co.kr/view/AKR20260512000000000},
+#      press = {yna|https://www.yna.co.kr/view/AKR...;
+#               donga|https://www.donga.com/news/...},
 #
 #    Format is `<slug>|<article url>`, entries separated by semicolons.
 #    Line breaks inside the braces are fine. The slug must match a key under
@@ -28,100 +29,151 @@
 # Note: `%` is a comment character in BibTeX. If an article URL contains one,
 # percent-encode it as %25 or the entry will be truncated at that point.
 
-# Language groups, in the order they are displayed. Remove a group or add one
-# (e.g. `ja` / Japanese) and the layout follows automatically.
-languages:
+# Display groups, in order. `code` is what an outlet's `group:` refers to.
+groups:
   - code: en
     label: English
   - code: ko
     label: Korean
+  - code: video
+    label: Video
 
 outlets:
   # --- English ---------------------------------------------------------------
   dongascience:
     name: DongA Science
-    lang: en
+    group: en
     logo: assets/img/press/dongascience.svg
-    symbol: true # symbol mark, not a wordmark — render the name beside it
+    symbol: true
 
   physorg:
     name: Phys.org
-    lang: en
+    group: en
     # logo: assets/img/press/physorg.svg
 
   eurekalert:
     name: EurekAlert!
-    lang: en
+    group: en
     # logo: assets/img/press/eurekalert.svg
-
-  sciencedaily:
-    name: ScienceDaily
-    lang: en
-    # logo: assets/img/press/sciencedaily.svg
 
   # --- Korean ----------------------------------------------------------------
   yna:
-    name: 연합뉴스
-    lang: ko
+    name: Yonhap News
+    group: ko
     logo: assets/img/press/yna.png
     symbol: true
 
   donga:
-    name: 동아일보
-    lang: ko
+    name: The Dong-A Ilbo
+    group: ko
     logo: assets/img/press/donga.png
     symbol: true
 
   khan:
-    name: 경향신문
-    lang: ko
+    name: The Kyunghyang Shinmun
+    group: ko
     logo: assets/img/press/khan.png
     symbol: true
 
+  ytnscience:
+    name: YTN Science
+    group: ko
+    logo: assets/img/press/ytn.png
+    symbol: true
+
   newsis:
-    name: 뉴시스
-    lang: ko
+    name: Newsis
+    group: ko
     logo: assets/img/press/newsis.png
+    symbol: true
+
+  kpinews:
+    name: KPI News
+    group: ko
+    logo: assets/img/press/kpinews.png
+    symbol: true
+
+  dgmbc:
+    name: Daegu MBC
+    group: ko
+    logo: assets/img/press/dgmbc.png
     symbol: true
 
   tbc:
     name: TBC
-    lang: ko
+    group: ko
     logo: assets/img/press/tbc.png
     symbol: true
 
-  unn:
-    name: 한국대학신문
-    lang: ko
-    # Only a 16px favicon is published — too small to render cleanly, so the
-    # name stands alone until a usable mark turns up.
-
-  kpinews:
-    name: KPI뉴스
-    lang: ko
-    logo: assets/img/press/kpinews.png
+  joongdo:
+    name: Joongdo Ilbo
+    group: ko
+    logo: assets/img/press/joongdo.png
     symbol: true
 
-  hidomin:
-    name: 경북도민일보
-    lang: ko
-    logo: assets/img/press/hidomin.png
+  kipost:
+    name: KIPOST
+    group: ko
+    logo: assets/img/press/kipost.png
+    symbol: true
+
+  newsworks:
+    name: Newsworks
+    group: ko
+    logo: assets/img/press/newsworks.png
     symbol: true
 
   kbmaeil:
-    name: 경북매일
-    lang: ko
+    name: Kyongbuk Maeil
+    group: ko
     logo: assets/img/press/kbmaeil.png
     symbol: true
 
   kbsm:
-    name: 경북신문
-    lang: ko
+    name: Gyeongbuk Shinmun
+    group: ko
     logo: assets/img/press/kbsm.png
     symbol: true
 
+  hidomin:
+    name: Gyeongbuk Domin Ilbo
+    group: ko
+    logo: assets/img/press/hidomin.png
+    symbol: true
+
+  kyongbuk:
+    name: Kyongbuk Ilbo
+    group: ko
+    logo: assets/img/press/kyongbuk.png
+    symbol: true
+
   dkilbo:
-    name: 대경일보
-    lang: ko
+    name: Daekyung Ilbo
+    group: ko
     logo: assets/img/press/dkilbo.png
+    symbol: true
+    invert_dark: true
+
+  veritas:
+    name: Veritas Alpha
+    group: ko
+    # Their mark is a hairline "V" that washes out on both themes.
+
+  unn:
+    name: Korea University News
+    group: ko
+    logo: assets/img/press/unn.png
+    symbol: true
+
+  # --- Video (broadcast segments hosted on YouTube) ---------------------------
+  ytnscience_yt:
+    name: YTN Science
+    group: video
+    logo: assets/img/press/youtube.png
+    symbol: true
+
+  phmbc_yt:
+    name: Pohang MBC
+    group: video
+    logo: assets/img/press/youtube.png
     symbol: true

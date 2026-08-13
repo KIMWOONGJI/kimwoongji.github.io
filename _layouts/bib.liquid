@@ -361,8 +361,8 @@
     {% if entry.press %}
       {% assign press_items = entry.press | split: ';' %}
       <div class="press">
-        <span class="press-label">Featured in</span>
-        {% for lang in site.data.press.languages %}
+        <span class="press-label">Media coverage</span>
+        {% for group in site.data.press.groups %}
           {% capture group_html %}
             {% for item in press_items %}
               {% assign parts = item | strip | split: '|' %}
@@ -370,7 +370,7 @@
               {% assign article_url = parts[1] | strip %}
               {% assign outlet = site.data.press.outlets[slug] %}
               {% if outlet %}
-                {% if outlet.lang == lang.code %}
+                {% if outlet.group == group.code %}
                   {% comment %}
                     Show the name unless the logo is a wordmark that already spells it out.
                     Split across nested tags because Liquid's `and` binds right-to-left.
@@ -400,7 +400,7 @@
           {% assign group_text = group_html | strip %}
           {% if group_text != '' %}
             <span class="press-group">
-              <span class="press-lang">{{ lang.label }}</span>
+              <span class="press-lang">{{ group.label }}</span>
               {{ group_html }}
             </span>
           {% endif %}
