@@ -120,9 +120,13 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+# .nojekyll is listed so Jekyll copies it into _site and the deploy carries it to
+# gh-pages. Without it GitHub runs its own Jekyll over the already-built output,
+# which is both pointless and what broke the 2026-08-13 deploy.
+include: ["_pages", "_scripts", ".nojekyll"]
 exclude:
   - bin/
+  - CLAUDE.md
   - CONTRIBUTING.md
   - CUSTOMIZE.md
   - Dockerfile
