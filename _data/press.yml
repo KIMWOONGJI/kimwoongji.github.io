@@ -120,7 +120,11 @@ outlets:
   kbmaeil:
     name: Kyongbuk Maeil
     group: ko
-    # Google has no mark for this host and serves a generic globe, so no domain.
+    # No `domain:` on purpose. Google has no favicon for kbmaeil.com — the service
+    # answers with the same generic globe it returns for a domain that does not
+    # exist (byte-identical), so an icon here would be meaningless rather than
+    # wrong-looking. The site does serve its own mark, but only from a Naver CDN
+    # path, which would mean reintroducing a self-hosted file for this one outlet.
 
   kbsm:
     name: Gyeongbuk Shinmun
@@ -146,7 +150,8 @@ outlets:
   veritas:
     name: Veritas Alpha
     group: ko
-    # A hairline "V" that washes out on both themes.
+    domain: www.veritas-a.com
+    invert_dark: true # a black serif "V" on transparent
 
   unn:
     name: Korea University News
