@@ -60,19 +60,36 @@ outlets:
     # logo: assets/img/press/sciencedaily.svg
 
   # --- Korean ----------------------------------------------------------------
+  khan:
+    name: 경향신문
+    lang: ko
+    logo: assets/img/press/khan.png
+    symbol: true # app icon; Kyunghyang does not publish a wordmark asset
+
+  newsis:
+    name: 뉴시스
+    lang: ko
+    logo: assets/img/press/newsis.png
+    invert_dark: true
+
+  tbc:
+    name: TBC
+    lang: ko
+    logo: assets/img/press/tbc.png
+
+  kbsm:
+    name: 경북신문
+    lang: ko
+    logo: assets/img/press/kbsm.png
+    invert_dark: true
+
+  dkilbo:
+    name: 대경일보
+    lang: ko
+    logo: assets/img/press/dkilbo.png
+    invert_dark: true
+
   yonhap:
     name: 연합뉴스
     lang: ko
     # logo: assets/img/press/yonhap.svg
-
-  ytn:
-    name: YTN
-    lang: ko
-    # logo: assets/img/press/ytn.svg
-
-  postech:
-    name: POSTECH
-    lang: ko
-    # logo: assets/img/press/postech.svg
-    # Set for logos that are dark-on-transparent and would disappear in dark mode.
-    # invert_dark: true
