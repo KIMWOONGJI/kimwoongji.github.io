@@ -104,10 +104,20 @@ is paper-specific.
 - **`_layouts/bib.liquid`** renders it; `_sass/_base.scss` (`.press`) styles it; `press` is in
   `filtered_bibtex_keywords`.
 
-Items in the `Video` group are embedded as players rather than linked. `bib.liquid` pulls the id out
-of whichever YouTube URL form the bib entry gives (`watch?v=`, `/shorts/`, `youtu.be/`), embeds via
-`youtube-nocookie.com` with `loading="lazy"` so nothing is requested until the player scrolls into
-view, and tags `/shorts/` links vertical so the 9:16 player sits level with the 16:9 one.
+Items in the `Video` group render as a YouTube poster frame linking out, **not** an `<iframe>`.
+`bib.liquid` pulls the id from whichever URL form the bib entry gives (`watch?v=`, `/shorts/`,
+`youtu.be/`) and builds an `i.ytimg.com/vi/<id>/hqdefault.jpg` still. Embedding was tried first and
+abandoned: whether a video plays embedded is settled in the browser against the page origin, and one
+of these rendered "Video unavailable" despite reporting `playableInEmbed: true` — not reproducible
+server-side. A still cannot fail that way. `/shorts/` links are tagged vertical; the box is sized by
+height with `aspect-ratio` so the 9:16 and 16:9 posters sit level, and `object-fit: cover` crops
+YouTube's 4:3 still back to the real frame.
+
+One layout constraint worth keeping: `.badges` is nested **inside** `.links` so the DOI button and
+the Altmetric/Dimensions/Scholar badges are items of a single flex row. Inline-block alignment could
+not line them up, because those scripts decide their own heights at runtime. `.links` must stay a
+direct child of the entry div — `assets/js/common.js` finds the entry with
+`$(this).parent().parent()` from `a.abstract`.
 
 Deliberate behaviours: an outlet with no `domain` falls back to its name as text, and a slug missing
 from the registry still renders (ungrouped, showing the raw slug) so typos surface instead of

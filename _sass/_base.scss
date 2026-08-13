@@ -807,20 +807,15 @@ footer.sticky-bottom {
         }
       }
 
-      // The DOI/Abs/Bib buttons and the Altmetric/Dimensions/Scholar badges are
-      // sibling blocks; make both inline so they share one line.
-      .links,
-      .badges {
-        display: inline-flex;
+      // .badges is nested inside .links (see the comment in _layouts/bib.liquid), so
+      // the DOI button and the badges are items of this one flex row and centre
+      // against each other no matter what height the badge scripts end up at.
+      .links {
+        display: flex;
         flex-wrap: wrap;
         align-items: center;
-        vertical-align: middle;
-        min-height: 2rem;
-      }
-
-      .links {
-        gap: 0.25rem;
-        margin-right: 0.5rem;
+        gap: 0.25rem 0.4rem;
+        margin-bottom: 0.5rem;
 
         a.btn {
           color: var(--global-text-color);
@@ -868,31 +863,67 @@ footer.sticky-bottom {
         }
 
         .press-video {
-          margin: 0;
+          display: block;
 
           .press-video-frame {
-            width: min(356px, 100%);
-            aspect-ratio: 16 / 9;
-          }
-
-          // Shorts are 9:16; matching heights keeps the two players level.
-          &.is-vertical .press-video-frame {
-            width: min(113px, 100%);
-            aspect-ratio: 9 / 16;
-          }
-
-          iframe {
+            // Height drives the box so the landscape and vertical posters sit level;
+            // aspect-ratio then decides each one's width.
+            position: relative;
             display: block;
-            width: 100%;
-            height: 100%;
-            border: 0;
+            height: 150px;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
             border-radius: 4px;
           }
 
-          figcaption {
+          &.is-vertical .press-video-frame {
+            aspect-ratio: 9 / 16;
+          }
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            // YouTube serves a 4:3 still; cover crops it back to the real frame.
+            object-fit: cover;
+          }
+
+          .press-video-play {
+            position: absolute;
+            inset: 0;
+            width: 2.4rem;
+            height: 1.7rem;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 0.35rem;
+            transition: background 0.15s ease;
+
+            &::after {
+              content: "";
+              position: absolute;
+              inset: 0;
+              width: 0;
+              height: 0;
+              margin: auto;
+              border-style: solid;
+              border-width: 0.38rem 0 0.38rem 0.62rem;
+              border-color: transparent transparent transparent #fff;
+            }
+          }
+
+          &:hover .press-video-play {
+            background: #f00;
+          }
+
+          .press-video-caption {
+            display: block;
             padding-top: 0.2rem;
             color: var(--global-text-color-light);
             font-size: 0.75rem;
+          }
+
+          &:hover .press-video-caption {
+            color: var(--global-theme-color);
           }
         }
 
@@ -944,12 +975,14 @@ footer.sticky-bottom {
       }
 
       .badges {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
         gap: 0.4rem;
-        padding-bottom: 0.5rem;
 
-        // Altmetric and Dimensions inject their markup at runtime and each ends
-        // up a different height, so centre every child on the shared line
-        // instead of leaving them on the text baseline.
+        // Altmetric and Dimensions inject their markup at runtime and each ends up
+        // a different height, so centre every child rather than leaving them on the
+        // text baseline.
         > span,
         > a {
           display: inline-flex;
