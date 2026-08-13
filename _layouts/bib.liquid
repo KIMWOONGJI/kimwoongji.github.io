@@ -371,28 +371,56 @@
               {% assign outlet = site.data.press.outlets[slug] %}
               {% if outlet %}
                 {% if outlet.group == group.code %}
-                  {% comment %}
-                    Show the name unless the logo is a wordmark that already spells it out.
-                    Split across nested tags because Liquid's `and` binds right-to-left.
-                  {% endcomment %}
-                  {% assign show_name = true %}
-                  {% if outlet.logo %}
-                    {% unless outlet.symbol %}
-                      {% assign show_name = false %}
-                    {% endunless %}
-                  {% endif %}
-                  <a
-                    href="{{ article_url }}"
-                    class="press-item{% if outlet.invert_dark %} press-invert{% endif %}"
-                    title="{{ outlet.name }}"
-                  >
-                    {% if outlet.logo %}
-                      <img src="{{ outlet.logo | relative_url }}" alt="{{ outlet.name }}" loading="lazy">
+                  {% if group.embed %}
+                    {% comment %} Pull the video id out of whichever YouTube URL form was given. {% endcomment %}
+                    {% assign video_id = '' %}
+                    {% assign is_vertical = false %}
+                    {% if article_url contains '/shorts/' %}
+                      {% assign video_id = article_url | split: '/shorts/' | last | split: '?' | first %}
+                      {% assign is_vertical = true %}
+                    {% elsif article_url contains 'watch?v=' %}
+                      {% assign video_id = article_url | split: 'watch?v=' | last | split: '&' | first %}
+                    {% elsif article_url contains 'youtu.be/' %}
+                      {% assign video_id = article_url | split: 'youtu.be/' | last | split: '?' | first %}
                     {% endif %}
-                    {% if show_name %}
+                    {% if video_id != '' %}
+                      <figure class="press-video{% if is_vertical %} is-vertical{% endif %}">
+                        <div class="press-video-frame">
+                          {% comment %} nocookie host and lazy loading: no YouTube request until the player scrolls into view. {% endcomment %}
+                          <iframe
+                            src="https://www.youtube-nocookie.com/embed/{{ video_id }}"
+                            title="{{ outlet.name }}"
+                            loading="lazy"
+                            frameborder="0"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                          ></iframe>
+                        </div>
+                        <figcaption>{{ outlet.name }}</figcaption>
+                      </figure>
+                    {% else %}
+                      <a href="{{ article_url }}" class="press-item" title="{{ outlet.name }}">
+                        <span class="press-name">{{ outlet.name }}</span>
+                      </a>
+                    {% endif %}
+                  {% else %}
+                    <a
+                      href="{{ article_url }}"
+                      class="press-item{% if outlet.invert_dark %} press-invert{% endif %}"
+                      title="{{ outlet.name }}"
+                    >
+                      {% if outlet.domain %}
+                        <img
+                          src="https://www.google.com/s2/favicons?domain={{ outlet.domain }}&amp;sz=128"
+                          alt=""
+                          loading="lazy"
+                          width="16"
+                          height="16"
+                        >
+                      {% endif %}
                       <span class="press-name">{{ outlet.name }}</span>
-                    {% endif %}
-                  </a>
+                    </a>
+                  {% endif %}
                 {% endif %}
               {% endif %}
             {% endfor %}

@@ -860,6 +860,40 @@ footer.sticky-bottom {
           flex-wrap: wrap;
           align-items: center;
           gap: 0.3rem 0.7rem;
+
+          // A row of players needs its label at the top, not floated mid-height.
+          &:has(.press-video) {
+            align-items: flex-start;
+          }
+        }
+
+        .press-video {
+          margin: 0;
+
+          .press-video-frame {
+            width: min(356px, 100%);
+            aspect-ratio: 16 / 9;
+          }
+
+          // Shorts are 9:16; matching heights keeps the two players level.
+          &.is-vertical .press-video-frame {
+            width: min(113px, 100%);
+            aspect-ratio: 9 / 16;
+          }
+
+          iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 4px;
+          }
+
+          figcaption {
+            padding-top: 0.2rem;
+            color: var(--global-text-color-light);
+            font-size: 0.75rem;
+          }
         }
 
         .press-lang {

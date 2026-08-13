@@ -86,26 +86,33 @@ Renders as a "Media coverage" block below the badges: a label, then one row per 
 two files, following the same idiom as `abbr` → `_data/venues.yml`: the bib entry carries only what
 is paper-specific.
 
-- **`_data/press.yml`** — outlet registry: display name, `group`, optional `logo` path, `symbol` and
-  `invert_dark` flags. Also defines the groups and their display order (`English`, `Korean`,
-  `Video` — the last for broadcast segments hosted on YouTube). Outlet names are written in English
-  or romanized, matching the co-author's list at https://beomseokohme.github.io/publications/.
-  **House style is symbol marks, never wordmarks** — a wordmark logo would stand alone, but every
-  outlet here sets `symbol: true` so the name renders beside the mark and the row stays aligned.
-  The cleanest uniform source is `https://www.google.com/s2/favicons?domain=<host>&sz=128`, which
-  normalizes and crops for you; **download and self-host it** rather than hotlinking, so visitors
-  are not exposed to Google. It falls back to the site's native favicon when smaller than requested,
-  so check the size — below ~32px, or when the mark washes out on either theme, omit `logo:` and let
-  the name stand alone.
+- **`_data/press.yml`** — outlet registry: display name, `group`, `domain`, optional `invert_dark`.
+  Also defines the groups and their display order (`English`, `Korean`, `Video`; `embed: true` on a
+  group renders players instead of links). Outlet names are written in English or romanized,
+  matching the co-author's list at https://beomseokohme.github.io/publications/.
+
+  **There are no logo files.** Icons are hotlinked at render time from
+  `https://www.google.com/s2/favicons?domain=<domain>&sz=128`, which normalizes every site's mark to
+  the same square — adding an outlet is a name, a group and a domain, nothing else. The tradeoff is
+  deliberate: the page calls google.com once per outlet, so visitors are exposed to Google on load.
+  The service serves the site's native favicon when it is smaller than requested, and falls back to
+  a generic globe when it has nothing; in that case omit `domain:` so the name stands alone
+  (Kyongbuk Maeil and Veritas Alpha are the current examples).
+
 - **`_bibliography/papers.bib`** — a `press` field per entry, formatted `<slug>|<article url>` with
   entries separated by `;`.
 - **`_layouts/bib.liquid`** renders it; `_sass/_base.scss` (`.press`) styles it; `press` is in
   `filtered_bibtex_keywords`.
 
-Deliberate behaviours: an outlet with no `logo` falls back to its name as text, and a slug missing
+Items in the `Video` group are embedded as players rather than linked. `bib.liquid` pulls the id out
+of whichever YouTube URL form the bib entry gives (`watch?v=`, `/shorts/`, `youtu.be/`), embeds via
+`youtube-nocookie.com` with `loading="lazy"` so nothing is requested until the player scrolls into
+view, and tags `/shorts/` links vertical so the 9:16 player sits level with the 16:9 one.
+
+Deliberate behaviours: an outlet with no `domain` falls back to its name as text, and a slug missing
 from the registry still renders (ungrouped, showing the raw slug) so typos surface instead of
-silently vanishing. Logos live in `assets/img/press/`. Because `%` starts a comment in BibTeX,
-percent-encode any `%` in article URLs as `%25`.
+silently vanishing. Because `%` starts a comment in BibTeX, percent-encode any `%` in article URLs
+as `%25`.
 
 ### Citation counts are updated by CI, not locally
 

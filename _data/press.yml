@@ -1,22 +1,26 @@
-# Outlet registry for the "Media coverage" row on the publications page.
+# Outlet registry for the "Media coverage" block on the publications page.
 #
-# This file holds everything that is the same for every article from an outlet
-# (display name, logo, group). Anything paper-specific — i.e. the article URL —
-# goes in _bibliography/papers.bib. Same split as _data/venues.yml, where the
-# bib entry carries `abbr` and this folder carries the colour and link.
+# This file holds what is constant per outlet (display name, group, domain).
+# Anything paper-specific — the article URL — goes in _bibliography/papers.bib.
+# Same split as _data/venues.yml, where the bib entry carries `abbr` and this
+# folder carries the colour and link.
 #
 # ---------------------------------------------------------------------------
 # HOW TO ADD COVERAGE TO A PAPER
 # ---------------------------------------------------------------------------
-# 1. Make sure the outlet has an entry under `outlets:` below. Add it if not.
+# 1. Make sure the outlet has an entry under `outlets:` below. Adding one is a
+#    name, a group and a domain — there is no logo file to produce. Icons are
+#    fetched at render time from Google's favicon service, which normalizes and
+#    crops every site's mark to the same square:
 #
-# 2. Drop its logo in assets/img/press/ and point `logo:` at it. House style is
-#    symbol marks, not wordmarks: take the outlet's apple-touch-icon or the
-#    largest frame of its favicon, cap it at 64px tall, and set `symbol: true`
-#    so the name renders beside it. Below ~32px, or when the mark is too faint
-#    to read on both themes, leave `logo:` out — the name then stands alone.
+#      https://www.google.com/s2/favicons?domain=<domain>&sz=128
 #
-# 3. In _bibliography/papers.bib, add a `press` field to the entry:
+#    Note this makes the page call google.com for each outlet, so visitors are
+#    exposed to Google on page load. Omit `domain:` to drop the icon and let the
+#    name stand alone — worth doing when Google has no real mark for a site and
+#    falls back to a generic globe.
+#
+# 2. In _bibliography/papers.bib, add a `press` field to the entry:
 #
 #      press = {yna|https://www.yna.co.kr/view/AKR...;
 #               donga|https://www.donga.com/news/...},
@@ -30,6 +34,7 @@
 # percent-encode it as %25 or the entry will be truncated at that point.
 
 # Display groups, in order. `code` is what an outlet's `group:` refers to.
+# `embed: true` renders each item as a player rather than a link.
 groups:
   - code: en
     label: English
@@ -37,143 +42,122 @@ groups:
     label: Korean
   - code: video
     label: Video
+    embed: true
 
 outlets:
   # --- English ---------------------------------------------------------------
   dongascience:
     name: DongA Science
     group: en
-    logo: assets/img/press/dongascience.svg
-    symbol: true
+    domain: www.dongascience.com
 
   physorg:
     name: Phys.org
     group: en
-    # logo: assets/img/press/physorg.svg
+    domain: phys.org
 
   eurekalert:
     name: EurekAlert!
     group: en
-    # logo: assets/img/press/eurekalert.svg
+    domain: www.eurekalert.org
 
   # --- Korean ----------------------------------------------------------------
   yna:
     name: Yonhap News
     group: ko
-    logo: assets/img/press/yna.png
-    symbol: true
+    domain: www.yna.co.kr
 
   donga:
     name: The Dong-A Ilbo
     group: ko
-    logo: assets/img/press/donga.png
-    symbol: true
+    domain: www.donga.com
 
   khan:
     name: The Kyunghyang Shinmun
     group: ko
-    logo: assets/img/press/khan.png
-    symbol: true
+    domain: www.khan.co.kr
 
   ytnscience:
     name: YTN Science
     group: ko
-    logo: assets/img/press/ytn.png
-    symbol: true
+    domain: science.ytn.co.kr
 
   newsis:
     name: Newsis
     group: ko
-    logo: assets/img/press/newsis.png
-    symbol: true
+    domain: www.newsis.com
 
   kpinews:
     name: KPI News
     group: ko
-    logo: assets/img/press/kpinews.png
-    symbol: true
+    domain: kpinews.kr
 
   dgmbc:
     name: Daegu MBC
     group: ko
-    logo: assets/img/press/dgmbc.png
-    symbol: true
+    domain: dgmbc.com
 
   tbc:
     name: TBC
     group: ko
-    logo: assets/img/press/tbc.png
-    symbol: true
+    domain: www.tbc.co.kr
 
   joongdo:
     name: Joongdo Ilbo
     group: ko
-    logo: assets/img/press/joongdo.png
-    symbol: true
+    domain: www.joongdo.co.kr
 
   kipost:
     name: KIPOST
     group: ko
-    logo: assets/img/press/kipost.png
-    symbol: true
+    domain: www.kipost.net
 
   newsworks:
     name: Newsworks
     group: ko
-    logo: assets/img/press/newsworks.png
-    symbol: true
+    domain: www.newsworks.co.kr
 
   kbmaeil:
     name: Kyongbuk Maeil
     group: ko
-    logo: assets/img/press/kbmaeil.png
-    symbol: true
+    # Google has no mark for this host and serves a generic globe, so no domain.
 
   kbsm:
     name: Gyeongbuk Shinmun
     group: ko
-    logo: assets/img/press/kbsm.png
-    symbol: true
+    domain: www.kbsm.net
 
   hidomin:
     name: Gyeongbuk Domin Ilbo
     group: ko
-    logo: assets/img/press/hidomin.png
-    symbol: true
+    domain: www.hidomin.com
 
   kyongbuk:
     name: Kyongbuk Ilbo
     group: ko
-    logo: assets/img/press/kyongbuk.png
-    symbol: true
+    domain: www.kyongbuk.co.kr
 
   dkilbo:
     name: Daekyung Ilbo
     group: ko
-    logo: assets/img/press/dkilbo.png
-    symbol: true
-    invert_dark: true
+    domain: www.dkilbo.com
+    invert_dark: true # dark-on-transparent wordmark
 
   veritas:
     name: Veritas Alpha
     group: ko
-    # Their mark is a hairline "V" that washes out on both themes.
+    # A hairline "V" that washes out on both themes.
 
   unn:
     name: Korea University News
     group: ko
-    logo: assets/img/press/unn.png
-    symbol: true
+    domain: news.unn.net
 
   # --- Video (broadcast segments hosted on YouTube) ---------------------------
   ytnscience_yt:
     name: YTN Science
     group: video
-    logo: assets/img/press/youtube.png
-    symbol: true
 
   phmbc_yt:
     name: Pohang MBC
     group: video
-    logo: assets/img/press/youtube.png
-    symbol: true
