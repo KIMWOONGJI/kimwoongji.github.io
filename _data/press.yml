@@ -17,8 +17,13 @@
 #
 #    Note this makes the page call google.com for each outlet, so visitors are
 #    exposed to Google on page load. Omit `domain:` to drop the icon and let the
-#    name stand alone — worth doing when Google has no real mark for a site and
-#    falls back to a generic globe.
+#    name stand alone.
+#
+#    If the service answers with a generic globe, do not conclude it has nothing
+#    for that site: it appears to fetch on demand, so a first request for an
+#    unseen domain can return the placeholder and the real mark only shows up
+#    afterwards. Coverage also varies by `sz` — kbmaeil.com serves its logo at
+#    sz=128 while still returning the globe at sz=64. Ask again before giving up.
 #
 # 2. In _bibliography/papers.bib, add a `press` field to the entry:
 #
@@ -62,6 +67,11 @@ outlets:
     domain: www.eurekalert.org
 
   # --- Korean ----------------------------------------------------------------
+  dongascience_ko:
+    name: DongA Science
+    group: ko
+    domain: www.dongascience.com
+
   yna:
     name: Yonhap News
     group: ko
@@ -97,6 +107,11 @@ outlets:
     group: ko
     domain: dgmbc.com
 
+  phmbc:
+    name: Pohang MBC
+    group: ko
+    domain: www.phmbc.co.kr # http-only site; the article link is plain http
+
   tbc:
     name: TBC
     group: ko
@@ -120,11 +135,7 @@ outlets:
   kbmaeil:
     name: Kyongbuk Maeil
     group: ko
-    # No `domain:` on purpose. Google has no favicon for kbmaeil.com — the service
-    # answers with the same generic globe it returns for a domain that does not
-    # exist (byte-identical), so an icon here would be meaningless rather than
-    # wrong-looking. The site does serve its own mark, but only from a Naver CDN
-    # path, which would mean reintroducing a self-hosted file for this one outlet.
+    domain: www.kbmaeil.com
 
   kbsm:
     name: Gyeongbuk Shinmun
