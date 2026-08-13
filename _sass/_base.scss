@@ -827,6 +827,73 @@ footer.sticky-bottom {
         }
       }
 
+      .press {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.25rem 0.75rem;
+        padding-bottom: 0.5rem;
+        font-size: 0.875rem;
+
+        .press-label {
+          color: var(--global-text-color-light);
+          font-style: italic;
+        }
+
+        .press-group {
+          display: inline-flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .press-lang {
+          color: var(--global-text-color-light);
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          letter-spacing: 0.03em;
+        }
+
+        a.press-item {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.3rem; // only bites when a symbol logo sits next to its name
+          line-height: 1;
+
+          img {
+            // Logos vary wildly in aspect ratio; pin the height and let width follow.
+            height: 1.15rem;
+            width: auto;
+            max-width: 7rem;
+            object-fit: contain;
+            opacity: 0.85;
+            transition: opacity 0.15s ease;
+          }
+
+          .press-name {
+            color: var(--global-text-color);
+            border-bottom: 1px solid var(--global-divider-color);
+          }
+
+          &:hover {
+            img {
+              opacity: 1;
+            }
+
+            .press-name {
+              color: var(--global-theme-color);
+              border-bottom-color: var(--global-theme-color);
+            }
+          }
+        }
+
+        // Opt-in per outlet via `invert_dark: true` in _data/press.yml, for logos
+        // that are dark-on-transparent and would vanish against a dark background.
+        html[data-theme="dark"] & a.press-item.press-invert img {
+          filter: invert(1) hue-rotate(180deg);
+        }
+      }
+
       .badges {
         padding-bottom: 0.5rem;
         span {

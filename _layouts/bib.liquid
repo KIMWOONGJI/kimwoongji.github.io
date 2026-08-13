@@ -357,6 +357,72 @@
       {% endif %}
     {% endif %}
 
+    <!-- Press / media coverage -->
+    {% if entry.press %}
+      {% assign press_items = entry.press | split: ';' %}
+      <div class="press">
+        <span class="press-label">Featured in</span>
+        {% for lang in site.data.press.languages %}
+          {% capture group_html %}
+            {% for item in press_items %}
+              {% assign parts = item | strip | split: '|' %}
+              {% assign slug = parts[0] | strip %}
+              {% assign article_url = parts[1] | strip %}
+              {% assign outlet = site.data.press.outlets[slug] %}
+              {% if outlet %}
+                {% if outlet.lang == lang.code %}
+                  {% comment %}
+                    Show the name unless the logo is a wordmark that already spells it out.
+                    Split across nested tags because Liquid's `and` binds right-to-left.
+                  {% endcomment %}
+                  {% assign show_name = true %}
+                  {% if outlet.logo %}
+                    {% unless outlet.symbol %}
+                      {% assign show_name = false %}
+                    {% endunless %}
+                  {% endif %}
+                  <a
+                    href="{{ article_url }}"
+                    class="press-item{% if outlet.invert_dark %} press-invert{% endif %}"
+                    title="{{ outlet.name }}"
+                  >
+                    {% if outlet.logo %}
+                      <img src="{{ outlet.logo | relative_url }}" alt="{{ outlet.name }}" loading="lazy">
+                    {% endif %}
+                    {% if show_name %}
+                      <span class="press-name">{{ outlet.name }}</span>
+                    {% endif %}
+                  </a>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          {% endcapture %}
+          {% assign group_text = group_html | strip %}
+          {% if group_text != '' %}
+            <span class="press-group">
+              <span class="press-lang">{{ lang.label }}</span>
+              {{ group_html }}
+            </span>
+          {% endif %}
+        {% endfor %}
+        {% comment %} Slugs missing from _data/press.yml still render, so typos are visible rather than silently dropped. {% endcomment %}
+        {% capture unlisted_html %}
+          {% for item in press_items %}
+            {% assign parts = item | strip | split: '|' %}
+            {% assign slug = parts[0] | strip %}
+            {% assign article_url = parts[1] | strip %}
+            {% unless site.data.press.outlets[slug] %}
+              <a href="{{ article_url }}" class="press-item"><span class="press-name">{{ slug }}</span></a>
+            {% endunless %}
+          {% endfor %}
+        {% endcapture %}
+        {% assign unlisted_text = unlisted_html | strip %}
+        {% if unlisted_text != '' %}
+          <span class="press-group">{{ unlisted_html }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
     {% if entry.award %}
       <!-- Hidden Award block -->
       <div class="award hidden d-print-inline">
