@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-03'
+  last_updated: '2026-09-02'
 papers:
   ZHKTxKIAAAAJ:0EnyYjriUFMC:
     citations: 0
@@ -10,7 +10,7 @@ papers:
     title: "\uC870\uC120\uC18C\uC758 \uB300\uD615\uBE14\uB85D \uC6A9\uC811\uC744 \uC704\uD55C \uC778\uB825 \uC6B4\uBC18\uD615 \uC6A9\uC811\uB85C\uBD07 \uAC1C\uBC1C"
     year: '2014'
   ZHKTxKIAAAAJ:3fE2CSJIrl8C:
-    citations: 1
+    citations: 2
     title: Dual-domain metamaterials co-integrated with a compact ultrasonic transducer for highly directional audio generation
     year: '2026'
   ZHKTxKIAAAAJ:8k81kl-MbHgC:
@@ -34,15 +34,19 @@ papers:
     title: An accurate measurement of parametric array using a spurious sound filter topologically equivalent to a half-wavelength resonator
     year: '2025'
   ZHKTxKIAAAAJ:Tyk-4Ss8FVUC:
-    citations: 101
+    citations: 104
     title: "A high\u2010fidelity skin\u2010attachable acoustic sensor for realizing auditory electronic skin"
     year: '2022'
+  ZHKTxKIAAAAJ:ULOm3_A8WrAC:
+    citations: 0
+    title: All-wave computational ultrasonic fingerprint identification with metasurface-driven loop-diffractive neural network
+    year: '2026'
   ZHKTxKIAAAAJ:UeHWp8X0CEIC:
     citations: 0
     title: Wireline tensioner layout structure and offshore structure having same layout structure
     year: '2016'
   ZHKTxKIAAAAJ:UebtZRa9Y70C:
-    citations: 8
+    citations: 11
     title: Hyperpacked piezoelectric-powered capacitive sensor array for high-fidelity vibration detection
     year: '2026'
   ZHKTxKIAAAAJ:WF5omc3nYNoC:
@@ -82,6 +86,6 @@ papers:
     title: "\uC811\uCD09\uC2DD \uBA74\uC801\uBCC0\uD654\uD615 \uC804\uAE30\uC6A9\uB7C9 \uBCC0\uC704\uC13C\uC11C\uC758 \uBD84\uD574\uB2A5 \uD5A5\uC0C1\uC744 \uC704\uD55C \uC5F0\uAD6C"
     year: '2011'
   ZHKTxKIAAAAJ:u5HHmVD_uO8C:
-    citations: 3
+    citations: 4
     title: Development of a Portable Welding Robot for Welding Jobs in Ship Blocks
     year: '2014'
