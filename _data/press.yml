@@ -87,6 +87,11 @@ outlets:
     group: intl
     domain: technoc.ir
 
+  digitaltrends:
+    name: Digital Trends
+    group: intl
+    domain: www.digitaltrends.com
+
   interestingengineering:
     name: Interesting Engineering
     group: intl
