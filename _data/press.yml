@@ -41,8 +41,8 @@
 # Display groups, in order. `code` is what an outlet's `group:` refers to.
 # `embed: true` renders each item as a player rather than a link.
 groups:
-  - code: en
-    label: English
+  - code: intl
+    label: International
   - code: ko
     label: Korean
   - code: video
@@ -52,21 +52,48 @@ groups:
     label: Radio
 
 outlets:
-  # --- English ---------------------------------------------------------------
-  dongascience:
-    name: DongA Science
-    group: en
-    domain: www.dongascience.com
-
-  physorg:
-    name: Phys.org
-    group: en
-    domain: phys.org
-
+  # --- International ---------------------------------------------------------
+  # This list mirrors what Altmetric attributed to the DOI; see
+  # https://nature.altmetric.com/details/201445999/news
   eurekalert:
     name: EurekAlert!
-    group: en
+    group: intl
     domain: www.eurekalert.org
+
+  techxplore:
+    name: Tech Xplore
+    group: intl
+    domain: techxplore.com
+
+  nanowerk:
+    name: Nanowerk
+    group: intl
+    domain: www.nanowerk.com
+
+  hackster:
+    name: Hackster
+    group: intl
+    domain: www.hackster.io
+
+  nyteknik:
+    name: Ny Teknik
+    group: intl
+    domain: www.nyteknik.se
+
+  technoc:
+    name: Techno
+    group: intl
+    domain: technoc.ir
+
+  mappingignorance:
+    name: Mapping Ignorance
+    group: intl
+    domain: mappingignorance.org
+
+  dongascience:
+    name: DongA Science
+    group: intl
+    domain: www.dongascience.com
 
   # --- Korean ----------------------------------------------------------------
   dongascience_ko:

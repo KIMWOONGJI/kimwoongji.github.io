@@ -87,17 +87,25 @@ two files, following the same idiom as `abbr` → `_data/venues.yml`: the bib en
 is paper-specific.
 
 - **`_data/press.yml`** — outlet registry: display name, `group`, `domain`, optional `invert_dark`.
-  Also defines the groups and their display order (`English`, `Korean`, `Video`; `embed: true` on a
-  group renders players instead of links). Outlet names are written in English or romanized,
-  matching the co-author's list at https://beomseokohme.github.io/publications/.
+  Also defines the groups and their display order (`International`, `Korean`, `Video`, `Radio`;
+  `embed: true` on a group renders players instead of links). Outlet names are written in English or
+  romanized, matching the co-author's list at https://beomseokohme.github.io/publications/. The
+  first group is `International`, not `English` — coverage includes Swedish and Persian outlets.
+
+  Altmetric's own attribution for a DOI is the best source for foreign coverage, which a Naver
+  sweep will not surface: `https://nature.altmetric.com/details/<altmetric id>/news` and `/blogs`.
+  Resolve its `ct.moreover.com` links to get the real article URLs. Several science outlets
+  (Tech Xplore, Nanowerk, Hackster) answer 403 to anything but a browser — that is a bot block,
+  not a dead link.
 
   **There are no logo files.** Icons are hotlinked at render time from
   `https://www.google.com/s2/favicons?domain=<domain>&sz=128`, which normalizes every site's mark to
   the same square — adding an outlet is a name, a group and a domain, nothing else. The tradeoff is
   deliberate: the page calls google.com once per outlet, so visitors are exposed to Google on load.
   The service serves the site's native favicon when it is smaller than requested, and falls back to
-  a generic globe when it has nothing; in that case omit `domain:` so the name stands alone
-  (Kyongbuk Maeil and Veritas Alpha are the current examples).
+  a generic globe when it has nothing; in that case omit `domain:` so the name stands alone. Before
+  concluding it has nothing, ask twice — it seems to fetch on demand, so the first request for an
+  unseen domain can return the placeholder and the real mark appears only afterwards.
 
 - **`_bibliography/papers.bib`** — a `press` field per entry, formatted `<slug>|<article url>` with
   entries separated by `;`.
