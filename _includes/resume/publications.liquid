@@ -19,7 +19,14 @@
           <h6 class="title font-weight-bold ml-1 ml-md-4">
             <a href="{{ content.url }}">{{ content.name }}</a>
           </h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.publisher }}</h6>
+          {% comment %}
+            Citation typography: the journal is italic and the author line is roman, as on the
+            publications page (_layouts/bib.liquid:155 wraps the journal in <em>, and
+            _sass/_base.scss sets the self-author <em> to font-style: normal). The al-folio
+            default italicises the third line of every resume entry, which suits a summary but
+            inverts the convention here, where that line holds the authors.
+          {% endcomment %}
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.publisher }}</h6>
           {% comment %}
             Underline the author's own name, as _layouts/bib.liquid does on the publications
             page. The name comes from the same `scholar` keys in _config.yml that bib.liquid
@@ -30,7 +37,7 @@
           {% assign self_last = site.scholar.last_name | first %}
           {% capture self_pattern %}{{ self_first }} {{ self_last }}([*∗†‡§¶‖]*){% endcapture %}
           {% capture self_replacement %}<em class="self">{{ self_first }} {{ self_last }}\1</em>{% endcapture %}
-          <h6 class="ml-1 ml-md-4 summary" style="font-size: 0.8rem; font-style: italic">
+          <h6 class="ml-1 ml-md-4 summary" style="font-size: 0.8rem">
             {{- content.summary | regex_replace: self_pattern, self_replacement -}}
           </h6>
         </div>

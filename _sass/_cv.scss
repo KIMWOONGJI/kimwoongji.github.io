@@ -219,12 +219,10 @@ ul.timeline li::before {
 }
 */
 
-// The author's own name inside a CV publication's author line. Mirrors the
-// publications page, where _layouts/bib.liquid wraps self in <em> and
-// _base.scss gives it `border-bottom: 1px solid`. Here the surrounding line is
-// already italic, so the marker is the underline alone — font-style is
-// inherited rather than reset, so the name matches its neighbours.
+// The author's own name inside a CV publication's author line. Same treatment
+// as the publications page (_sass/_base.scss, `.author > em`): underlined, and
+// font-style reset so the <em> does not italicise a name that should stay roman.
 h6.summary em.self {
-  font-style: inherit;
+  font-style: normal;
   border-bottom: 1px solid;
 }
