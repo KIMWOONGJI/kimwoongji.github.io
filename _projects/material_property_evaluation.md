@@ -1,7 +1,7 @@
 ---
 layout: page
 title: material property evaluation
-description: Dynamic material property evaluation of piezoelectric materials using impulse excitation technique complying with ASTM E1876 standards.
+description: Dynamic material property evaluation of piezoelectric materials using the impulse excitation technique complying with the ASTM E1876 standard.
 img: assets/img/project/dynamic-material-property-evaluation/dynamic-material-property-evaluation-1.png
 importance: 3
 category: experiment
@@ -97,7 +97,7 @@ scholar:
     </div>
 </div>
 <div class="caption">
-    Experimental results (left) and comparison of material properties obtained by FEM with MatWeb data and ASTM E1876 measurements (right).
+    Experimental results (left) and comparison of the ASTM E1876 measurements with reference MatWeb data (right).
 </div>
 
 <hr>
@@ -117,7 +117,7 @@ scholar:
             <li>Impedance analyzer, Test fixture</li>
         </ul>
         <h5>Results</h5>
-        <p>Demonstrated that the discrepancy between experimental impedance (blue dash-dotted curve) and simulated response (red solid curve) enables evaluation of the validity of piezoelectric property data provided in supplier datasheets.</p>
+        <p>Demonstrated that the agreement between experimental impedance (blue dash-dotted curve) and simulated response (red solid curve) enables evaluation of the validity of piezoelectric property data provided in supplier datasheets.</p>
     </div>
 </div>
 

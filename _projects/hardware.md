@@ -129,11 +129,11 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
     <div class="col-sm-2 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/10.JPEG" title="Custom-designed wrench flat clamping jig" alt="Custom-designed wrench flat clamping jig for controlled preload application" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
-            6- Custom-designed wrench flat clamping jig
+            6 - Custom-designed wrench flat clamping jig
         </div>
     </div>
     <div class="col-sm-2 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/6.JPEG" title="Tightening with wrench flat clamping jig and torque wrench" alt="Transducer affixed with wrench flat clamping jig and mechanical vise" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/xdcr-assembly/sppal/6.JPEG" title="Affixing transducer with wrench flat clamping jig and mechanical vise" alt="Transducer affixed with wrench flat clamping jig and mechanical vise" class="img-fluid rounded z-depth-1" %}
         <div class="caption" style="font-size: 0.6rem;">
             7 - Affix transducer with wrench flat clamping jig and mechanical vise
         </div>
@@ -210,7 +210,7 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
         <h4><strong>Circuit Implementation for Demonstration</strong></h4>
-        <p>To design and implement the driving circuit for demonstration, including bandpass filters and piezo amplifiers, enabling frequency-selective sound generation synchronized with light emission. The circuitry was designed such that musical inputs from a piano app on tablet PC directly drive flexible alternating-current electroluminescent (ACEL) devices, realizing an interactive sound-and-light demonstration.{% cite parkInteractiveDeformableColored2024 %}</p>
+        <p>To design and implement the driving circuit for demonstration, including bandpass filters and piezo amplifiers, enabling frequency-selective sound generation synchronized with light emission. The circuitry was designed such that musical inputs from a piano app on a tablet PC directly drive flexible alternating-current electroluminescent (ACEL) devices, realizing an interactive sound-and-light demonstration.{% cite parkInteractiveDeformableColored2024 %}</p>
         <h5>Technical Skills</h5>
         <ul>
             <li>Tablet PC's output signal characterization, Circuit configuration & design, Component selection, PCB layout, Assembly, EMC consideration</li>
@@ -239,7 +239,7 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
     <div class="col-sm-4 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/project/mems-mic-circuit-interface/mems-mic-circuit-interface-1.png" title="MEMS microphone analog interface" alt="Custom-designed MEMS microphone analog interface PCB for die characterization" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
-            Custom-designed impedance tube and experimental configuration for acoustic input impedance measurement of an automotive horn.
+            Custom-designed MEMS microphone analog interface PCB for die characterization.
         </div>
     </div>
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -248,9 +248,9 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
         <h5>Technical Skills</h5>
         <ul>
             <li>Designed and fabricated custom interface PCBs for MEMS microphone die characterization.</li>
-            <li>Identified parasitic capacitance sources using impedance analyzer and validated their effects through LTspice circuit simulations.</li>
+            <li>Identified parasitic capacitance sources using an impedance analyzer and validated their effects through LTspice circuit simulations.</li>
             <li>Implemented guard ring connection via metal lid and verified sensitivity improvement experimentally.</li>
-            <li>Characterized MEMS microphone performance in terms of sensitivity,noise floor, and SNR(A).</li>
+            <li>Characterized MEMS microphone performance in terms of sensitivity, noise floor, and SNR(A).</li>
         </ul>
     </div>
 </div>

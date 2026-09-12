@@ -1,34 +1,22 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+# Co-author links for the publications page.
+#
+# _layouts/bib.liquid looks an author up by lowercased surname, then matches the
+# given name against `firstname`, and wraps the name in a link to `url`. An
+# author with no entry here simply renders as plain text, so this file only
+# needs the people who actually have a page worth linking to.
+#
+# This replaced the al-folio demo data, which listed Einstein's co-authors
+# (Podolsky, Schrödinger, Planck …) and therefore never matched anyone in
+# _bibliography/papers.bib — the linking feature did nothing.
+#
+# Only URLs that were checked and resolve are listed. To add someone, use their
+# surname in lowercase as the key and include every form of the given name that
+# appears in papers.bib.
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"oh":
+  - firstname: ["Beomseok", "B.", "B. S."]
+    url: https://beomseokohme.github.io/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
-
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
-
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
-
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
-
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
-
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
-
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"rho":
+  - firstname: ["Junsuk", "J.", "J. S."]
+    url: https://photonics.postech.ac.kr/

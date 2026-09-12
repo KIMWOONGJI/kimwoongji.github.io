@@ -116,7 +116,7 @@ The EMA of the radiating plate around the 8th eigenmode frequency showed close a
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
         <h4><strong>Miniature Diaphragm Characterization</strong></h4>
-        <p>To establish a precise measurement methodology based on passive excitation, since the compliance of thin and tiny polymer diaphragms (micrometer thick and sub-millimeter diameter) critically determines acoustic sensor performance. Obtained diaphragm compliance data and validated the methodology by comparing measurement results with FEM simulations.</p>
+        <p>Because the compliance of thin and tiny polymer diaphragms (micrometer thick and sub-millimeter diameter) critically determines acoustic sensor performance, a precise measurement methodology based on passive excitation was established. Diaphragm compliance data were obtained and the methodology was validated by comparing measurement results with FEM simulations.</p>
         <h5>Experimental Setup</h5>
         <ul>
             <li>LabVIEW-based automated measurement program</li>
