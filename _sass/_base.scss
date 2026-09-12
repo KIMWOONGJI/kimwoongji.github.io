@@ -834,6 +834,13 @@ footer.sticky-bottom {
         a.award.btn {
           border-color: var(--global-highlight-color);
         }
+
+        // The only link in the entry that stays on the site — everything else
+        // (DOI, media coverage, video) leaves. Accented so it reads as a way in
+        // rather than one more way out.
+        a.project.btn {
+          border-color: var(--global-theme-color);
+        }
       }
 
       .press {

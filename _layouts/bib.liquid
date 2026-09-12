@@ -254,6 +254,30 @@
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
       {% comment %}
+        Link back to the project page that tells the story behind this paper. `related_publications`
+        already carries projects → publications; this is the return path, which did not exist — every
+        link in the publication list pointed off-site. The field holds one or more project slugs
+        (the filename without .md), separated by `;`, as in `project={parametric_array_loudspeakers}`.
+        A slug that matches no project renders nothing rather than a dead button.
+      {% endcomment %}
+      {% if entry.project %}
+        {% assign project_slugs = entry.project | split: ';' %}
+        {% for project_slug in project_slugs %}
+          {% assign wanted = project_slug | strip %}
+          {% assign linked_project = site.projects | where: 'slug', wanted | first %}
+          {% if linked_project %}
+            <a
+              href="{{ linked_project.url | relative_url }}"
+              class="btn btn-sm z-depth-0 project"
+              role="button"
+              title="{{ linked_project.title }}"
+            >
+              Project
+            </a>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% comment %}
         The badges live inside .links rather than beside it so the DOI button and the
         badges are siblings in one flex row — inline-block alignment cannot line up two
         boxes whose heights the Altmetric and Dimensions scripts decide at runtime.
