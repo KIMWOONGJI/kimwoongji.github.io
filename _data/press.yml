@@ -3,7 +3,7 @@
 # This file holds what is constant per outlet (display name, group, domain).
 # Anything paper-specific — the article URL — goes in _bibliography/papers.bib.
 # Same split as _data/venues.yml, where the bib entry carries `abbr` and this
-# folder carries the colour and link.
+# file carries the color and link.
 #
 # ---------------------------------------------------------------------------
 # HOW TO ADD COVERAGE TO A PAPER
@@ -179,7 +179,7 @@ outlets:
     domain: www.newsworks.co.kr
 
   kbmaeil:
-    name: Kyongbuk Maeil
+    name: Gyeongbuk Maeil
     group: ko
     domain: www.kbmaeil.com
 
@@ -194,7 +194,7 @@ outlets:
     domain: www.hidomin.com
 
   kyongbuk:
-    name: Kyongbuk Ilbo
+    name: Gyeongbuk Ilbo
     group: ko
     domain: www.kyongbuk.co.kr
 
