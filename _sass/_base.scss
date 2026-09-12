@@ -1781,3 +1781,18 @@ mjx-container[jax="CHTML"][display="true"] {
     padding-top: 0.5rem;
   }
 }
+
+// Badges inside a home-page card. The grid block above already lays .links out as a
+// wrapping flex row and pins it to the card foot, so the badges only need to sit on
+// that row and centre against the buttons rather than the text baseline.
+.publications.selected-grid .badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+
+  > span {
+    display: inline-flex;
+    align-items: center;
+  }
+}
