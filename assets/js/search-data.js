@@ -49,14 +49,14 @@ ninja.data = [{
               window.location.href = "/projects/hardware.html";
             },},{id: "projects-material-property-evaluation",
           title: 'material property evaluation',
-          description: "Dynamic material property evaluation of piezoelectric materials using impulse excitation technique complying with ASTM E1876 standards.",
+          description: "Dynamic material property evaluation of piezoelectric materials using the impulse excitation technique complying with the ASTM E1876 standard.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/material_property_evaluation.html";
             },},{id: "projects-mechanical-vibration-characterization",
           title: 'mechanical vibration characterization',
           description: "Mechanical vibration characterization of radiating plates using laser Doppler vibrometry (LDV) for transducer validation.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/mech_vibraction_characterization.html";
+              window.location.href = "/projects/mech_vibration_characterization.html";
             },},{id: "projects-parametric-array-loudspeakers",
           title: 'parametric array loudspeakers',
           description: "Research on parametric array loudspeaker transducers — highly directional sound sources utilizing nonlinear acoustics, stepped plates, and dual-domain metamaterials.",
