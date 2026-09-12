@@ -37,17 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project.html";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project.html";
-            },},{id: "projects-acoustical-field-characterization",
+        },{id: "projects-acoustical-field-characterization",
           title: 'acoustical field characterization',
           description: "Fully automated acoustical field characterization system for measuring directivity and sound pressure levels in a semi-anechoic chamber.",
           section: "Projects",handler: () => {
