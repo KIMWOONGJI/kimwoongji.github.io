@@ -69,7 +69,7 @@ ninja.data = [{
               window.location.href = "/projects/mech_vibraction_characterization.html";
             },},{id: "projects-parametric-array-loudspeakers",
           title: 'parametric array loudspeakers',
-          description: "Research on parametric array loudspeaker transducers — highly directional sound sources utilizing nonlinear acoustics, stepped plates, and acoustic metamaterials.",
+          description: "Research on parametric array loudspeaker transducers — highly directional sound sources utilizing nonlinear acoustics, stepped plates, and dual-domain metamaterials.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/parametric_array_loudspeakers.html";
             },},{id: "projects-my-research-workflow-and-technology-stack",
