@@ -17,7 +17,7 @@ category: skills
     Research workflow and technology stack.
 </div>
 
-This infographic outlines the integrated methodology and technical infrastructure that underpin my research and development processes. It highlights a systematic approach bridging analytical modeling, high-fidelity simulations, and scalable data management to accelerate scientific discovery and engineering innovation.
+This infographic outlines the integrated methodology and technical infrastructure that underpin my research and development processes. It highlights a systematic approach bridging analytical modeling, high-fidelity simulations, and scalable data management to accelerate scientific discovery and engineering innovation. The diagram covers the modeling, simulation, and data side of that workflow; the measurement side — building a setup suited to the experiment and orchestrating the instruments into one automated system — is documented on the [acoustical field]({% link _projects/aco_field_characterization.md %}) and [mechanical vibration]({% link _projects/mech_vibraction_characterization.md %}) characterization pages.
 
 <hr>
 

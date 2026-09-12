@@ -21,7 +21,7 @@ The goal of this project was to characterize the acoustic field of a developed s
     Experimental setup in a semi-anechoic chamber, including a measurement microphone, linear and rotational stages, and a spectrum analyzer.
 </div>
 
-A MATLAB-based automated measurement program was developed, which profiled and applied instrument settings via vendor-specific command sets over GPIB, ensuring consistent and reproducible measurement conditions. The system was capable of characterizing frequency response, propagation curves, and beam patterns.
+A MATLAB-based automated measurement program was developed, which profiled and applied instrument settings via vendor-specific command sets over GPIB, ensuring consistent and reproducible measurement conditions. The spectrum analyzer, power amplifier, and the linear and rotational stages were driven from this single program, so that once the setup had been aligned a full propagation or directivity sweep ran to completion unattended: no operator action between measurement points, and therefore no run-to-run operator variability in the acquired field. The system was capable of characterizing frequency response, propagation curves, and beam patterns.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

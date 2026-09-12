@@ -49,7 +49,7 @@
         "Impedance analyzer, Spectrum analyzer, Lock-in amplifier, Motion control system, Scanning probe microscopy (AFM, DFM, KFM)",
         "Waveform generator, Oscilloscope, Power amplifier, NI hardware",
         "Measurement microphone, Accelerometer, Force sensor, Impedance head, Vibration exciter, Impact hammer",
-        "Lab automation: MATLAB, LabVIEW via SCPI/IVI and vendor-specific command sets over GPIB/Serial"
+        "Lab automation: MATLAB, LabVIEW via SCPI/IVI and vendor-specific command sets over GPIB/Serial; instrument orchestration for unattended acquisition, removing operator variability between runs"
       ]
     }
   ],

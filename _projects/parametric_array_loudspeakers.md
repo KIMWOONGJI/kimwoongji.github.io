@@ -166,7 +166,7 @@ To understand the physical mechanism behind this limitation, consider the vibrat
 
 - Through multi-objective optimization, a **dual-resonance (DR) transducer architecture** was engineered to amplify both the primary carrier and sideband frequencies. This capability effectively compensates for the low-frequency roll-off inherent to parametric arrays, significantly enhancing the generated audio output.
 
-- Extensive [vibration]({% link _projects/mech_vibraction_characterization.md %}) and [acoustic measurements]({% link _projects/aco_field_characterization.md %}) **formally identified CR for the first time** as an intrinsic structural limitation of single-body flexural transducers.
+- Extensive [vibration]({% link _projects/mech_vibraction_characterization.md %}) and [acoustic measurements]({% link _projects/aco_field_characterization.md %}), run on a fully automated and synchronized test setup, **formally identified CR for the first time** as an intrinsic structural limitation of single-body flexural transducers.
 
 <!-- XYZ bullets -->
 

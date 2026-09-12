@@ -27,6 +27,11 @@ scholar:
             <li>MATLAB-based automated measurement program</li>
             <li>Spectrum analyzer, single-point laser Doppler vibrometer, power amplifier, stage controller, linear stages</li>
         </ul>
+        <h5>Technical Skills</h5>
+        <ul>
+            <li>Orchestrated the spectrum analyzer, laser Doppler vibrometer, power amplifier, and stage controller from a single MATLAB program, so that once the setup had been aligned an entire modal scan ran to completion unattended.</li>
+            <li>Removed operator action between grid points, holding the excitation and acquisition settings identical across the whole scan so that the measured mode shapes could be compared against FEM predictions on equal terms.</li>
+        </ul>
     </div>
 </div>
 
