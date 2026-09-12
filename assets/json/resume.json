@@ -139,11 +139,18 @@
   ],
   "publications": [
     {
-      "name": "Dual-metamaterials co-integrated with a Compact Ultrasonic Transducer for Highly Directional Audio Generation",
+      "name": "All-wave computational ultrasonic fingerprint identification with metasurface-driven loop-diffractive neural network",
+      "publisher": "Nat. Sens.",
+      "releaseDate": "2026-07-31",
+      "url": "https://doi.org/10.1038/s44460-026-00102-7",
+      "summary": "Seokho Lee†, Beomseok Oh†, Woongji Kim, Junsu Lee, Wonkyu Moon, and Junsuk Rho*. 1, 728–739 (2026)."
+    },
+    {
+      "name": "Dual-domain metamaterials co-integrated with a compact ultrasonic transducer for highly directional audio generation",
       "publisher": "Nat. Commun.",
       "releaseDate": "2026-05-22",
       "url": "https://doi.org/10.1038/s41467-026-73604-0",
-      "summary": "Woongji Kim†,  Beomseok Oh†,  and Wonkyu Moon*, Junsuk Rho*. 17, 6750 (2026)."
+      "summary": "Woongji Kim†, Beomseok Oh†, Wonkyu Moon*, and Junsuk Rho*. 17, 6750 (2026)."
     },
     {
       "name": "Miniature Nanomesh Mechano-Acoustic Sensor with Wide Linear Dynamic Range, Broad Bandwidth, and Flat Frequency Response",
