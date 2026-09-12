@@ -783,15 +783,24 @@ footer.sticky-bottom {
       }
 
       .author {
+        // Co-author links take the body colour rather than the global link colour,
+        // which made them louder than the author's own name — the one entry in the
+        // list that should stand out. The dashed underline still marks them as
+        // links, and the theme colour returns on hover.
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          color: var(--global-text-color);
+          border-bottom: 1px dashed var(--global-divider-color);
 
           &:hover {
+            color: var(--global-theme-color);
+            border-bottom-color: var(--global-theme-color);
             border-bottom-style: solid;
             text-decoration: none;
           }
         }
 
+        // Self: same colour as everything around it, distinguished by a solid
+        // underline against the co-authors' dashed one.
         > em {
           border-bottom: 1px solid;
           font-style: normal;
@@ -840,8 +849,27 @@ footer.sticky-bottom {
         // The only link in the entry that stays on the site — everything else
         // (DOI, media coverage, video) leaves. Accented so it reads as a way in
         // rather than one more way out.
+        //
+        // "Related Project" is set on two lines but must stay exactly as tall as
+        // its one-line siblings. mdbootstrap 4.20.0 gives .btn.btn-sm a font-size
+        // of 0.64rem, and the rule above sets 0.25rem of vertical padding, so a
+        // sibling measures 0.64 × 1.5 + 0.5 = 1.46rem. Two lines at 0.55rem and
+        // line-height 1 come to 1.10rem, leaving 0.18rem of padding a side to
+        // make up the same total. Change the font size and this padding has to be
+        // recomputed with it.
         a.project.btn {
+          color: var(--global-theme-color);
           border-color: var(--global-theme-color);
+          font-size: 0.55rem;
+          line-height: 1;
+          padding-top: 0.18rem;
+          padding-bottom: 0.18rem;
+          text-align: center;
+
+          &:hover {
+            color: var(--global-hover-color);
+            border-color: var(--global-hover-color);
+          }
         }
       }
 
@@ -1008,6 +1036,12 @@ footer.sticky-bottom {
           }
         }
 
+        // No blanket size cap here. Altmetric draws its donut as an <img>, whereas
+        // Dimensions builds a <div> holding an inline <svg>, so a max-height hit only
+        // the Altmetric badge and shrank its score out of legibility while Dimensions
+        // kept its natural size. Match the two by choosing badge variants of similar
+        // size in _layouts/bib.liquid instead — Dimensions offers small_circle,
+        // medium_circle, large_circle, small_rectangle and large_rectangle.
         img {
           display: block;
         }

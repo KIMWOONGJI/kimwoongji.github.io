@@ -272,7 +272,7 @@
               role="button"
               title="{{ linked_project.title }}"
             >
-              Project
+              Related<br />Project
             </a>
           {% endif %}
         {% endfor %}
@@ -309,7 +309,13 @@
             {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
               <span
                 class="altmetric-embed"
-                data-badge-type="2"
+                {% comment %}
+                  "donut", not a number. Altmetric's embed script maps a numeric badge-type to
+                  "v" + the number, and v2 — which is also its default — is the rectangle. Only
+                  the words donut, bar and text select a shape; this pairs with the Dimensions
+                  small_circle beside it.
+                {% endcomment %}
+                data-badge-type="donut"
                 data-badge-popover="right"
                 {% if entry.altmetric != blank and entry.altmetric != 'true' %}
                   data-altmetric-id="{{ entry.altmetric }}"
@@ -336,9 +342,15 @@
                 {% else %}
                   data-pmid="{{ entry.pmid }}"
                 {% endif %}
-                data-style="small_rectangle"
+                {% comment %}
+                  small_circle rather than small_rectangle: Altmetric renders a donut, so a
+                  circle puts the two badges in the same shape family and at a comparable
+                  size, instead of pairing a donut with a wide bar. The margin-bottom nudge
+                  is dropped — .badges centres its children now, so it only pushed this one
+                  out of line.
+                {% endcomment %}
+                data-style="small_circle"
                 data-legend="hover-right"
-                style="margin-bottom: 3px;"
               ></span>
             {% endif %}
             {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
