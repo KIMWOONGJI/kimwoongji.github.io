@@ -226,22 +226,102 @@
     {% endcase %}
   {% endfor %}
 
+  {% comment %}
+    String values go through `strip | jsonify` rather than being wrapped in literal quotes.
+    site.description is a YAML folded scalar, so it ends in a newline; interpolated raw it
+    put a bare control character inside a JSON string and the whole block failed to parse,
+    which means search engines were discarding this structured data entirely. jsonify emits
+    its own quotes and escapes, so the quotes are deliberately absent below.
+  {% endcomment %}
+  {% if page.description %}
+    {% assign schema_description = page.description %}
+  {% else %}
+    {% assign schema_description = site.description %}
+  {% endif %}
+  {% if page.title %}
+    {% assign schema_headline = page.title %}
+  {% else %}
+    {% assign schema_headline = site.title %}
+  {% endif %}
   <script type="application/ld+json">
     {
         "author":
         {
             "@type": "Person",
-            "name": "{{ author_name }}"
+            "name": {{ author_name | strip | jsonify }}
         },
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-        "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+        "description": {{ schema_description | strip | jsonify }},
+        "headline": {{ schema_headline | strip | jsonify }},
         {% if sameaslinks != blank %}
         "sameAs": {{ sameaslinks | jsonify }},
         {% endif %}
-        "name": "{{ author_name }}",
+        "name": {{ author_name | strip | jsonify }},
         "@context": "https://schema.org"
     }
   </script>
+
+  {% comment %}
+    A second block describing the site owner as a Person. The WebSite object above carries
+    the Person only as an "author" property, which tells a search engine almost nothing about
+    who this is; jobTitle, affiliation, alumniOf and knowsAbout are what let it treat the name
+    as an entity rather than a string.
+
+    Everything is read from assets/json/resume.json (exposed as site.data.resume by
+    jekyll_get_json) so these facts are not restated here and cannot drift from the CV.
+    Emitted on the home page only — one authoritative Person node per site is what
+    search engines expect.
+  {% endcomment %}
+  {% if page.url == '/' and site.data.resume %}
+    {% assign current_jobs = '' | split: ',' %}
+    {% for job in site.data.resume.work %}
+      {% if job.endDate == blank %}
+        {% assign current_jobs = current_jobs | push: job %}
+      {% endif %}
+    {% endfor %}
+    {% assign topics = '' | split: ',' %}
+    {% for group in site.data.resume.interests %}
+      {% for keyword in group.keywords %}
+        {% assign topics = topics | push: keyword %}
+      {% endfor %}
+    {% endfor %}
+    <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "{{ author_name }}",
+          "url": "{{ site.url }}{{ site.baseurl }}/",
+          {% if site.og_image %}
+            "image": "{{ site.og_image | prepend: '/assets/img/' | prepend: site.baseurl | prepend: site.url }}",
+          {% endif %}
+          {% if current_jobs.first %}
+            "jobTitle": {{ current_jobs.first.position | jsonify }},
+          {% endif %}
+          {% if current_jobs != empty %}
+            "affiliation": [
+              {% for job in current_jobs %}
+                { "@type": "Organization", "name": {{ job.name | jsonify }}{% if job.url %}, "url": {{ job.url | jsonify }}{% endif %} }{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            ],
+          {% endif %}
+          {% comment %} uniq because a degree each at the same university would otherwise list it twice. {% endcomment %}
+          {% assign schools = site.data.resume.education | map: 'institution' | uniq %}
+          {% if schools != empty %}
+            "alumniOf": [
+              {% for school in schools %}
+                { "@type": "CollegeOrUniversity", "name": {{ school | jsonify }} }{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            ],
+          {% endif %}
+          {% if topics != empty %}
+            "knowsAbout": {{ topics | jsonify }},
+          {% endif %}
+          {% if sameaslinks != blank %}
+            "sameAs": {{ sameaslinks | jsonify }},
+          {% endif %}
+          "description": {{ site.description | strip | jsonify }}
+      }
+    </script>
+  {% endif %}
 {% endif %}

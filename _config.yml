@@ -11,7 +11,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Woongji Kim, Ph.D. in Mechanical Engineering from POSTECH.
   Research in electro-mechano-acoustic transducers, linear and nonlinear acoustics, parametric array loudspeakers, and acoustic metamaterials.
 footer_text: >
-keywords: Woongji Kim, acoustic transducers, parametric array loudspeaker, nonlinear acoustics, acoustic metamaterials, POSTECH, mechanical engineering, finite element analysis
+keywords: Woongji Kim, acoustic transducers, parametric array loudspeaker, directional audio, ultrasonic transducer, nonlinear acoustics, acoustic metamaterials, acoustic metasurface, elastic metamaterials, MEMS microphone, extended reality audio, electroacoustic transducer, POSTECH, UNIST, mechanical engineering, finite element analysis
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🌌 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -141,6 +141,14 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  # al-folio demo projects. Left in the repo but kept out of the build so they
+  # stop appearing in sitemap.xml, where they were being submitted to Google as
+  # if they were real work.
+  - _projects/1_project.md
+  - _projects/3_project.md
+  - _projects/1_project.
+  - _projects/3_project.
+  - _projects/5_project.
   - purgecss.config.js
   - README.md
   - readme_preview/
