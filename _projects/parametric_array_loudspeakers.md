@@ -1,7 +1,7 @@
 ---
 layout: page
 title: parametric array loudspeakers
-description: Research on parametric array loudspeaker transducers — highly directional sound sources utilizing nonlinear acoustics, stepped plates, and acoustic metamaterials.
+description: Research on parametric array loudspeaker transducers — highly directional sound sources utilizing nonlinear acoustics, stepped plates, and dual-domain metamaterials.
 tags: [parametric array loudspeaker, pal, acoustics, nonlinear acoustics, meta-materials, transducers]
 img: assets/img/project/parametric-array-loudspeaker/meta-materials-integrated/mipal-experiment-close-1.svg
 importance: 1
@@ -180,7 +180,7 @@ Discovered a previously unknown physical limitation that disrupts targeted direc
 
 <h4><strong>Metamaterials-integrated parametric array loudspeaker (MiPAL)</strong> <span style="font-size: 0.8rem;">{% cite kim2026Dualmetamaterials %}</span></h4>
 
-To comprehensively overcome the limitations of the SPPAL---namely, its relatively low sound pressure and the parasitic noise caused by CR---the MiPAL was invented. The MiPAL is a revolutionary single-body ultrasonic transducer interwoven with dual-domain metamaterials, addressing acoustics in the air and elastic vibrations in the structure simultaneously.
+To overcome the limitations of the SPPAL---namely, its relatively low sound pressure and the parasitic noise caused by CR---the MiPAL co-integrates dual-domain metamaterials with a single-body ultrasonic transducer, addressing acoustics in the air and elastic vibrations in the structure simultaneously. A single piezoelectric driver takes the place of the tens to hundreds of emitters a conventional phased array requires.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
@@ -209,7 +209,7 @@ To comprehensively overcome the limitations of the SPPAL---namely, its relativel
     Highly directional audible sound produced over a broad frequency range with parasitic combination resonance (CR) leakage effectively suppressed.
 </div>
 
-This architecture employs an **acoustic metasurface** to shape the scattered ultrasonic emissions into a pristine, collimated beam. Concurrently, locally resonant **elastic meta-units** are integrated into the plate to act as mechanical band-gap filters. These units expertly suppress the specific low-frequency structural vibrations responsible for CR. The result is a highly compact loudspeaker capable of producing intensely focused audio beams across a broad frequency range, completely free from unwanted side-lobe leakage.
+This architecture employs an **acoustic metasurface** to shape the scattered ultrasonic emissions into a collimated beam. Concurrently, locally resonant **elastic meta-units** integrated into the plate act as mechanical band-gap filters, suppressing the low-frequency structural vibrations responsible for CR. Experiments demonstrate a compact loudspeaker that delivers directional audio over four octaves, from 500 Hz to 10 kHz, without the omnidirectional leakage that limited the SPPAL.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">
@@ -232,13 +232,11 @@ This architecture employs an **acoustic metasurface** to shape the scattered ult
 
 <!-- - Complementing this acoustic control, integrated **elastic meta-units** act in the structural domain to introduce precise, mode-selective loss. This dual-domain synergy successfully suppresses parasitic CR modes and eliminates omnidirectional sound leakage, enabling the projection of an ultrabroadband, highly collimated audio beam spanning over four octaves (500 Hz to 10 kHz). -->
 
-- Developing a novel architecture that represents the **application of dual-domain metamaterials** marks a fundamental paradigm shift in compact directional audio design.
+- Co-integrating **dual-domain metamaterials** with a single piezoelectric driver established a compact directional-audio architecture that does not depend on a phased array of emitters.
 
 - Engineering an **acoustic metasurface** successfully overcame the severe material damping and low efficiency limitations of previous models. By replacing the heavy polymer steps of the SPPAL, this tailored layer redirects scattered ultrasonic emissions into a highly collimated sound beam.
 
-- Integrating locally resonant **elastic meta-units** directly onto the radiating plate introduces precise, mode-selective mechanical loss. This structural modification suppresses parasitic combination resonance modes, completely eliminating omnidirectional noise leakage and securing an ultrabroadband audio beam spanning over four octaves (500 Hz to 10 kHz).
-
-- *The comprehensive findings are currently under peer review for publication.*
+- Integrating locally resonant **elastic meta-units** directly onto the radiating plate introduces precise, mode-selective mechanical loss. This structural modification suppresses parasitic combination resonance modes, eliminating omnidirectional noise leakage and securing an ultrabroadband audio beam spanning over four octaves (500 Hz to 10 kHz).
 
 <!-- XYZ bullets -->
 
