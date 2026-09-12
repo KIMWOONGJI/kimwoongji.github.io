@@ -1,0 +1,106 @@
+---
+---
+{% comment %}
+  Compact card used only for the "selected publications" grid on the home page, selected via
+  `--template bib_selected` in _includes/selected_papers.liquid.
+
+  _layouts/bib.liquid stays the template for /publications/ and for project pages' related works.
+  Reusing it here put the whole entry on the landing page — abstract and BibTeX toggles, Altmetric
+  and Dimensions badges, and the 40-item media-coverage block, which alone was 56% of the page.
+  This keeps the preview image, the citation, and the two links worth following: the DOI, and the
+  project page that tells the story behind the paper.
+{% endcomment %}
+<div class="card-item">
+  {% if entry.preview %}
+    <a
+      class="preview-link"
+      {% if entry.project %}
+        {% assign first_slug = entry.project | split: ';' | first | strip %}
+        {% assign linked_project = site.projects | where: 'slug', first_slug | first %}
+      {% endif %}
+      href="{% if linked_project %}{{ linked_project.url | relative_url }}{% else %}https://doi.org/{{ entry.doi }}{% endif %}"
+    >
+      {% if entry.preview contains '://' %}
+        <img class="preview z-depth-1 rounded" src="{{ entry.preview }}" alt="{{ entry.title }}">
+      {% else %}
+        {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+        {%
+          include figure.liquid
+          loading="eager"
+          path=entry_path
+          sizes="360px"
+          class="preview z-depth-1 rounded"
+          zoomable=false
+          alt=entry.title
+        %}
+      {% endif %}
+    </a>
+  {% endif %}
+
+  <div class="card-body">
+    {% if entry.abbr %}
+      {% assign venue = site.data.venues[entry.abbr] %}
+      <abbr
+        class="badge rounded"
+        {% if venue.color != blank %}
+          style="background-color: {{ venue.color }}"
+        {% endif %}
+      >
+        {{- entry.abbr -}}
+      </abbr>
+    {% endif %}
+
+    <div class="title">{{ entry.title }}</div>
+
+    <div class="author">
+      {%- for author in entry.author_array -%}
+        {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
+        {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+        {%- assign author_is_self = false -%}
+        {%- if site.scholar.last_name contains author_last_name -%}
+          {%- if site.scholar.first_name contains author.first -%}
+            {%- assign author_is_self = true -%}
+          {%- endif -%}
+        {%- endif -%}
+        {%- unless forloop.first %}, {% endunless -%}
+        {%- if author_is_self -%}
+          <em>
+            {{- author.first }}
+            {{ author_last_html -}}
+          </em>
+        {%- else -%}
+          {{ author.first }}
+          {{ author_last_html }}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="periodical">
+      <em>{{ entry.journal }}</em>
+      {%- if entry.year %}, {{ entry.year }}{% endif %}
+    </div>
+
+    <div class="links">
+      {% if entry.doi %}
+        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+      {% endif %}
+      {% if entry.project %}
+        {% assign project_slugs = entry.project | split: ';' %}
+        {% for project_slug in project_slugs %}
+          {% assign wanted = project_slug | strip %}
+          {% assign card_project = site.projects | where: 'slug', wanted | first %}
+          {% if card_project %}
+            <a
+              href="{{ card_project.url | relative_url }}"
+              class="btn btn-sm z-depth-0 project"
+              role="button"
+              title="{{ card_project.title }}"
+            >
+              Project
+            </a>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>

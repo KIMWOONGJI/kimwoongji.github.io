@@ -50,3 +50,9 @@ $back-to-top-right: 30px;
 $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
+
+// "Selected publications" grid on the home page. The profile photo is sized from the same
+// two values so it stays exactly one card wide — change the gap or the column count here and
+// both the grid and the profile follow.
+$selected-grid-columns: 3;
+$selected-grid-gap: 1.5rem;

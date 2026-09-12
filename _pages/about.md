@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-# subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Acoustic Engineer, Ph.D.
 
 profile:
   align: right
@@ -10,19 +10,16 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info:
 
+selected_papers: true # renders bib entries marked `selected={true}`, via _includes/selected_papers.liquid
 social: true # includes social icons at the bottom of the page
 
 ---
 
 <br>
 
-I hold a **Ph.D. in Mechanical Engineering** from [Pohang University of Science and Technology (POSTECH)](https://postech.ac.kr/eng), where I graduated in February 2026. 
+I am a **Postdoctoral Fellow** at [Ulsan National Institute of Science and Technology (UNIST)](https://www.unist.ac.kr/) and in the Center for Flat Optics and Metaphotonics at [Pohang University of Science and Technology (POSTECH)](https://postech.ac.kr/eng), where I earned my **Ph.D. in Mechanical Engineering** in February 2026.
 
-<br>
-
-My research expertise lies in **Electro-Mechano-Acoustic Transducers**, **Linear/Nonlinear Acoustics**, and **Modeling and Simulation, Design, and Experimental Validation**. 
-
-<br>
+My research expertise lies in **Electro-Mechano-Acoustic Transducers**, **Multiphysics Systems**, **Linear/Nonlinear Acoustics**, and **Acoustic Metamaterials**.
 
 I specialize in bridging the gap between theoretical models and practical applications, utilizing a workflow that integrates analytical modeling, finite element analysis, and rigorous experimental validation.
 
@@ -31,9 +28,3 @@ I specialize in bridging the gap between theoretical models and practical applic
 <!-- Prior to my doctoral studies, I earned my M.Sc. in Mechanical Engineering from POSTECH and my B.Sc. from Kyung Hee University. I also possess valuable industry experience, having worked as a research engineer at Hanwha Ocean. -->
 
 <!-- **Contact:** [wj.kim@postech.ac.kr](mailto:wj.kim@postech.ac.kr) -->
-
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
