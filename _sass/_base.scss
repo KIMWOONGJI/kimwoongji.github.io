@@ -1831,3 +1831,101 @@ mjx-container[jax="CHTML"][display="true"] {
     align-items: center;
   }
 }
+
+// The Altmetric donut is a 64px PNG with a fully transparent ground and the score painted
+// in flat black, so on a dark page the number sinks into the background. No CSS can recolour
+// text that is baked into a raster image; the only lever is what sits behind it, so put a
+// light disc there and the badge gets back the black-on-light contrast it was drawn for.
+//
+// An `invert()` filter of the sort `.press-invert` uses is not an option here: the ring's
+// segment colours encode where the attention came from, and inverting would falsify them.
+// Dimensions needs none of this — it draws an inline SVG that carries its own fill.
+//
+// A light panel on a dark ground is already this theme's idiom (the footer and the
+// newsletter box both switch to $grey-color-light in dark mode), so this matches rather
+// than introduces a look.
+// Altmetric ships no motion at all — not one @keyframes, animation or transition in either
+// its stylesheet or its script, and every badge type but `text` is a single <img>. Dimensions,
+// sitting immediately beside it, grows and turns under the pointer because it builds its badge
+// from four stacked DOM layers it can transform separately. Side by side, only one of the pair
+// answered the mouse.
+//
+// A flat image can only move as a whole, so the turn does not carry over: rotating it would
+// spin the score along with the ring, where Dimensions keeps its score upright by holding it
+// in an element of its own. The lift does carry over, on the same 500ms curve Dimensions uses
+// so the two read as one row.
+//
+// `border-radius` is what makes the shadow usable rather than decorative: an outer box-shadow
+// is clipped to outside the border box, so rounding the square, transparent image turns a
+// boxy halo into one that follows the donut.
+.altmetric-embed img {
+  border-radius: 50%;
+  transition:
+    transform 500ms cubic-bezier(0.77, 0, 0.175, 1),
+    box-shadow 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+// Keyboard users get the same affordance — the badge is a link, and the pointer should not be
+// the only way to see it respond. 1.08 is bounded by the 0.4rem gap to the Dimensions badge:
+// it adds 2.6px a side on a 64px badge, so the two never collide.
+.altmetric-embed a:hover img,
+.altmetric-embed a:focus-visible img {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .altmetric-embed img {
+  background-color: $grey-color-light;
+}
+
+// A black halo is invisible against a dark page, so the shadow flips to light here — the same
+// reason the disc above exists.
+//
+// It reuses $grey-color-light rather than plain white, and that is load-bearing. Dart Sass
+// compresses a colour to whichever notation is shorter, and for white that is `hsla(0,0%,...)`
+// — whereupon `cssminify2`, which `jekyll-minifier` runs over the stylesheet in production
+// only, strips the zero's unit and leaves `hsla(0,0,...)`. Saturation has to carry a percent
+// sign, so the browser drops the whole declaration and the halo silently reverts to the black
+// one above. #e8e8e8 stays in rgba() through both steps. Verified end to end; `jekyll serve`
+// cannot show this, because the minifier does not run there.
+html[data-theme="dark"] .altmetric-embed a:hover img,
+html[data-theme="dark"] .altmetric-embed a:focus-visible img {
+  box-shadow: 0 0 10px rgba($grey-color-light, 0.3);
+}
+
+// Honour a reduced-motion preference: drop the movement but keep the shadow, so the badge
+// still answers the pointer. Nothing else on this site declares this yet — and neither does
+// Dimensions' own stylesheet, which has no such query at all.
+@media (prefers-reduced-motion: reduce) {
+  .altmetric-embed img {
+    transition: none;
+  }
+
+  .altmetric-embed a:hover img,
+  .altmetric-embed a:focus-visible img {
+    transform: none;
+  }
+}
+
+// Same story one level down. Altmetric's own stylesheet paints the popover body white and
+// then never sets a text colour, so the text inherits ours — which in dark mode is a light
+// grey, landing light-on-white at about 1.2:1. Only the "See more details" link stays
+// legible, because that one carries an explicit blue, which is why the popover reads as
+// half-broken rather than blank.
+//
+// The popover is appended to <body>, not inside the badge, so it has to be matched from the
+// root rather than through .publications. An explicit colour beats an inherited one whatever
+// the specificity, so this needs no !important.
+html[data-theme="dark"] [id^="_altmetric_popover_el"] .altmetric-popover-content {
+  // The descendants need naming, not just the box. This file opens with a blanket
+  // `p, h1..h6, em, div, li, span, strong { color: var(--global-text-color) }` (line 7),
+  // and an explicit declaration on a child beats a colour inherited from its parent, so
+  // setting the container alone leaves every div, span and strong inside it light again.
+  //
+  // Anchors are left out on purpose: Altmetric colours its own two links (#1565c0 for
+  // "See more details", #000000 for the title) and both already read on white.
+  &,
+  *:not(a) {
+    color: $grey-color-dark;
+  }
+}
