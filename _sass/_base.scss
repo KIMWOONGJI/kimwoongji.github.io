@@ -1706,20 +1706,55 @@ mjx-container[jax="CHTML"][display="true"] {
 // stacked list on /publications/. Scoped to .selected-grid so the publications page and the
 // related-works block on project pages keep the list layout they already have.
 .publications.selected-grid {
-  ol.bibliography {
-    display: grid;
-    grid-template-columns: repeat($selected-grid-columns, 1fr);
-    gap: $selected-grid-gap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    // One column on phones, two on tablets — three narrow cards are unreadable below ~768px.
-    @media (max-width: 575px) {
-      grid-template-columns: 1fr;
+  .selected-scroller {
+    ol.bibliography {
+      display: grid;
+      grid-template-columns: repeat($selected-grid-columns, 1fr);
+      gap: $selected-grid-gap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    @media (min-width: 576px) and (max-width: 991px) {
-      grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Below the grid's own width the cards used to wrap, which left the third one alone on a
+  // second row. Shrinking them instead is not an option: the Altmetric and Dimensions badges
+  // are rendered at a fixed pixel size by their embed scripts, and the DOI / Related Project
+  // buttons are already at their smallest legible size, so they stop fitting long before the
+  // image does. The row becomes a horizontal scroller with the card width pinned instead.
+  //
+  // Nothing changes on a wide screen: three 284px cards and two 24px gaps come to exactly the
+  // 900px of content that `max_width: 930px` leaves, so the scroller never actually scrolls.
+  @media (max-width: 991px) {
+    .selected-scroller {
+      overflow-x: auto;
+      // Keep a sideways swipe on a phone from triggering the browser's back gesture.
+      overscroll-behavior-x: contain;
+      // `proximity` rather than `mandatory` so a half-swipe is not yanked back.
+      scroll-snap-type: x proximity;
+      // Leave the scrollbar somewhere to sit other than on top of the card foot.
+      padding-bottom: 0.5rem;
+      // Bleed half a gap each side so the peeking card is cut off by the container edge.
+      // That cut is the only thing telling the reader the row scrolls.
+      margin-inline: -0.5 * $selected-grid-gap;
+      padding-inline: 0.5 * $selected-grid-gap;
+
+      ol.bibliography {
+        display: flex;
+        gap: $selected-grid-gap;
+      }
+
+      li {
+        // Grow but never shrink. Between roughly 894px and 991px three cards still fit, so
+        // they spread to fill the row rather than leaving a ragged gap on the right; below
+        // that the basis wins, the row overflows, and the scroller takes over.
+        //
+        // 78% leaves the next card visibly peeking. The 15rem floor is where the badge row
+        // and the two buttons stop sharing a line; the 17rem ceiling keeps a card from
+        // growing past the width it has on a wide screen.
+        flex: 1 0 clamp(15rem, 78%, 17rem);
+        scroll-snap-align: start;
+      }
     }
   }
 

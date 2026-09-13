@@ -1,3 +1,14 @@
+{% comment %}
+  The inner wrapper is what scrolls sideways below 992px — see `.selected-scroller` in
+  _sass/_base.scss. It has to be its own element because jekyll-scholar emits the
+  `<ol class="bibliography">` itself, leaving nowhere else to hang these attributes.
+
+  role + aria-label + tabindex are what axe's `scrollable-region-focusable` rule asks for:
+  a box that scrolls has to be reachable and scrollable with the keyboard alone. `axe.yml`
+  runs this check on every push.
+{% endcomment %}
 <div class="publications selected-grid">
-  {% bibliography --template bib_selected --group_by none --query @*[selected=true]* %}
+  <div class="selected-scroller" role="region" aria-label="Selected publications" tabindex="0">
+    {% bibliography --template bib_selected --group_by none --query @*[selected=true]* %}
+  </div>
 </div>
