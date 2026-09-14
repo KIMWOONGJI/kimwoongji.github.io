@@ -527,5 +527,104 @@
         <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1" controls=true %}</div>
       </div>
     {% endif %}
+
+    {% comment %}
+      A machine-readable description of the work this entry cites.
+
+      Emitted only where the page opts in with `structured_data: true`, which today means
+      _pages/publications.md alone. bib.liquid also renders the "Related works" list on project
+      pages, and letting it speak there would leave three pages each declaring itself the page
+      about the same DOI, with nothing to say which one to resolve the work to. The flag is what
+      makes that choice movable: when a per-paper page exists, it inherits the flag and the
+      listing gives it up.
+
+      It lives here rather than in _includes/metadata.liquid because jekyll-scholar renders the
+      bibliography into the page body and never exposes its entries to the head. JSON-LD is valid
+      anywhere in the document, so the description sits with the entry it describes.
+
+      What it is for: `sameAs` and `identifier` state that this listing and the DOI record are the
+      same work, so a search engine can resolve the paper as an entity instead of matching a string.
+      It is not a rich-result type — nothing new appears in a search listing because of it.
+
+      The author markers (`†` equal contribution, `*` corresponding) are presentation, written inline
+      in the BibTeX author field per the convention in _pages/publications.md. They are stripped here
+      the same way line 63 strips them for display, so the structured data carries names only.
+
+      Every value goes through `jsonify`, which quotes and escapes it. Never hand-quote a field —
+      a title with an apostrophe or a quotation mark would otherwise produce invalid JSON, and an
+      invalid block is discarded whole rather than partially read.
+    {% endcomment %}
+    {% if page.structured_data %}
+      {% assign schema_url = page.url | append: '#' | append: entry.key | prepend: site.baseurl | prepend: site.url %}
+      {% assign schema_date = entry.year %}
+      {% if entry.month %}
+        {% assign month_names = 'jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec' | split: ',' %}
+        {% assign month_key = entry.month | downcase | slice: 0, 3 %}
+        {% for month_name in month_names %}
+          {% if month_name == month_key %}
+            {% assign month_number = forloop.index %}
+            {% if month_number < 10 %}
+              {% assign month_number = month_number | prepend: '0' %}
+            {% endif %}
+            {% assign schema_date = entry.year | append: '-' | append: month_number %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ScholarlyArticle",
+          "headline": {{ entry.title | strip | jsonify }},
+          "name": {{ entry.title | strip | jsonify }},
+          "url": {{ schema_url | jsonify }},
+          {% if schema_date %}
+            "datePublished": {{ schema_date | jsonify }},
+          {% endif %}
+          {% if entry.journal %}
+            "isPartOf": {
+              "@type": "Periodical",
+              "name": {{ entry.journal | strip | jsonify }}
+            },
+          {% endif %}
+          {% if entry.publisher %}
+            "publisher": {
+              "@type": "Organization",
+              "name": {{ entry.publisher | strip | jsonify }}
+            },
+          {% endif %}
+          {% if entry.doi %}
+            "identifier": {
+              "@type": "PropertyValue",
+              "propertyID": "DOI",
+              "value": {{ entry.doi | strip | jsonify }}
+            },
+            "sameAs": {{ entry.doi | strip | prepend: 'https://doi.org/' | jsonify }},
+          {% endif %}
+          {% if entry.abstract %}
+            "abstract": {{ entry.abstract | strip_html | strip | jsonify }},
+          {% endif %}
+          {% if entry.preview %}
+            {% comment %}
+              A preview may be a local file under assets/img/publication_preview/ or an absolute URL;
+              schema.org wants an absolute URL either way.
+            {% endcomment %}
+            {% if entry.preview contains '://' %}
+              {% assign schema_image = entry.preview %}
+            {% else %}
+              {% assign schema_image = entry.preview | prepend: '/assets/img/publication_preview/' | prepend: site.baseurl | prepend: site.url %}
+            {% endif %}
+            "image": {{ schema_image | jsonify }},
+          {% endif %}
+          "author": [
+            {%- for author in entry.author_array -%}
+              {%- assign schema_last = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' | strip -%}
+              {%- assign schema_name = author.first | strip | append: ' ' | append: schema_last | strip -%}
+              {"@type": "Person", "name": {{ schema_name | jsonify }}}{%- unless forloop.last -%},{%- endunless -%}
+            {%- endfor -%}
+          ]
+        }
+      </script>
+    {% endif %}
   </div>
 </div>
