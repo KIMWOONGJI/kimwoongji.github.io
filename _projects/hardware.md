@@ -158,7 +158,7 @@ The measured acoustic input impedance of the automotive horn showed good agreeme
     </div>
 </div>
 
-<h5>Metamaterial-integrated parametric array loudspeaker</h5>
+<h5>Metamaterial-integrated parametric array loudspeaker{% cite kim2026Dualmetamaterials %}</h5>
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-2 mt-0 mt-md-0">

@@ -21,7 +21,7 @@ scholar:
     </div>
     <div class="col-sm-8 mt-3 mt-md-0">
         <h4><strong>Dynamic Material Property Evaluation</strong></h4>
-        <p>This project aims to determine the dynamic Young's modulus, shear modulus, and Poisson's ratio of the materials used in transducer fabrication and prototype development. It ensures the reliability of FEM-based simulations and incorporates material-specific properties into the design process.{% cite kimDesignAnalysisExperimental2025b %}</p>
+        <p>This project aims to determine the dynamic Young's modulus, shear modulus, and Poisson's ratio of the materials used in transducer fabrication and prototype development. It ensures the reliability of FEM-based simulations and incorporates material-specific properties into the design process.{% cite kimDesignAnalysisExperimental2025b kim2026Dualmetamaterials %}</p>
         <h5>Standard</h5>
         <p><em>ASTM E1876-22: Standard Test Method for Dynamic Young's Modulus, Shear Modulus, and Poisson's Ratio by Impulse Excitation of Vibration</em></p>
         <h5>Experimental Setup</h5>
@@ -111,7 +111,7 @@ scholar:
     </div>
     <div class="col-sm-8 mt-3 mt-md-0">
         <h4><strong>Piezoelectric Material Characterization</strong></h4>
-        <p>Verification of piezoelectric material constants (transversely orthotropic Young's modulus, Poisson's ratio, damping coefficient, piezoelectric constants, and permittivity) through impedance analysis of ceramic rings, and validation of their consistency by comparing experimental measurements with FEM-based simulations.{% cite kimDesignAnalysisExperimental2025b %}</p>
+        <p>Verification of piezoelectric material constants (transversely orthotropic Young's modulus, Poisson's ratio, damping coefficient, piezoelectric constants, and permittivity) through impedance analysis of ceramic rings, and validation of their consistency by comparing experimental measurements with FEM-based simulations.{% cite kimDesignAnalysisExperimental2025b kim2026Dualmetamaterials %}</p>
         <h5>Experimental Setup</h5>
         <ul>
             <li>Impedance analyzer, Test fixture</li>

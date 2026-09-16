@@ -72,7 +72,7 @@ The EMA of the radiating plate around the 8th eigenmode frequency showed close a
     </div>
     <div class="col-sm-5 mt-0 mt-md-0">
         <h4><strong>Locally Resonant Metamaterial Characterization</strong></h4>
-        <p>To estimate the effective properties of a 3D-printed locally resonant metamaterial (LRM) and use the identified values to redesign it to meet the required resonant behavior.</p>
+        <p>To estimate the effective properties of a 3D-printed locally resonant metamaterial (LRM) and use the identified values to redesign it to meet the required resonant behavior.{% cite kim2026Dualmetamaterials %}</p>
         <h5>Experimental Setup</h5>
         <ul>
             <li>Spectrum analyzer, single-point laser Doppler vibrometer, power amplifier, vibration exciter</li>
@@ -97,7 +97,7 @@ The EMA of the radiating plate around the 8th eigenmode frequency showed close a
     </div>
     <div class="col-sm-5 mt-0 mt-md-0">
         <h4><strong>Plate Impedance Characterization</strong></h4>
-        <p>Plate impedance characterization was performed to evaluate the frequency-dependent dynamic behavior of the radiating plate with and without the locally resonant metamaterial.</p>
+        <p>Plate impedance characterization was performed to evaluate the frequency-dependent dynamic behavior of the radiating plate with and without the locally resonant metamaterial.{% cite kim2026Dualmetamaterials %}</p>
         <h5>Experimental Setup</h5>
         <ul>
             <li>Spectrum analyzer, power amplifier, vibration exciter, impedance head, custom jig (Carefully designed to ensure rigid support while minimizing any influence on the measurement results.)</li>
