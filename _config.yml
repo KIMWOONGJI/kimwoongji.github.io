@@ -13,7 +13,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
 keywords: Woongji Kim, acoustic transducers, parametric array loudspeaker, directional audio, ultrasonic transducer, nonlinear acoustics, acoustic metamaterials, acoustic metasurface, elastic metamaterials, MEMS microphone, extended reality audio, electroacoustic transducer, POSTECH, UNIST, mechanical engineering, finite element analysis
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🌌 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.png # 144px render of the 🌌 emoji. Search engines ignore the data: URI an emoji icon compiles to, so results showed a generic globe; /favicon.ico is the 48px version
 
 url: https://kimwoongji.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -141,6 +141,11 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  # al-folio demo assets. Neither is linked from any page, but both were still built and
+  # published: the notebook as a page titled with the converter's temp file name, and a 4 MB
+  # Plotly demo.
+  - assets/jupyter/blog.ipynb
+  - assets/plotly/demo.html
   # al-folio demo projects. Left in the repo but kept out of the build so they
   # stop appearing in sitemap.xml, where they were being submitted to Google as
   # if they were real work.
