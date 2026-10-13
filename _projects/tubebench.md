@@ -5,8 +5,8 @@ title_icon: tubebench # logo before the title on /projects/ and on this page (_i
 description: Open-source MATLAB application for four-microphone impedance-tube measurements after ASTM E2611 — transmission loss, reflection, transfer impedance and transfer matrix — with instrument control, guided switching calibration and a validity check on every frequency line.
 tags: [impedance tube, transfer impedance, transmission loss, acoustic measurement, instrument control, matlab]
 img: assets/img/project/tubebench/tubebench-card.png
-importance: 5
-category: experiment
+importance: 1
+category: tools
 ---
 
 <hr>
