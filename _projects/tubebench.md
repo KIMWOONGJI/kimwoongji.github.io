@@ -62,7 +62,7 @@ Commercial impedance-tube systems, especially four-microphone tubes for transmis
 <div class="row justify-content-sm-center">
     <div class="col-sm-11 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/project/tubebench/measurement-chain.svg" title="tubebench measurement chain" alt="Measurement chain: tubebench drives the signal generator over SCPI, the amplifier drives the loudspeaker of the tube, four microphones M1 to M4 around the specimen feed the LAN-XI module, which streams to tubebench" class="img-fluid only-light" %}
-        {% include figure.liquid loading="eager" path="assets/img/project/tubebench/measurement-chain-dark.svg" title="tubebench measurement chain" alt="Measurement chain: tubebench drives the signal generator over SCPI, the amplifier drives the loudspeaker of the tube, four microphones M1 to M4 around the specimen feed the LAN-XI module, which streams to tubebench" class="img-fluid only-dark" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/tubebench/measurement-chain-dark.svg" title="tubebench measurement chain" alt="Measurement chain: tubebench drives the signal generator over SCPI, the amplifier drives the loudspeaker of the tube, four microphones M1 to M4 around the specimen feed the LAN-XI module, which streams to tubebench" class="img-fluid only-dark figure-panel-dark" %}
     </div>
 </div>
 <div class="caption">

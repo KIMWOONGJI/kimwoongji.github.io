@@ -2103,3 +2103,12 @@ html[data-theme="dark"] .brand-mark-tubebench {
   --tb-m3: #33c99a;
   --tb-m4: #e8c547;
 }
+
+// A dark-theme figure drawn for GitHub's dark canvas (#0d1117): its boxes (#161b22) are almost
+// the colour of this site's dark background (#1c1c1d), so on the bare page they disappear. The
+// panel puts the figure back on the background it was drawn against.
+.figure-panel-dark {
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: #0d1117;
+}
