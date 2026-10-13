@@ -8,6 +8,9 @@ module.exports = {
   // purgecss to find. Without this the rules compile, work under `jekyll serve`, and are
   // then stripped from the production stylesheet — the failure only shows up once deployed.
   safelist: {
-    greedy: [/_altmetric_popover_el/, /altmetric-popover/],
+    // MathJax builds its <mjx-container> elements at runtime, so the rule that lets a wide display
+    // equation scroll inside its own box (_sass/_base.scss) was stripped the same way, and on a
+    // phone a long equation widened the whole page instead.
+    greedy: [/_altmetric_popover_el/, /altmetric-popover/, /mjx-container/],
   },
 };

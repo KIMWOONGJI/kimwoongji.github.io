@@ -1131,6 +1131,10 @@ pre {
     border-radius: 0;
     margin-bottom: 0;
     padding: 0;
+    // The `code` rule below sets `white-space: normal` so that inline code wraps, and it reaches
+    // the <code> inside a block too, which collapsed every code block onto one line. Inside a
+    // block the whitespace is the block's.
+    white-space: inherit;
   }
 }
 
