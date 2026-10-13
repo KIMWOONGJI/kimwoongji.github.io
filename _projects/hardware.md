@@ -50,6 +50,8 @@ scholar:
 
 The measured acoustic input impedance of the automotive horn showed good agreement with FEM predictions, validating the accuracy of the impedance tube design and measurement procedure.
 
+For four-microphone measurements of transmission loss and transfer impedance, see [tubebench]({% link _projects/tubebench.md %}), the measurement software developed for that purpose.
+
 <hr>
 
 <div class="row justify-content-sm-center">

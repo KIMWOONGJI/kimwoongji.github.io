@@ -12,7 +12,10 @@
         %}
       {% endif %}
       <div class="card-body">
-        <h2 class="card-title">{{ project.title }}</h2>
+        <h2 class="card-title">
+          {% if project.title_icon %}{% include brand_mark.liquid name=project.title_icon %}{% endif -%}
+          {{- project.title }}
+        </h2>
         <p class="card-text">{{ project.description }}</p>
         <div class="row ml-1 mr-1 p-0">
           {% if project.github %}

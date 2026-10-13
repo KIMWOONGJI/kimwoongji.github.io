@@ -1933,3 +1933,49 @@ html[data-theme="dark"] [id^="_altmetric_popover_el"] .altmetric-popover-content
     color: $grey-color-dark;
   }
 }
+
+// Inline project logos placed before a name (_includes/brand_mark.liquid). Sized in em so the mark
+// follows the text it sits in, from body copy to a card title; the vertical offset lines its base
+// up with the baseline of the word beside it.
+.brand-mark {
+  display: inline-block;
+  height: 0.85em;
+  width: 1.29em; // the cropped viewBox is 59 x 39
+  margin-right: 0.22em;
+  vertical-align: -0.06em;
+}
+
+// tubebench: the light logo's colours, and in the dark theme those of its reverse logo. The
+// microphones are a stroked stem and a filled head, so each colour is a variable that the stems
+// take as their stroke and the heads as their fill; stroking the heads too would enlarge them.
+.brand-mark-tubebench {
+  --tb-body: #334a63;
+  --tb-m1: #0072b2;
+  --tb-m2: #c2185b;
+  --tb-m3: #009e73;
+  --tb-m4: #bf9900;
+
+  .tb-body-line {
+    stroke: var(--tb-body);
+  }
+  .tb-body-fill {
+    fill: var(--tb-body);
+  }
+
+  @each $m in m1, m2, m3, m4 {
+    line.tb-#{$m} {
+      stroke: var(--tb-#{$m});
+    }
+    circle.tb-#{$m} {
+      fill: var(--tb-#{$m});
+    }
+  }
+}
+
+html[data-theme="dark"] .brand-mark-tubebench {
+  --tb-body: #ffffff;
+  --tb-m1: #5ab0f0;
+  --tb-m2: #f06a9f;
+  --tb-m3: #33c99a;
+  --tb-m4: #e8c547;
+}

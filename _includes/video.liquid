@@ -47,6 +47,13 @@
       {% if include.muted %}
         muted
       {% endif %}
+      {% comment %}
+        iOS Safari plays a video inline, and so autoplays it, only with playsinline; without it the
+        video waits for a tap and opens full screen.
+      {% endcomment %}
+      {% if include.playsinline %}
+        playsinline
+      {% endif %}
       {% if include.poster %}
         poster="{{ include.poster }}"
       {% endif %}
