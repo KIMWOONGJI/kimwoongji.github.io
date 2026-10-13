@@ -1,0 +1,56 @@
+{% comment %}
+  A repository card drawn by the site, for entries of featured_repos in _data/repositories.yml.
+  Unlike repo.liquid, which embeds a github-readme-stats image, everything here is ordinary HTML,
+  so it takes the site's fonts and dark theme and needs no request to a third-party service.
+  `card hoverable` gives it the same raised panel and hover lift as the cards on /projects/.
+  The project's mark sits inline before the name (`icon:`); a separate large logo beside the text
+  repeated it, so there is none.
+{% endcomment %}
+{% assign r = include.repo %}
+{% assign repo_url = r.repo | prepend: 'https://github.com/' %}
+{% if r.project %}
+  {% assign project_page = site.projects | where: 'slug', r.project | first %}
+{% endif %}
+<article class="repo-card card hoverable">
+  <div class="repo-card-body">
+    <h3 class="repo-card-title">
+      <a href="{{ repo_url }}">
+        {%- if r.icon %}{% include brand_mark.liquid name=r.icon %}{% endif -%}
+        {{- r.name -}}
+      </a>
+    </h3>
+    <p class="repo-card-path">
+      <a href="{{ repo_url }}"><i class="fa-brands fa-github"></i> {{ r.repo }}</a>
+    </p>
+    {% if r.tagline %}
+      <p class="repo-card-tagline">{{ r.tagline }}</p>
+    {% endif %}
+    {% if r.description %}
+      <p class="repo-card-description">{{ r.description }}</p>
+    {% endif %}
+    {% if r.topics %}
+      <ul class="repo-card-topics" aria-label="Topics">
+        {% for topic in r.topics %}
+          <li>{{ topic }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <div class="repo-card-foot">
+      {% if r.language %}
+        <span class="repo-card-meta">
+          <span class="repo-card-language" style="background-color: {{ r.language_color | default: '#888' }}"></span>
+          {{- r.language -}}
+        </span>
+      {% endif %}
+      {% if r.license %}
+        <span class="repo-card-meta"><i class="fa-solid fa-scale-balanced"></i> {{ r.license }}</span>
+      {% endif %}
+      <span class="repo-card-actions">
+        <a class="btn btn-sm z-depth-0" href="{{ repo_url }}" role="button"><i class="fa-brands fa-github"></i> GitHub</a>
+        {% if project_page %}
+          <a class="btn btn-sm z-depth-0" href="{{ project_page.url | relative_url }}" role="button">Project page</a>
+        {% endif %}
+      </span>
+    </div>
+  </div>
+</article>

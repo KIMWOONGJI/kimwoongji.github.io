@@ -1934,6 +1934,130 @@ html[data-theme="dark"] [id^="_altmetric_popover_el"] .altmetric-popover-content
   }
 }
 
+// Repository cards on /repositories/ (_includes/repository/repo_card.liquid). Drawn from
+// _data/repositories.yml rather than embedded as github-readme-stats images, so they share the
+// site's type and theme colours. The panel itself -- background, corners, shadow and the hover
+// lift -- comes from the `card hoverable` classes the /projects/ cards use, so the two pages keep
+// one look; only the inner layout is set here.
+.repo-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.repo-card {
+  padding: 1.5rem;
+
+  .repo-card-body {
+    min-width: 0;
+  }
+
+  .repo-card-title {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.2;
+
+    a {
+      color: var(--global-text-color);
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .repo-card-path {
+    margin: 0.2rem 0 0.75rem;
+    font-size: 0.8rem;
+
+    a {
+      color: var(--global-text-color-light);
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .repo-card-tagline {
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+  }
+
+  .repo-card-description {
+    margin-bottom: 0.9rem;
+    font-size: 0.92rem;
+  }
+
+  .repo-card-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      color: var(--global-theme-color);
+      background-color: var(--global-code-bg-color);
+    }
+  }
+
+  .repo-card-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.25rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+
+  .repo-card-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .repo-card-language {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+  }
+
+  .repo-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-left: auto;
+
+    a.btn {
+      margin: 0;
+      padding: 0.25rem 1rem;
+      color: var(--global-text-color);
+      border: 1px solid var(--global-text-color);
+
+      &:hover {
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+      }
+    }
+  }
+
+  // On a phone the buttons start a line of their own instead of hugging the right edge.
+  @media (max-width: 575px) {
+    .repo-card-actions {
+      margin-left: 0;
+    }
+  }
+}
+
 // Inline project logos placed before a name (_includes/brand_mark.liquid). Sized in em so the mark
 // follows the text it sits in, from body copy to a card title; the vertical offset lines its base
 // up with the baseline of the word beside it.

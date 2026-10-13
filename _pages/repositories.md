@@ -7,6 +7,17 @@ nav: true
 nav_order: 4
 ---
 
+Open-source software from my research: tools built for my own measurements and released so that other labs can use them.
+
+{% if site.data.repositories.featured_repos %}
+
+<div class="repo-cards">
+  {% for repo in site.data.repositories.featured_repos %}
+    {% include repository/repo_card.liquid repo=repo %}
+  {% endfor %}
+</div>
+{% endif %}
+
 {% if site.data.repositories.github_users %}
 
 ## GitHub users

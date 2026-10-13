@@ -2,4 +2,25 @@ github_users:
 
 repo_description_lines_max: 2
 
+# Cards drawn by the site itself (_includes/repository/repo_card.liquid), so they follow the
+# site's typography and dark theme and can carry an icon, topics and a link to the project page.
+# The github_repos list below instead embeds github-readme-stats images, which only show a
+# name, two lines of description and the language, and render an error for a private repo.
+#
+#   repo         owner/name on GitHub
+#   project      slug of the _projects page about it (optional)
+#   icon         inline mark before the name, by its name in _includes/brand_mark.liquid (optional)
+#   language_color   GitHub's colour for the language, for the dot
+featured_repos:
+  - repo: kimwoongji/tubebench
+    name: tubebench
+    icon: tubebench
+    tagline: Four-microphone impedance-tube measurements in MATLAB
+    description: Drives the signal generator and acquisition, guides the microphone calibration, and computes transmission loss, reflection, transfer impedance and the transfer matrix after ASTM E2611, with a validity check on every frequency line. Runs without hardware on a virtual tube; new instruments plug in through drivers, with a Claude Code skill to guide the work.
+    language: MATLAB
+    language_color: "#e16737"
+    license: MIT
+    topics: [impedance-tube, astm-e2611, transfer-impedance, transmission-loss, instrument-control]
+    project: tubebench
+
 github_repos:
