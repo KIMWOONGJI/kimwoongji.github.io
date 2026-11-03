@@ -72,6 +72,11 @@ ninja.data = [{
           description: "Design of a spurious sound filter using a half-wavelength resonator analogy for accurate parametric array loudspeaker measurements.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/spurious_sound_filter.html";
+            },},{id: "projects-tubebench",
+          title: 'tubebench',
+          description: "Open-source MATLAB application for four-microphone impedance-tube measurements after ASTM E2611 — transmission loss, reflection, transfer impedance and transfer matrix — with instrument control, guided switching calibration and a validity check on every frequency line.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/tubebench.html";
             },},{
         id: 'social-email',
         title: 'email',
