@@ -70,7 +70,7 @@ Commercial impedance-tube systems, especially four-microphone tubes for transmis
 </div>
 
 <div class="mt-3 mb-3">
-<p>The generator and the acquisition need no shared clock. All four channels are sampled together, so dividing each by a reference channel cancels the unknown drive spectrum $S(f)$; the remaining gain ratio $C_k$ is removed by the calibration below.</p>
+<p>The generator and the acquisition need no shared clock. All four channels are sampled together, so dividing each by a reference channel cancels the unknown drive spectrum $S(f)$; the remaining complex gain ratio $C_k$, amplitude and phase, is removed by the calibration below.</p>
 $$
 H_k^{\,m} = \frac{Y_k}{Y_{\mathrm{ref}}} = C_k\,H_k
 $$
@@ -110,22 +110,26 @@ The gain and phase mismatch between microphones is measured in place by swapping
 
 <h4><strong>Verification</strong></h4>
 
+To check the whole chain against an independent reference, a 3D-printed resonator cell was measured with one load and with two loads (ASTM E2611) on the same mount, and compared with a 3D finite-element model with thermoviscous losses.
+
 <div class="row justify-content-sm-center">
-    <div class="col-sm-9 mt-3 mt-md-0">
-        {% include figure.liquid loading="lazy" path="assets/img/project/tubebench/simulation-recovery.png" title="simulated recovery of R and tau" alt="Reflection and transmission coefficient magnitudes recovered from a simulated measurement with a log sweep and with stepped sines, plotted over the analytic values" class="img-fluid" %}
+    <div class="col-sm-12 mt-3 mt-md-0">
+        {% include figure.liquid loading="lazy" path="assets/img/project/tubebench/tubebench-verification.svg" title="transmission loss of the resonator cell" alt="Transmission loss of a 3D-printed resonator cell from 118 Hz to 4.7 kHz: two-load measurement, one-load measurement and 3D finite-element simulation, with a close-up of the first resonance between 250 and 550 Hz." class="img-fluid only-light" %}
+        {% include figure.liquid loading="lazy" path="assets/img/project/tubebench/tubebench-verification-dark.svg" title="transmission loss of the resonator cell" alt="Transmission loss of a 3D-printed resonator cell from 118 Hz to 4.7 kHz: two-load measurement, one-load measurement and 3D finite-element simulation, with a close-up of the first resonance between 250 and 550 Hz." class="img-fluid only-dark figure-panel-dark" %}
     </div>
 </div>
 <div class="caption">
-    Simulation: reflection (top) and transmission (bottom) recovered by the full chain, against the analytic values (black).
+    Transmission loss of the cell: (a) over the tube's band, (b) around the first resonance (shaded in a).
 </div>
 
-The full measurement chain recovers the analytic values of the virtual tube, and more than 360 automated tests cover the analysis, the drivers and the window. On the lab's instruments, calibrations and swept-sine measurements have been run; validation on reference specimens is under way. Raw data are never overwritten, and every result is stored with its configuration, calibration and software version.
+**With two loads, the measured transmission loss follows the simulation**: 377&nbsp;Hz and 12.9&nbsp;dB at the first resonance against 377&nbsp;Hz and 13.4&nbsp;dB, and the other resonances lie within 3&nbsp;% of the simulated frequencies, though up to 2.4&nbsp;dB lower above 2&nbsp;kHz. The one-load curve, the transmission coefficient with the absorbing end alone, is biased by that end's reflection ($\lvert R \rvert \approx 0.5$ near 400&nbsp;Hz) and peaks at 371&nbsp;Hz and 11.0&nbsp;dB; the two-load transfer matrix removes that dependence. A repeat of the first load reproduced the transfer matrix to 3&nbsp;% (median), so the specimen had not moved, and {% include brand_mark.liquid name="tubebench" %}tubebench flagged the lines it could not trust.
 
 <h6><strong>Development Contributions</strong></h6>
 
 - **Instrument control** for a home-built four-microphone tube: the full ASTM E2611 workflow in one application.
 - **No shared clock** needed between generator and acquisition.
 - **Self-qualifying results**: a validity verdict for every frequency line.
+- **Two-load transfer matrix** (ASTM E2611), with a repeat of the first load to show that the specimen did not move.
 - **Virtual tube** for end-to-end testing without hardware.
 - **Open source**, with plug-in instrument drivers and a Claude Code skill that guides other labs through adding their own.
 
@@ -149,7 +153,16 @@ $$
 Z_t = \frac{p_L - p_R}{u}, \qquad
 \mathrm{TL} = 20\log_{10}\left\lvert 1 + \frac{Z_t}{2Z_c} \right\rvert
 $$
-<p>The usable band follows from the geometry, with the microphone spacing between 1&nbsp;% and 40&nbsp;% of a wavelength: 118&nbsp;Hz to 4.73&nbsp;kHz for the lab tube (29&nbsp;mm bore and spacing).</p>
+<p>Here $u$ is the mean particle velocity on the two faces and $Z_c$ the characteristic impedance of the tube; $k$ and $Z_c$ include the wall losses. With two terminations $a$ and $b$, the transfer matrix relating pressure and particle velocity on the faces $L$ and $R$ follows from the two measured states, and gives the transmission loss with an anechoic termination for any specimen:</p>
+$$
+\begin{bmatrix} T_{11} & T_{12} \\ T_{21} & T_{22} \end{bmatrix}
+= \begin{bmatrix} p_L^{a} & p_L^{b} \\ u_L^{a} & u_L^{b} \end{bmatrix}
+\begin{bmatrix} p_R^{a} & p_R^{b} \\ u_R^{a} & u_R^{b} \end{bmatrix}^{-1}
+$$
+$$
+\mathrm{TL} = 20\log_{10}\left\lvert \frac{T_{11} + T_{12}/Z_c + Z_c T_{21} + T_{22}}{2} \right\rvert
+$$
+<p>The usable band follows from the geometry, with the microphone spacing between 1&nbsp;% and 40&nbsp;% of a wavelength: 118&nbsp;Hz to about 4.7&nbsp;kHz for the lab tube (29&nbsp;mm bore and spacing).</p>
 </div>
 
 <hr>
