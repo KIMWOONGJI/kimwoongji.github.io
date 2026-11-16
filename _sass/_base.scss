@@ -2112,3 +2112,70 @@ html[data-theme="dark"] .brand-mark-tubebench {
   border-radius: 0.5rem;
   background-color: #0d1117;
 }
+
+// Animated figures (assets/js/motion-figure.js): a looping render with the static figure's labels
+// drawn over it. The label drawing has the static figure's viewBox and fills the box; each video
+// sits where the render sits in that drawing, in percent of the viewBox, so the two scale together.
+// The renders are flattened onto white, so the box stays white in the dark theme too.
+.motion-figure {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1; // 600 x 300, the combination-resonance figure
+  background: #ffffff;
+  overflow: hidden;
+
+  video,
+  > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  > img {
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  // 180 x 180 concept figures: SPPAL render inset 4.96 units on each side, MiPAL render 168 units
+  // wide at (4.54, 3.55).
+  &.sppal-concept,
+  &.mipal-concept {
+    aspect-ratio: 1 / 1;
+  }
+  &.sppal-concept video {
+    inset: auto;
+    left: 2.756%;
+    top: 2.756%;
+    width: 94.53%;
+    height: 94.53%;
+  }
+  &.mipal-concept video {
+    inset: auto;
+    left: 2.522%;
+    top: 1.972%;
+    width: 93.33%;
+    height: 93.33%;
+  }
+
+  // 260 x 150 metamaterial figures: two 132-unit square renders at (2.44, 10.5) and (130, 10.5).
+  // They overlap by 4.44 units; the left one stays on top so its field is not cut by the right
+  // render's white margin.
+  &.mipal-meta {
+    aspect-ratio: 260 / 150;
+  }
+  &.mipal-meta video {
+    inset: auto;
+    top: 7%;
+    width: 50.769%;
+    height: 88%;
+  }
+  &.mipal-meta video.left {
+    left: 0.938%;
+    z-index: 1;
+  }
+  &.mipal-meta video.right {
+    left: 50%;
+  }
+}
