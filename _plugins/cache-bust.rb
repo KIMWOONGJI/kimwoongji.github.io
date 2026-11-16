@@ -43,7 +43,10 @@ module Jekyll
     end
 
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      # The stylesheets live in _sass/. Upstream pointed at assets/_sass, which does not exist, so the
+      # digest was always that of an empty string and main.css kept one URL across every change:
+      # browsers went on using a cached stylesheet that lacked newly added rules.
+      CacheDigester.new(file_name: file_name, directory: '_sass').digest!
     end
   end
 end
