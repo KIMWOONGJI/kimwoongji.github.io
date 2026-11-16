@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 260 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231f20;
+        font-family: Helvetica, Helvetica;
+        font-size: 6px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <text class="cls-1" transform="translate(27.54 7.15)"><tspan x="0" y="0">without acoustic metasurface</tspan></text>
+    <text class="cls-1" transform="translate(159.26 7.15)"><tspan x="0" y="0">with acoustic metasurface</tspan></text>
+  </g>
+</svg>
