@@ -2178,4 +2178,9 @@ html[data-theme="dark"] .brand-mark-tubebench {
   &.mipal-meta video.right {
     left: 50%;
   }
+
+  // 600 x 600 spurious-sound-filter figures (_projects/spurious_sound_filter.md): the render fills the drawing.
+  &.ssf {
+    aspect-ratio: 1 / 1;
+  }
 }
