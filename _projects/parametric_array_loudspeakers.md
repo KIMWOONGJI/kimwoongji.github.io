@@ -245,6 +245,20 @@ This architecture places an **acoustic metasurface** in front of the radiating p
     Locally resonant <strong>elastic meta-units</strong> attached to the radiating plate introduce mode-selective loss in the lower-order modes excited by CR. Without them (left), CR excites a lower-order eigenmode of the plate in addition to its ultrasonic mode, producing nearly omnidirectional acoustic leakage alongside the directional audio beam. With them (right), leakage is largely suppressed, though faint, short-lived leakage still appears near the plate. The audio beam remains directional. Schematic animation, slowed for visibility.
 </div>
 
+The animation below summarizes the paper's speech demonstration: a subway announcement recorded in an anechoic chamber 0.5 m from the MiPAL at 0°, 15°, 30°, and 45°, with and without elastic meta-units. Without the meta-units, a horizontal band near 2 kHz appears at all measured angles, indicating nearly omnidirectional leakage due to second-order CR. With the meta-units, this component is strongly suppressed. Off-axis levels decrease with increasing angle, consistent with the directivity patterns.
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-12 mt-3 mt-md-0">
+        <figure class="motion-figure mipal-toc rounded z-depth-1" role="img" aria-label="Animated spectrograms of speech recorded around the MiPAL: elastic meta-units strongly suppress the band near 2 kHz associated with second-order combination resonance (CR), reducing nearly omnidirectional leakage." data-chapters="0:Without elastic meta-units|7.5:With elastic meta-units|15:Left: without · Right: with">
+            <video data-src="{{ '/assets/video/parametric-array-loudspeaker/mipal-toc.mp4' | relative_url }}" poster="{{ '/assets/video/parametric-array-loudspeaker/mipal-toc.webp' | relative_url }}" muted loop playsinline preload="none" aria-hidden="true"></video>
+            <span class="motion-chapter">Left: without · Right: with</span>
+        </figure>
+    </div>
+</div>
+<div class="caption">
+    Recorded speech spectrograms surround the MiPAL, with the source spectrogram at the center. Three parts show the radiating plate without elastic meta-units on both halves, with meta-units on both halves, and a comparison (left: without; right: with). Both conditions were measured on the same side of the beam axis; the comparison mirrors them for display. A playhead sweeps outward along each panel's time axis, lifting the instantaneous spectrum; color indicates frequency, from yellow (low) to purple (high). Schematic animation, slowed for visibility; plate motion and angular differences are exaggerated.
+</div>
+
 <script defer src="{{ '/assets/js/motion-figure.js' | relative_url | bust_file_cache }}"></script>
 
 <h6><strong>Research Contributions</strong></h6>

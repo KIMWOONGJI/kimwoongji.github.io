@@ -9,6 +9,24 @@
   if (!videos.length) return;
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+  // Chapter labels: a figure with data-chapters="seconds:text|seconds:text|..." names the part being
+  // played in its .motion-chapter element. Before playback (poster, reduced motion, no JavaScript) the
+  // element keeps its own text, which describes the poster frame.
+  document.querySelectorAll(".motion-figure[data-chapters]").forEach((fig) => {
+    const v = fig.querySelector("video");
+    const label = fig.querySelector(".motion-chapter");
+    if (!v || !label) return;
+    const chapters = fig.dataset.chapters.split("|").map((c) => {
+      const i = c.indexOf(":");
+      return [parseFloat(c.slice(0, i)), c.slice(i + 1)];
+    });
+    v.addEventListener("timeupdate", () => {
+      let text = "";
+      for (const [start, name] of chapters) if (v.currentTime >= start) text = name;
+      if (text && label.textContent !== text) label.textContent = text;
+    });
+  });
+
   function play(v) {
     if (!v.getAttribute("src")) v.src = v.dataset.src;
     v.muted = true;

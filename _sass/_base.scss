@@ -2183,4 +2183,31 @@ html[data-theme="dark"] .brand-mark-tubebench {
   &.ssf {
     aspect-ratio: 1 / 1;
   }
+
+  // MiPAL speech demonstration: a 1200 x 675 studio render that fills the box (no label drawing). The
+  // part being played is named by .motion-chapter, which motion-figure.js updates from data-chapters.
+  &.mipal-toc {
+    aspect-ratio: 16 / 9;
+    background: #4b4547;
+  }
+
+  .motion-chapter {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.6rem;
+    z-index: 2;
+    padding: 0.15rem 0.55rem;
+    border-radius: 0.35rem;
+    background: rgba(0, 0, 0, 0.55);
+    color: #ffffff;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    pointer-events: none;
+
+    @media (max-width: 576px) {
+      right: 0.4rem;
+      bottom: 0.3rem;
+      font-size: 0.68rem;
+    }
+  }
 }
