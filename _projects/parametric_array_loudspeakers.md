@@ -249,14 +249,14 @@ The animation below summarizes the paper's speech demonstration: a subway announ
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-12 mt-3 mt-md-0">
-        <figure class="motion-figure mipal-toc rounded z-depth-1" role="img" aria-label="Animated spectrograms of speech recorded around the MiPAL: elastic meta-units strongly suppress the band near 2 kHz associated with second-order combination resonance (CR), reducing nearly omnidirectional leakage." data-chapters="0:Without elastic meta-units|7.5:With elastic meta-units|15:Left: without · Right: with">
+        <figure class="motion-figure mipal-toc rounded z-depth-1" role="img" aria-label="Animated spectrograms of speech recorded around the MiPAL: elastic meta-units strongly suppress the band near 2 kHz associated with second-order combination resonance (CR), reducing nearly omnidirectional leakage." data-chapters="0:Without elastic meta-units|9.5:With elastic meta-units|19:Left: without · Right: with">
             <video data-src="{{ '/assets/video/parametric-array-loudspeaker/mipal-toc.mp4' | relative_url }}" poster="{{ '/assets/video/parametric-array-loudspeaker/mipal-toc.webp' | relative_url }}" muted loop playsinline preload="none" aria-hidden="true"></video>
             <span class="motion-chapter">Left: without · Right: with</span>
         </figure>
     </div>
 </div>
 <div class="caption">
-    Recorded speech spectrograms surround the MiPAL, with the source spectrogram at the center. Three parts show the radiating plate without elastic meta-units on both halves, with meta-units on both halves, and a comparison (left: without; right: with). Both conditions were measured on the same side of the beam axis; the comparison mirrors them for display. A playhead sweeps outward along each panel's time axis, lifting the instantaneous spectrum; color indicates frequency, from yellow (low) to purple (high). Schematic animation, slowed for visibility; plate motion and angular differences are exaggerated.
+    Recorded speech spectrograms surround the MiPAL, with the source spectrogram at the center. Three parts show the radiating plate without elastic meta-units on both halves, with meta-units on both halves, and a comparison (left: without; right: with). Both conditions were measured on the same side of the beam axis; the comparison mirrors them for display. Each recorded spectrogram streams outward from the MiPAL along its panel, with the instantaneous spectrum lifted at a fixed line near the inner end; color indicates frequency, from yellow (low) to purple (high). Schematic animation, slowed for visibility; plate motion and angular differences are exaggerated.
 </div>
 
 <script defer src="{{ '/assets/js/motion-figure.js' | relative_url | bust_file_cache }}"></script>
