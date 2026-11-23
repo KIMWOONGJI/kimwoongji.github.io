@@ -1,0 +1,69 @@
+{% assign modal_id = include.id | default: 'astm-e1876' %}
+{% assign modal_finishes = 'aluminium,stainless-steel,field' | split: ',' %}
+{% if include.compact %}{% assign modal_finishes = 'aluminium' | split: ',' %}{% endif %}
+<div class="astm-modal-comparison{% if include.compact %} astm-modal-supplement{% endif %}" data-modal-materials>
+  {% unless include.compact %}
+    <div class="astm-material-controls" role="group" aria-label="Specimen appearance">
+      {% for finish in modal_finishes %}
+        {% case finish %}
+          {% when 'aluminium' -%}
+            {%- assign finish_label = 'Aluminium' %}
+          {% when 'stainless-steel' -%}
+            {%- assign finish_label = 'Stainless steel' %}
+          {% else -%}
+            {%- assign finish_label = 'Modal field' %}
+        {% endcase %}
+        <button
+          type="button"
+          class="astm-material-option"
+          data-material="{{ finish }}"
+          aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"
+          aria-controls="{{ modal_id }}-{{ finish }}"
+        >
+          {{ finish_label }}
+        </button>
+      {% endfor %}
+    </div>
+  {% endunless %}
+  {% for finish in modal_finishes %}
+    {% assign media = '/assets/video/dynamic-material-property-evaluation/astm-e1876-' | append: finish %}
+    <div
+      id="{{ modal_id }}-{{ finish }}"
+      data-material-panel="{{ finish }}"
+      {% unless forloop.first %}
+        hidden
+      {% endunless %}
+    >
+      <figure
+        class="motion-figure astm-modes"
+        role="img"
+        aria-label="First three specimen modes: first flexural, first torsional, and second flexural; {{ finish | replace: '-', ' ' }} appearance. Motion is slowed and exaggerated for illustration."
+      >
+        <video
+          data-src="{{ media | append: '.mp4' | relative_url }}"
+          poster="{{ media | append: '.webp' | relative_url }}"
+          muted
+          loop
+          playsinline
+          preload="none"
+          aria-hidden="true"
+        ></video>
+        <img src="{{ '/assets/img/project/dynamic-material-property-evaluation/astm-e1876-labels.svg' | relative_url }}" alt="" aria-hidden="true">
+      </figure>
+    </div>
+  {% endfor %}
+  {% unless include.compact -%}
+    <noscript>
+      <p>
+        Aluminium is shown above.
+        <a href="{{ '/assets/video/dynamic-material-property-evaluation/astm-e1876-field.mp4' | relative_url }}">View the modal field</a> or
+        <a href="{{ '/assets/video/dynamic-material-property-evaluation/astm-e1876-stainless-steel.mp4' | relative_url }}">stainless steel</a>.
+      </p>
+    </noscript>
+  {%- endunless %}
+</div>
+{% unless include.compact %}
+  <div class="caption">
+    Three mode shapes with the same illustrative motion in each material finish; motion is slowed and deformation exaggerated.
+  </div>
+{% endunless %}

@@ -2113,6 +2113,50 @@ html[data-theme="dark"] .brand-mark-tubebench {
   background-color: #0d1117;
 }
 
+// Material controls for the ASTM E1876 mode comparison.
+.astm-modal-comparison {
+  margin-top: 1.5rem;
+
+  &.astm-modal-supplement {
+    margin-top: 0;
+  }
+
+  [data-material-panel][hidden] {
+    display: none;
+  }
+
+  .astm-material-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+
+    button {
+      padding: 0.35rem 0.65rem;
+      border: 1px solid var(--global-text-color);
+      border-radius: 0.25rem;
+      background: transparent;
+      color: var(--global-text-color);
+      font: inherit;
+      font-size: 0.8rem;
+      line-height: 1.3;
+      cursor: pointer;
+    }
+
+    button:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 3px;
+    }
+
+    [aria-pressed="true"] {
+      color: var(--global-bg-color);
+      background: var(--global-text-color);
+      border-color: var(--global-text-color);
+    }
+  }
+}
+
 // Animated figures (assets/js/motion-figure.js): a looping render with the static figure's labels
 // drawn over it. The label drawing has the static figure's viewBox and fills the box; each video
 // sits where the render sits in that drawing, in percent of the viewBox, so the two scale together.
@@ -2182,6 +2226,11 @@ html[data-theme="dark"] .brand-mark-tubebench {
   // 600 x 600 spurious-sound-filter figures (_projects/spurious_sound_filter.md): the render fills the drawing.
   &.ssf {
     aspect-ratio: 1 / 1;
+  }
+
+  &.astm-modes {
+    aspect-ratio: 5 / 2;
+    margin-bottom: 0;
   }
 
   // MiPAL speech demonstration: a 1200 x 675 studio render that fills the box (no label drawing). The

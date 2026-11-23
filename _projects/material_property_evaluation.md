@@ -32,9 +32,10 @@ scholar:
     </div>
 </div>
 
-<div class="row justify-content-sm-center">
+<div class="row justify-content-sm-center align-items-center astm-results">
     <div class="col-sm-5 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/project/dynamic-material-property-evaluation/dynamic-material-property-evaluation-2.png" title="ASTM E1876 results" alt="Dynamic material property measurement results showing Young's modulus and shear modulus" %}
+        {% include astm-modes.liquid compact=true %}
     </div>
     <div class="col-sm-5 mt-3 mt-md-0">
         <style>
@@ -97,7 +98,7 @@ scholar:
     </div>
 </div>
 <div class="caption">
-    Experimental results (left) and comparison of the ASTM E1876 measurements with reference MatWeb data (right).
+    Resonance peaks and illustrative mode shapes (left); evaluated material properties (right).
 </div>
 
 <hr>
@@ -169,3 +170,5 @@ scholar:
 <div class="caption">
     Custom fixture with pogo pins (left), typical PE/SE curves (middle), and extracted effective piezoelectric constant ($e_{31,f}$) (right).
 </div>
+
+<script defer src="{{ '/assets/js/motion-figure.js' | relative_url | bust_file_cache }}"></script>
