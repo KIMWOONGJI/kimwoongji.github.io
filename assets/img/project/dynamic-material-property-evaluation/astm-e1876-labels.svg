@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <title>Three elastic modes of the ASTM E1876 specimen</title>
+  <desc>Mode 1 is the first flexural mode, mode 2 the first torsional mode, and mode 3 the second flexural mode.</desc>
+  <style>
+    @media (max-width: 600px) {
+      .mode-title { font-size: 26px; }
+      .mode-type { font-size: 21px; }
+    }
+  </style>
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle" fill="#161616">
+    <g class="mode-title" font-size="17" font-weight="600">
+      <text x="150" y="55">Mode 1</text>
+      <text x="450" y="55">Mode 2</text>
+      <text x="750" y="55">Mode 3</text>
+    </g>
+    <g class="mode-type" font-size="13" fill="#555">
+      <text x="150" y="84">1st flexural</text>
+      <text x="450" y="84">1st torsional</text>
+      <text x="750" y="84">2nd flexural</text>
+    </g>
+  </g>
+</svg>
