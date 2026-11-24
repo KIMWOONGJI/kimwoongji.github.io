@@ -30,15 +30,19 @@ Expected build noise — neither indicates a problem:
 - ~40 Dart Sass deprecation warnings from `_sass/tabler-icons/` (upstream uses pre-3.0 Sass syntax).
 - A ~15s first build, dominated by `[NbConvertApp] Converting notebook`.
 
-Formatting is Prettier with the Shopify Liquid plugin (`printWidth: 150`), plus pre-commit hooks
-(trailing whitespace, EOF, YAML check):
+Formatting uses the locked Prettier and Shopify Liquid plugin (`printWidth: 150`). Install the
+Git hooks once; commits format staged text files and pushes check the full tracked tree:
 
 ```bash
-npx prettier --write .
-pre-commit run --all-files
+npm ci
+pre-commit install
+npm run format
+npm run format:check
 ```
 
-Note `.prettierignore` excludes `_data/citations.yml`, `_scripts/*`, and vendored CSS/JS.
+Stage new source files before the full check. CI runs the same `npm run format:check` command;
+checking only edited files can miss existing failures elsewhere. Untracked local previews are
+excluded. `.prettierignore` also excludes `_data/citations.yml`, `_scripts/*`, and vendored CSS/JS.
 
 ## Content vs. theme
 

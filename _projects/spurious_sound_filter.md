@@ -46,6 +46,7 @@ As illustrated, the extremely short half-wavelength at high frequencies makes di
 </div>
 
 Designing a pragmatic filter based on this principle requires aligning the microphone diaphragm strictly with the acoustic node. Through the topological transformation illustrated above, the positions of the <strong>acoustic input port</strong> and the <strong>measurement port</strong> are optimized, enabling geometric integration with measurement microphones. The intricate design elegantly accommodates the contours of the microphone's existing protection grid. Although the geometry physically resembles a conventional acoustic low-pass filter, <strong>its underlying resonance principle is fundamentally distinct.</strong>
+
 <div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">
         <figure class="motion-figure ssf" role="img" aria-label="Cross-section of a measurement microphone equipped with the proposed spurious sound filter, with the standing wave in the filter">
@@ -74,5 +75,5 @@ We effectively utilized this filter to evaluate the parametric array loudspeaker
 
 <h4><strong>References</strong></h4>
 
-[^1]: <small>M. T. Abuelma’atti, "Improved Analysis of the Electrically Manifested Distortions of Condenser Microphones," *Appl. Acoust.*, vol. 64, no. 5, pp. 471--480, 2003. DOI: [10.1016/S0003-682X(02)00140-8](https://doi.org/10.1016/S0003-682X(02)00140-8).</small>
-[^2]: <small>M. B. Bennett and D. T. Blackstock, "Parametric array in air," *J. Acoust. Soc. Am.*, vol. 57, no. 3, pp. 562--568, 1975. DOI: [10.1121/1.380484](https://doi.org/10.1121/1.380484).</small>
+[^1]: <small>M. T. Abuelma’atti, "Improved Analysis of the Electrically Manifested Distortions of Condenser Microphones," _Appl. Acoust._, vol. 64, no. 5, pp. 471--480, 2003. DOI: [10.1016/S0003-682X(02)00140-8](<https://doi.org/10.1016/S0003-682X(02)00140-8>).</small>
+[^2]: <small>M. B. Bennett and D. T. Blackstock, "Parametric array in air," _J. Acoust. Soc. Am._, vol. 57, no. 3, pp. 562--568, 1975. DOI: [10.1121/1.380484](https://doi.org/10.1121/1.380484).</small>

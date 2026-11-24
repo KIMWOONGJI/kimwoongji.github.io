@@ -12,7 +12,6 @@ profile:
 
 selected_papers: true # renders bib entries marked `selected={true}`, via _includes/selected_papers.liquid
 social: true # includes social icons at the bottom of the page
-
 ---
 
 <br>

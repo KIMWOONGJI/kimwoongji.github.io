@@ -10,6 +10,19 @@ If you would like to implement a new feature or a bug, please make sure you (or 
 
 Note that since [#2048](https://github.com/alshedivat/al-folio/pull/2048) al-folio uses the [prettier formatter](https://prettier.io/) for its code, meaning all new submitted code must conform to its standard. If you don't have `prettier` installed for your setup and the `prettier` code check fails when submitting a PR, you can check the referred failed action in our repo. In that action there will be an artifact with an HTML diff showing the needed changes.
 
+### Formatting this repository
+
+Install the exact Prettier and Liquid plugin versions from the lockfile, then enable the local checks:
+
+```bash
+npm ci
+pre-commit install
+```
+
+Stage new source files before checking. Use `npm run format` to format all tracked files, or `npm run format -- path/to/file` for a specific file. Run `npm run format:check` before pushing; CI runs this same command. It includes newly staged files and excludes untracked local previews and experiments. Existing `.prettierignore` rules still apply. The pre-commit hook formats staged text files; the pre-push hook checks the full tracked tree without modifying it.
+
+Past repeated failures came from existing unformatted files elsewhere in the repository: checking only the files being edited left the full-tree CI check failing. Clean up the complete baseline once and use the shared check thereafter. `npm ci` keeps installation reproducible; the diagnosed failures were also reproducible with the repository's pinned versions, so a version mismatch was not their direct cause. Update formatter dependencies intentionally and reformat the full tracked tree in the same change.
+
 ### Adding new social media information
 
 To add new social media information, there are a few places you might need to modify. Currently, the template supports icons from [Academicons](https://jpswalsh.github.io/academicons/), [Font Awesome](https://fontawesome.com/), and [Tabler Icons](https://tabler.io/icons). For an example PR, check [Add HAL id to socials](https://github.com/alshedivat/al-folio/pull/3206/files). Note that the information in all these files are alphabetically sorted.

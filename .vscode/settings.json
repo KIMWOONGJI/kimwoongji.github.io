@@ -1,4 +1,4 @@
 {
-    "gitdoc.enabled": false,
-    "remote.autoForwardPortsFallback": 0
+  "gitdoc.enabled": false,
+  "remote.autoForwardPortsFallback": 0
 }

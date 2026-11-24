@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "format": "node bin/format.mjs --write",
+    "format:check": "node bin/format.mjs --check",
+    "test:format": "node --test bin/format.test.mjs"
+  },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "1.4.0",
     "prettier": "3.1.1"

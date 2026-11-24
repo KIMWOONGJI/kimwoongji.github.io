@@ -1,5 +1,7 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
+default_install_hook_types: [pre-commit, pre-push]
+default_stages: [pre-commit]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
@@ -8,3 +10,18 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
+  - repo: local
+    hooks:
+      - id: prettier
+        name: Prettier (staged files)
+        entry: node bin/format.mjs --write
+        language: system
+        types: [text]
+        stages: [pre-commit]
+      - id: prettier-check
+        name: Prettier (all tracked files)
+        entry: node bin/format.mjs --check
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
