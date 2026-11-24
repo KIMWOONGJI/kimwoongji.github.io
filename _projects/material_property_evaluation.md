@@ -122,16 +122,19 @@ scholar:
     </div>
 </div>
 
-<div class="row justify-content-sm-center">
+<div class="row justify-content-sm-center align-items-center piezo-results">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/piezo-impedance/piezo-impedance-2.png" title="impedance result 1" alt="Piezoelectric impedance measurement showing agreement between experiment and FEM" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/piezo-impedance/piezo-impedance-2.png" title="impedance result 1" alt="Measured and simulated piezoelectric impedances showing discrepancies in resonance frequencies, especially near 1 MHz" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/piezo-impedance/piezo-impedance-3.png" title="impedance result 2" alt="Piezoelectric impedance measurement showing discrepancy indicating unreliable supplier data" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/piezo-impedance/piezo-impedance-3.png" title="impedance result 2" alt="Measured and simulated piezoelectric impedances showing closer agreement in resonance frequencies, with some magnitude differences" %}
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include piezo-ring-modes.liquid %}
     </div>
 </div>
 <div class="caption">
-    Comparison between experimental measurements and FEM simulations. Agreement (left) validates supplier data, while discrepancy (right) indicates unreliability.
+    Measured and simulated impedances: discrepancy (left) and closer agreement (centre). Modes associated with the centre model's impedance resonances (right; motion slowed and exaggerated).
 </div>
 
 <hr>
