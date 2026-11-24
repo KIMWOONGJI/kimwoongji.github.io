@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <title>Electrically excited OD20 ring eigenmodes in increasing frequency</title>
+  <desc>Short-circuit eigenmodes: radial, 74.6 kilohertz; coupled radial-thickness, 319.7 kilohertz; coupled thickness-dominant, 560.8 kilohertz. Representative modes, not consecutive global mode numbers. Motion is slowed and deformation exaggerated.</desc>
+  <style>
+    @media (max-width: 600px) {
+      .mode-title { font-size: 34px; }
+      .mode-frequency { font-size: 29px; }
+    }
+  </style>
+  <g font-family="Helvetica, Arial, sans-serif" text-anchor="middle" fill="#161616">
+    <g class="mode-title" font-size="18" font-weight="600">
+      <text x="150" y="49">Radial</text>
+      <text x="450" y="49">Coupled</text>
+      <text x="750" y="49">Thickness</text>
+    </g>
+    <g class="mode-frequency" font-size="14" fill="#555">
+      <text x="150" y="77">74.6 kHz</text>
+      <text x="450" y="77">319.7 kHz</text>
+      <text x="750" y="77">560.8 kHz</text>
+    </g>
+  </g>
+</svg>
