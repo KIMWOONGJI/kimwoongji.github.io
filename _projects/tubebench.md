@@ -19,27 +19,22 @@ Commercial impedance-tube systems, especially four-microphone tubes for transmis
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-12 mt-3 mt-md-0">
-        {% comment %}
-          Two sizes made with a Lanczos filter, chosen by the browser through srcset: the 3840 px
-          screenshot of the repository, shrunk 4x by the browser into this 900 px column, aliased
-          its small text badly. 900 px serves ordinary screens, 1800 px high-density ones.
-        {% endcomment %}
         <figure>
-          <img
-            src="{{ 'assets/img/project/tubebench/tubebench-window-1800.webp' | relative_url }}"
-            srcset="{{ 'assets/img/project/tubebench/tubebench-window-900.webp' | relative_url }} 900w, {{ 'assets/img/project/tubebench/tubebench-window-1800.webp' | relative_url }} 1800w"
-            sizes="(min-width: 930px) 900px, calc(100vw - 30px)"
-            width="1800"
-            height="946"
-            loading="eager"
-            alt="The tubebench window: instrument, tube, excitation, calibration and measurement controls on the left, and a 3D section of the four-microphone impedance tube on the right"
-            class="img-fluid rounded z-depth-1"
-          >
+          <a href="{{ 'assets/img/project/tubebench/tube-setup.webp' | relative_url | bust_file_cache }}" aria-label="Open the full tubebench window at its original size">
+            <img
+              src="{{ 'assets/img/project/tubebench/tube-setup.webp' | relative_url | bust_file_cache }}"
+              width="1728"
+              height="972"
+              loading="eager"
+              alt="The tubebench app in simulation mode. Instrument, excitation and measurement controls occupy the left sidebar. The Tube setup tab on the right shows the TIT v3.1 section and geometry, with messages below."
+              class="img-fluid rounded z-depth-1"
+            >
+          </a>
         </figure>
     </div>
 </div>
 <div class="caption">
-    The {% include brand_mark.liquid name="tubebench" %}tubebench window: the controls follow the workflow from top to bottom, and the 3D tube follows the geometry entered.
+    The {% include brand_mark.liquid name="tubebench" %}tubebench window in simulation mode, with instrument and measurement settings on the left and the TIT v3.1 tube on the right.
 </div>
 
 <div class="table-responsive">
@@ -48,7 +43,7 @@ Commercial impedance-tube systems, especially four-microphone tubes for transmis
     <tr><th scope="row">Method</th><td>Four-microphone transfer-matrix method (ASTM E2611)</td></tr>
     <tr><th scope="row">Results</th><td>Reflection, transmission, transmission loss, transfer impedance, transfer matrix</td></tr>
     <tr><th scope="row">Excitation</th><td>Swept sine, stepped sine, random noise</td></tr>
-    <tr><th scope="row">Instruments</th><td>Keysight 33220A, HBK LAN-XI; others through drivers, guided by a Claude Code skill</td></tr>
+    <tr><th scope="row">Instruments</th><td>Keysight 33220A, HBK LAN-XI; other instruments through MATLAB drivers</td></tr>
     <tr><th scope="row">Platform</th><td>MATLAB R2022b, Signal Processing Toolbox</td></tr>
     <tr><th scope="row">Licence</th><td>MIT &middot; <a href="https://github.com/kimwoongji/tubebench">github.com/kimwoongji/tubebench</a></td></tr>
   </tbody>
@@ -61,12 +56,12 @@ Commercial impedance-tube systems, especially four-microphone tubes for transmis
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-11 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/project/tubebench/measurement-chain.svg" title="tubebench measurement chain" alt="Measurement chain: tubebench drives the signal generator over SCPI, the amplifier drives the loudspeaker of the tube, four microphones M1 to M4 around the specimen feed the LAN-XI module, which streams to tubebench" class="img-fluid only-light" %}
-        {% include figure.liquid loading="eager" path="assets/img/project/tubebench/measurement-chain-dark.svg" title="tubebench measurement chain" alt="Measurement chain: tubebench drives the signal generator over SCPI, the amplifier drives the loudspeaker of the tube, four microphones M1 to M4 around the specimen feed the LAN-XI module, which streams to tubebench" class="img-fluid only-dark figure-panel-dark" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/tubebench/measurement-chain.svg" avoid_scaling=true cache_bust=true title="TIT v3.1 measurement chain" alt="tubebench controls the generator and receives four synchronized LAN-XI channels. The four microphones connect through a cable bundle around the specimen in the transfer impedance tube. Claude Code or Codex can write MATLAB drivers with the add-instrument skill." class="img-fluid only-light" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/tubebench/measurement-chain-dark.svg" avoid_scaling=true cache_bust=true title="TIT v3.1 measurement chain" alt="tubebench controls the generator and receives four synchronized LAN-XI channels. The four microphones connect through a cable bundle around the specimen in the transfer impedance tube. Claude Code or Codex can write MATLAB drivers with the add-instrument skill." class="img-fluid only-dark" %}
     </div>
 </div>
 <div class="caption">
-    {% include brand_mark.liquid name="tubebench" %}tubebench drives the generator over SCPI and reads four microphones through the acquisition module.
+    Four microphone leads on the transfer impedance tube share a cable bundle and connect to separate LAN-XI inputs. The <code>/add-instrument</code> skill helps a lab write a MATLAB driver when it changes the generator or acquisition hardware.
 </div>
 
 <div class="mt-3 mb-3">
@@ -84,7 +79,7 @@ As in the [automated field characterization]({% link _projects/aco_field_charact
 
 Another lab's tube rarely comes with the same instruments. {% include brand_mark.liquid name="tubebench" %}tubebench talks to hardware only through drivers, so supporting a new signal generator or acquisition module, including NI DAQ devices and audio interfaces, means writing one driver class; the session, calibration, analysis and window stay unchanged.
 
-In [Claude Code](https://claude.com/claude-code), the `/add-instrument` skill walks a lab through it:
+From the repository, run `/add-instrument` in Claude Code or `$add-instrument` in Codex. Both follow the same guide to implement and test the MATLAB driver.
 
 1. **Manual first**: start from the instrument's programming manual; commands are never guessed.
 2. **Suitability check**: confirm the instrument can do what the measurement needs before writing any code.
@@ -97,14 +92,19 @@ In [Claude Code](https://claude.com/claude-code), the `/add-instrument` skill wa
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-11 mt-3 mt-md-0">
-        {% include video.liquid path="assets/img/project/tubebench/switching-calibration.mp4" poster="/assets/img/project/tubebench/switching-calibration-poster.webp" title="Switching calibration on the virtual tube" class="img-fluid rounded z-depth-1" autoplay=true loop=true muted=true playsinline=true %}
+        <video
+          width="1280" height="720" class="img-fluid rounded z-depth-1" controls loop muted playsinline preload="none"
+          aria-label="TIT v3.1 simulation of the microphone exchange and return"
+          poster="{{ 'assets/img/project/tubebench/switching-calibration-poster.webp' | relative_url | bust_file_cache }}"
+          src="{{ 'assets/img/project/tubebench/switching-calibration.mp4' | relative_url | bust_file_cache }}"
+        ></video>
     </div>
 </div>
 <div class="caption">
-    Switching calibration on the virtual tube.
+    Switching calibration on the TIT v3.1. The yellow rings mark the two calibration ports. Each coloured microphone travels with its holder along the dashed path.
 </div>
 
-The gain and phase mismatch between microphones is measured in place by swapping them between ports: twelve guided steps, closed by an automatic empty-tube check. Every frequency line then gets a verdict, and lines that the geometry, calibration, signal quality or termination cannot support are masked, with the reason shown.
+The software measures gain and phase mismatch by swapping each microphone with the reference between the same two ports. An automatic empty-tube check verifies the calibration. Every frequency line then gets a verdict, and lines that the geometry, calibration, signal quality or termination cannot support are masked, with the reason shown.
 
 <hr>
 
@@ -114,15 +114,17 @@ To check the whole chain against an independent reference, a 3D-printed resonato
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-12 mt-3 mt-md-0">
-        {% include figure.liquid loading="lazy" path="assets/img/project/tubebench/tubebench-verification.svg" title="transmission loss of the resonator cell" alt="Transmission loss of a 3D-printed resonator cell from 118 Hz to 4.7 kHz: two-load measurement, one-load measurement and 3D finite-element simulation, with a close-up of the first resonance between 250 and 550 Hz." class="img-fluid only-light" %}
-        {% include figure.liquid loading="lazy" path="assets/img/project/tubebench/tubebench-verification-dark.svg" title="transmission loss of the resonator cell" alt="Transmission loss of a 3D-printed resonator cell from 118 Hz to 4.7 kHz: two-load measurement, one-load measurement and 3D finite-element simulation, with a close-up of the first resonance between 250 and 550 Hz." class="img-fluid only-dark figure-panel-dark" %}
+        {% include figure.liquid loading="lazy" path="assets/img/project/tubebench/tubebench-verification.svg" avoid_scaling=true cache_bust=true title="Transmission loss of the resonator cell" alt="Transmission loss of a 3D-printed resonator cell over 118 Hz to 4.7 kHz, with a close-up of the first resonance. The one-load measurement peaks at 371 Hz. The two-load measurement and simulation peak at 377 Hz." class="img-fluid only-light" %}
+        {% include figure.liquid loading="lazy" path="assets/img/project/tubebench/tubebench-verification-dark.svg" avoid_scaling=true cache_bust=true title="Transmission loss of the resonator cell" alt="Transmission loss of a 3D-printed resonator cell over 118 Hz to 4.7 kHz, with a close-up of the first resonance. The one-load measurement peaks at 371 Hz. The two-load measurement and simulation peak at 377 Hz." class="img-fluid only-dark" %}
     </div>
 </div>
 <div class="caption">
-    Transmission loss of the cell: (a) over the tube's band, (b) around the first resonance (shaded in a).
+    Transmission loss with one load and two loads, compared with the simulation. The right panel expands the shaded region. Dotted guides locate each peak on the frequency and transmission-loss axes.
 </div>
 
-**With two loads, the measured transmission loss follows the simulation**: 377&nbsp;Hz and 12.9&nbsp;dB at the first resonance against 377&nbsp;Hz and 13.4&nbsp;dB, and the other resonances lie within 3&nbsp;% of the simulated frequencies, though up to 2.4&nbsp;dB lower above 2&nbsp;kHz. The one-load curve, the transmission coefficient with the absorbing end alone, is biased by that end's reflection ($\lvert R \rvert \approx 0.5$ near 400&nbsp;Hz) and peaks at 371&nbsp;Hz and 11.0&nbsp;dB; the two-load transfer matrix removes that dependence. A repeat of the first load reproduced the transfer matrix to 3&nbsp;% (median), so the specimen had not moved, and {% include brand_mark.liquid name="tubebench" %}tubebench flagged the lines it could not trust.
+With the absorbing load alone, the first peak falls at 371&nbsp;Hz and 11.0&nbsp;dB. The end still reflects sound ($\lvert R \rvert \approx 0.5$ near 400&nbsp;Hz), which biases this one-load estimate. **Using two loads removes that dependence.** The measured peak moves to 377&nbsp;Hz and 12.9&nbsp;dB, close to the simulated 377&nbsp;Hz and 13.4&nbsp;dB. The remaining resonances fall within 3&nbsp;% of the simulated frequencies, with peaks up to 2.4&nbsp;dB lower above 2&nbsp;kHz.
+
+Repeating the first load reproduced the transfer matrix to within 3&nbsp;% (median), consistent with the specimen staying in place. {% include brand_mark.liquid name="tubebench" %}tubebench flagged unreliable frequency lines.
 
 <h6><strong>Development Contributions</strong></h6>
 
@@ -131,7 +133,7 @@ To check the whole chain against an independent reference, a 3D-printed resonato
 - **Self-qualifying results**: a validity verdict for every frequency line.
 - **Two-load transfer matrix** (ASTM E2611), with a repeat of the first load to show that the specimen did not move.
 - **Virtual tube** for end-to-end testing without hardware.
-- **Open source**, with plug-in instrument drivers and a Claude Code skill that guides other labs through adding their own.
+- **Open source**, with plug-in instrument drivers and a skill for adding support for another lab’s hardware.
 
 <hr>
 
@@ -162,7 +164,7 @@ $$
 $$
 \mathrm{TL} = 20\log_{10}\left\lvert \frac{T_{11} + T_{12}/Z_c + Z_c T_{21} + T_{22}}{2} \right\rvert
 $$
-<p>The usable band follows from the geometry, with the microphone spacing between 1&nbsp;% and 40&nbsp;% of a wavelength: 118&nbsp;Hz to about 4.7&nbsp;kHz for the lab tube (29&nbsp;mm bore and spacing).</p>
+<p>The usable band follows from the geometry, with the microphone spacing between 1&nbsp;% and 40&nbsp;% of a wavelength: 118&nbsp;Hz to about 4.7&nbsp;kHz for the tube used in the verification experiment (29&nbsp;mm bore and spacing). The TIT v3.1 shown above has a 29&nbsp;mm bore and 20&nbsp;mm spacing within each microphone pair.</p>
 </div>
 
 <hr>
